@@ -7,12 +7,12 @@
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light">
 <title>Beeswax – Create a dumbphone on Android</title>
-<meta name="description" content="Beeswax hides web browsers and blocks newly installed apps until you enter your lock code. Open source, no network access, one permission.">
+<meta name="description" content="Beeswax blocks web browsers and newly installed apps until you enter your lock code. Open source, no network access, one permission.">
 <link rel="canonical" href="https://beeswax.getflourish.org/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Beeswax">
 <meta property="og:title" content="Beeswax – Create a dumbphone on Android">
-<meta property="og:description" content="Beeswax hides web browsers and blocks newly installed apps until you enter your lock code. Open source, no network access, one permission.">
+<meta property="og:description" content="Beeswax blocks web browsers and newly installed apps until you enter your lock code. Open source, no network access, one permission.">
 <meta property="og:url" content="https://beeswax.getflourish.org/">
 <meta property="og:image" content="https://beeswax.getflourish.org/og.png">
 <meta property="og:image:width" content="1200">
@@ -384,7 +384,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; font-family: var(--mon
 
     <div class="wrap">
       <h1>Create a <span class="stick">dumbphone</span><br>on <span class="stick green">Android</span></h1>
-      <p class="lede">Beeswax hides web browsers and blocks newly installed apps until you enter your 16 character lock code. Give the code to someone you trust, or put it somewhere inconvenient.</p>
+      <p class="lede">Beeswax blocks web browsers and newly installed apps until you enter your lock code. Give the code to someone you trust, or put it somewhere inconvenient.</p>
       <a class="btn" href="https://github.com/flourish-today/beeswax/releases"><svg aria-hidden="true"><use href="#gh"/></svg>Get it on GitHub<svg aria-hidden="true"><use href="#arrow"/></svg></a>
       <div class="minor">
         <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/flourish-today/beeswax/releases"><svg aria-hidden="true"><use href="#dl"/></svg>Get it on Obtainium</a>
@@ -393,6 +393,20 @@ footer .xmr { user-select: all; -webkit-user-select: all; font-family: var(--mon
       </div>
     </div>
   </div>
+
+  <div class="wrap" style="max-width: 900px;">
+    <div class="card" role="note" style="display: flex; gap: 18px; align-items: flex-start; background: var(--honey-pale); padding: 24px 26px;">
+      <svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg>
+      <div>
+        <h2 style="font-size: 1.6rem; text-align: left; margin-bottom: 6px;">Beeswax is in beta.</h2>
+        <p>It has only been tested on GrapheneOS. Before you lock it, read the <a href="https://github.com/flourish-today/beeswax/blob/main/SETUP.md">setup guide</a> and keep your lock code somewhere safe. If the code is lost, the only way back is a factory reset. If something doesn't work right or you have a feature request, please open an <a href="https://github.com/flourish-today/beeswax/issues">issue</a>.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
 
   <section class="why" id="why" aria-labelledby="why-h">
     <div class="wrap">
@@ -430,7 +444,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; font-family: var(--mon
       <ul class="stats">
         <li class="card"><b>No</b><span>network access</span></li>
         <li class="card"><b>1</b><span>permission</span></li>
-        <li class="card"><b><svg aria-hidden="true"><use href="#i-check"/></svg></b><span>reproducible builds</span></li>
+        <li class="card"><b><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M9 34 24 49 55 15" fill="none" stroke="#1A1A1A" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></svg></b><span>reproducible builds</span></li>
       </ul>
       <p class="more"><a href="https://github.com/flourish-today/beeswax/blob/main/PRIVACY.md"><svg aria-hidden="true"><use href="#doc"/></svg>Privacy and security<svg aria-hidden="true"><use href="#arrow"/></svg></a></p>
     </div>
@@ -439,7 +453,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; font-family: var(--mon
   <section class="setup" id="setup" aria-labelledby="setup-h">
     <div class="wrap">
       <h2 id="setup-h">Setup</h2>
-      <p class="lead">You'll need a computer with <a href="https://developer.android.com/tools/releases/platform-tools">ADB</a>, USB debugging turned on, and no accounts on the phone while you set the device owner. You can add them back afterwards.</p>
+      <p class="lead">You'll need a computer with <a href="https://developer.android.com/tools/releases/platform-tools">ADB</a>, USB debugging turned on, and no accounts or users on the phone while you set the device owner. You can add accounts back afterwards.</p>
       <ol class="three">
         <li class="card"><span class="num">1</span><p>Install Beeswax and make it device owner with a single ADB command.</p></li>
         <li class="card"><span class="num">2</span><p>Lock Beeswax and keep the lock code somewhere you can't easily reach.</p></li>
