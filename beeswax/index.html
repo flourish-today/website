@@ -273,10 +273,11 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
 
 /* Wide screens: "Show each step" shows all five side by side, so the arrows and numbers aren't needed */
 @media (min-width: 981px) {
-  .shots .stage { display: flex; justify-content: center; align-items: flex-start; gap: 24px; }
+  .shots .stage { display: flex; justify-content: center; align-items: flex-start; gap: 24px; width: min(100vw - 44px, 1700px); position: relative; left: 50%; transform: translateX(-50%); }
   #v1:checked ~ .stage .step, #v2:checked ~ .stage .step, #v3:checked ~ .stage .step, #v4:checked ~ .stage .step, #v5:checked ~ .stage .step { display: flex; }
   .shots .step .nav-btn, .shots .dots { display: none; }
-  .shots .step .shot { width: 190px; }
+  .shots .step { flex: 1 1 0; min-width: 0; }
+  .shots .step .shot { width: 100%; max-width: 320px; }
   .shots .step figcaption { width: 100%; }
 }
 
