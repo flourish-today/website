@@ -226,6 +226,8 @@ footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 footer li, footer p { color: #1E3517; font-size: 0.97rem; }
 footer ul a { font-weight: 600; color: #1E3517; text-decoration: none; }
 footer ul a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--ink); text-decoration-thickness: 3px; }
+footer .xmr-label { display: flex; align-items: center; gap: 7px; }
+footer .xmr-label svg { width: 18px; height: 18px; flex: none; }
 footer .xmr-box { background: #1D2229; border-radius: 12px; padding: 10px 12px; font: 500 0.78rem/1.6 var(--mono); }
 footer .xmr-box .copy { position: static; float: right; width: 28px; height: 28px; border-radius: 8px; margin: 0 0 4px 8px; }
 footer .xmr-box .copy svg { width: 14px; height: 14px; }
@@ -373,6 +375,15 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
   <symbol id="cloud" viewBox="0 0 240 92">
     <g fill="#D3E2F3" transform="translate(0 7)"><rect x="8" y="54" width="224" height="28" rx="14"/><circle cx="62" cy="54" r="28"/><circle cx="114" cy="42" r="36"/><circle cx="166" cy="52" r="28"/><circle cx="202" cy="62" r="20"/></g>
     <g fill="#F0F7FE"><rect x="8" y="54" width="224" height="28" rx="14"/><circle cx="62" cy="54" r="28"/><circle cx="114" cy="42" r="36"/><circle cx="166" cy="52" r="28"/><circle cx="202" cy="62" r="20"/></g>
+  </symbol>
+  <clipPath id="xmr-clip"><circle cx="16" cy="16" r="14.5"/></clipPath>
+  <symbol id="xmr-logo" viewBox="0 0 32 32">
+    <g clip-path="url(#xmr-clip)">
+      <rect width="32" height="32" fill="#F26822"/>
+      <rect y="22" width="32" height="10" fill="#000000"/>
+      <path d="M0 20.3H7.6V9.6L16 18 24.4 9.6V20.3H32" fill="none" stroke="#FFFFFF" stroke-width="3.4"/>
+    </g>
+    <circle cx="16" cy="16" r="14.5" fill="none" stroke="#1A1A1A" stroke-width="1.8"/>
   </symbol>
   <symbol id="cloud-b" viewBox="0 0 200 80">
     <g fill="#D3E2F3" transform="translate(0 7)"><rect x="6" y="46" width="188" height="26" rx="13"/><circle cx="48" cy="48" r="22"/><circle cx="88" cy="34" r="28"/><circle cx="134" cy="40" r="24"/><circle cx="166" cy="52" r="16"/></g>
@@ -682,7 +693,7 @@ F5:37:A3:91:23:40:95:AC:42:53:85:D4:9E:B0:AA:43:C8:ED:84:4D:FC:84:15:F2:1C:C4:BF
     <div>
       <h3>Support</h3>
       <ul>
-        <li>Monero</li>
+        <li class="xmr-label"><svg aria-hidden="true"><use href="#xmr-logo"/></svg>Monero</li>
         <li class="xmr-box"><button class="copy" type="button" data-copy="xmr" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button><span class="xmr" id="xmr">82omZG3aUU7gqJhR6dZGSReYvKD7kHFuxj5MGKMAGiJdcSYLnMb9Nky9UBxeuadSSzCNYpwfUueQBdQPEaTXmLH4Tkmbv39</span></li>
       </ul>
     </div>
