@@ -212,7 +212,7 @@ details[open] > summary .plus { transform: rotate(45deg); }
 .copy.ok .done { display: block; }
 .copy.ok { background: #93C77E; }
 .copy[hidden] { display: none; }
-.verify pre, footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; margin: 0; padding-right: 64px !important; text-align: left; background: #1D2229; color: #EEF1F5; padding: 20px 24px; font: 500 0.82rem/1.75 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.verify pre { user-select: all; -webkit-user-select: all; cursor: text; margin: 0; padding-right: 64px !important; text-align: left; background: #1D2229; color: #EEF1F5; padding: 20px 24px; font: 500 0.82rem/1.75 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
 .comb-c { left: 4%; top: 60px; width: 120px; height: 106px; transform: rotate(-10deg); }
 .comb-d { right: 4%; top: 64px; width: 120px; height: 106px; transform: rotate(10deg); }
 
@@ -226,7 +226,10 @@ footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 footer li, footer p { color: #1E3517; font-size: 0.97rem; }
 footer ul a { font-weight: 600; color: #1E3517; text-decoration: none; }
 footer ul a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--ink); text-decoration-thickness: 3px; }
-footer .xmr { display: block; padding: 16px 18px; }
+footer .xmr-box { background: #1D2229; border-radius: 12px; padding: 10px 12px; font: 500 0.78rem/1.6 var(--mono); }
+footer .xmr-box .copy { position: static; float: right; width: 28px; height: 28px; border-radius: 8px; margin: 0 0 4px 8px; }
+footer .xmr-box .copy svg { width: 14px; height: 14px; }
+footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #EEF1F5; overflow-wrap: anywhere; }
 
 /* Screenshots: the before and after, or one step at a time, in the same spot.
    Radio buttons choose the view, so it needs no script; arrow keys move between steps. */
@@ -265,6 +268,15 @@ footer .xmr { display: block; padding: 16px 18px; }
 #v1:checked ~ .controls .ctl-steps, #v2:checked ~ .controls .ctl-steps, #v3:checked ~ .controls .ctl-steps, #v4:checked ~ .controls .ctl-steps, #v5:checked ~ .controls .ctl-steps { display: flex; }
 #v1:checked ~ .controls .d1, #v2:checked ~ .controls .d2, #v3:checked ~ .controls .d3, #v4:checked ~ .controls .d4, #v5:checked ~ .controls .d5 { background-image: var(--hex); }
 #v0:focus-visible ~ .controls .show, #v1:focus-visible ~ .controls .d1, #v2:focus-visible ~ .controls .d2, #v3:focus-visible ~ .controls .d3, #v4:focus-visible ~ .controls .d4, #v5:focus-visible ~ .controls .d5 { outline: 3px solid var(--sky-deep); outline-offset: 3px; border-radius: 10px; }
+
+/* Wide screens: "Show each step" shows all five side by side, so the arrows and numbers aren't needed */
+@media (min-width: 981px) {
+  .shots .stage { display: flex; justify-content: center; align-items: flex-start; gap: 24px; }
+  #v1:checked ~ .stage .step, #v2:checked ~ .stage .step, #v3:checked ~ .stage .step, #v4:checked ~ .stage .step, #v5:checked ~ .stage .step { display: flex; }
+  .shots .step .nav-btn, .shots .dots { display: none; }
+  .shots .step .shot { width: 190px; }
+  .shots .step figcaption { width: 100%; }
+}
 
 /* Responsive */
 @media (max-width: 980px) {
@@ -481,19 +493,20 @@ footer .xmr { display: block; padding: 16px 18px; }
         </div>
         <div class="view view5 step">
           <label class="nav-btn back" for="v4" title="Previous step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Previous step</span></label>
-          <figure class="shot"><img src="screenshots/5-blocked.webp" width="720" height="1480" alt="The apps list: Subway Surfers, outlined, is already under Blocked"><figcaption>It's blocked straight away—you can't open it without the lock code</figcaption></figure>
+          <figure class="shot"><img src="screenshots/5-blocked.webp" width="720" height="1480" alt="The apps list: Subway Surfers, outlined, is already under Blocked"><figcaption>It's blocked until you enter your code</figcaption></figure>
           <span class="nav-btn none" aria-hidden="true"></span>
         </div>
       </div>
       <div class="controls">
         <div class="ctl-pair"><label class="show" for="v1">Show each step<svg aria-hidden="true"><use href="#arrow"/></svg></label></div>
-        <div class="ctl-steps"><div class="dots"><label class="dot d1" for="v1" title="Step 1">1</label><label class="dot d2" for="v2" title="Step 2">2</label><label class="dot d3" for="v3" title="Step 3">3</label><label class="dot d4" for="v4" title="Step 4">4</label><label class="dot d5" for="v5" title="Step 5">5</label></div><label class="back-link" for="v0">Back to before and after</label></div>
+        <div class="ctl-steps"><div class="dots"><label class="dot d1" for="v1" title="Step 1">1</label><label class="dot d2" for="v2" title="Step 2">2</label><label class="dot d3" for="v3" title="Step 3">3</label><label class="dot d4" for="v4" title="Step 4">4</label><label class="dot d5" for="v5" title="Step 5">5</label></div><label class="back-link" for="v0">Before and after</label></div>
       </div>
     </div>
   </section>
 
   <section class="why" id="why" aria-labelledby="why-h">
     <svg class="cloud" aria-hidden="true" style="top:-48px;right:-84px;width:215px;height:86px;--d:58s;--x:-42px"><use href="#cloud-b"/></svg>
+    <svg class="cloud" aria-hidden="true" style="top:455px;left:3%;width:132px;height:51px;opacity:.45;--d:44s;--x:20px"><use href="#cloud"/></svg>
     <div class="wrap">
       <h2 id="why-h">Why Beeswax?</h2>
       <div class="grid">
@@ -538,6 +551,7 @@ footer .xmr { display: block; padding: 16px 18px; }
   </section>
 
   <section class="setup" id="setup" aria-labelledby="setup-h">
+    <svg class="cloud" aria-hidden="true" style="top:-36px;left:-64px;width:225px;height:87px;--d:69s;--x:34px"><use href="#cloud"/></svg>
     <svg class="cloud" aria-hidden="true" style="top:330px;right:-46px;width:185px;height:74px;opacity:.5;--d:52s;--x:-30px"><use href="#cloud-b"/></svg>
     <div class="wrap">
       <h2 id="setup-h">Setup</h2>
@@ -567,6 +581,7 @@ footer .xmr { display: block; padding: 16px 18px; }
 
   <section class="faq" id="faq" aria-labelledby="faq-h">
     <svg class="cloud" aria-hidden="true" style="top:-64px;left:7%;width:165px;height:66px;--d:73s;--x:24px"><use href="#cloud-b"/></svg>
+    <svg class="cloud" aria-hidden="true" style="top:310px;right:-36px;width:150px;height:60px;opacity:.5;--d:49s;--x:-26px"><use href="#cloud-b"/></svg>
     <div class="wrap">
       <h2 id="faq-h">FAQ</h2>
       <div class="list">
@@ -668,7 +683,7 @@ F5:37:A3:91:23:40:95:AC:42:53:85:D4:9E:B0:AA:43:C8:ED:84:4D:FC:84:15:F2:1C:C4:BF
       <h3>Support</h3>
       <ul>
         <li>Monero</li>
-        <li class="copyable"><button class="copy" type="button" data-copy="xmr" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button><span class="card xmr" id="xmr">82omZG3aUU7gqJhR6dZGSReYvKD7kHFuxj5MGKMAGiJdcSYLnMb9Nky9UBxeuadSSzCNYpwfUueQBdQPEaTXmLH4Tkmbv39</span></li>
+        <li class="xmr-box"><button class="copy" type="button" data-copy="xmr" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button><span class="xmr" id="xmr">82omZG3aUU7gqJhR6dZGSReYvKD7kHFuxj5MGKMAGiJdcSYLnMb9Nky9UBxeuadSSzCNYpwfUueQBdQPEaTXmLH4Tkmbv39</span></li>
       </ul>
     </div>
   </div>
