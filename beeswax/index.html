@@ -244,10 +244,11 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
 .shots .pair-row { justify-content: center; align-items: flex-start; gap: 26px; }
 .shot { margin: 0; width: 240px; flex: none; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; justify-items: center; }
 .shot img { width: 100%; height: auto; display: block; border-radius: 22px; background: #111A2C; }
-.shot figcaption { display: flex; align-items: center; justify-content: center; min-height: 2.6em; font: 600 1.1rem/1.25 var(--display); color: var(--ink); text-align: center; }
+.shot figcaption { display: flex; align-items: flex-start; justify-content: center; min-height: 2.6em; font: 600 1.1rem/1.25 var(--display); color: var(--ink); text-align: center; }
 .shots .to { width: 40px; height: 40px; flex: none; color: var(--ink); margin-top: 226px; }
 .shots .step { align-items: flex-start; justify-content: center; gap: 26px; }
 .shots .step figcaption { width: 340px; max-width: calc(100vw - 44px); }
+.shots .step .num { display: none; }
 .shots .nav-btn { width: 52px; height: 52px; flex: none; margin-top: 220px; display: grid; place-items: center; border-radius: 50%; background: var(--honey); border: 2px solid var(--ink); box-shadow: 0 3px 0 var(--ink); color: var(--ink); cursor: pointer; }
 .shots .nav-btn:hover { background: #F9D566; }
 .shots .nav-btn svg { width: 24px; height: 24px; }
@@ -279,6 +280,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
   .shots .step { flex: 1 1 0; min-width: 0; }
   .shots .step .shot { width: 100%; max-width: 320px; }
   .shots .step figcaption { width: 100%; }
+  .shots .step .num { display: grid; width: 44px; height: 49px; font-size: 1.2rem; }
 }
 
 /* Responsive */
@@ -473,7 +475,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
     <svg class="cloud" aria-hidden="true" style="top:250px;right:2%;width:140px;height:56px;opacity:.45;--d:37s;--x:-22px"><use href="#cloud-b"/></svg>
     <div class="wrap">
       <h2 id="shots-h">Screenshots</h2>
-      <p class="lead">The apps you pick disappear when you lock.</p>
+      <p class="lead">Blocked apps disappear from your phone.</p>
       <input class="vh" type="radio" name="shots-view" id="v0" aria-label="Before and after" checked><input class="vh" type="radio" name="shots-view" id="v1" aria-label="Step 1"><input class="vh" type="radio" name="shots-view" id="v2" aria-label="Step 2"><input class="vh" type="radio" name="shots-view" id="v3" aria-label="Step 3"><input class="vh" type="radio" name="shots-view" id="v4" aria-label="Step 4"><input class="vh" type="radio" name="shots-view" id="v5" aria-label="Step 5">
       <div class="stage">
         <div class="view view0 pair-row">
@@ -483,27 +485,27 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
         </div>
         <div class="view view1 step">
           <span class="nav-btn back none" aria-hidden="true"></span>
-          <figure class="shot"><img src="screenshots/1-pick.webp" width="720" height="1480" alt="Beeswax before locking: Brave, Instagram, Vanadium and YouTube under Blocked; Aurora Store, Bitwarden, Obtainium, Organic Maps and Signal under Allowed"><figcaption>Pick what to block</figcaption></figure>
+          <figure class="shot"><img src="screenshots/1-pick.webp" width="720" height="1480" alt="Beeswax before locking: Brave, Instagram, Vanadium and YouTube under Blocked; Aurora Store, Bitwarden, Obtainium, Organic Maps and Signal under Allowed"><span class="num" aria-hidden="true">1</span><figcaption>Pick what to block</figcaption></figure>
           <label class="nav-btn" for="v2" title="Next step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Next step</span></label>
         </div>
         <div class="view view2 step">
           <label class="nav-btn back" for="v1" title="Previous step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Previous step</span></label>
-          <figure class="shot"><img src="screenshots/2-code.webp" width="720" height="1480" alt="The new lock code, shown once to save"><figcaption>Save your lock code</figcaption></figure>
+          <figure class="shot"><img src="screenshots/2-code.webp" width="720" height="1480" alt="The new lock code, shown once to save"><span class="num" aria-hidden="true">2</span><figcaption>Save your lock code</figcaption></figure>
           <label class="nav-btn" for="v3" title="Next step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Next step</span></label>
         </div>
         <div class="view view3 step">
           <label class="nav-btn back" for="v2" title="Previous step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Previous step</span></label>
-          <figure class="shot"><img src="screenshots/3-locked.webp" width="720" height="1480" alt="Beeswax locked, asking for the lock code"><figcaption>Lock it</figcaption></figure>
+          <figure class="shot"><img src="screenshots/3-locked.webp" width="720" height="1480" alt="Beeswax locked, asking for the lock code"><span class="num" aria-hidden="true">3</span><figcaption>Lock it</figcaption></figure>
           <label class="nav-btn" for="v4" title="Next step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Next step</span></label>
         </div>
         <div class="view view4 step">
           <label class="nav-btn back" for="v3" title="Previous step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Previous step</span></label>
-          <figure class="shot"><img src="screenshots/4-install.webp" width="720" height="1480" alt="Aurora Store downloading Subway Surfers"><figcaption>Later, you install a game</figcaption></figure>
+          <figure class="shot"><img src="screenshots/4-install.webp" width="720" height="1480" alt="Aurora Store downloading Subway Surfers"><span class="num" aria-hidden="true">4</span><figcaption>Later, you install a game</figcaption></figure>
           <label class="nav-btn" for="v5" title="Next step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Next step</span></label>
         </div>
         <div class="view view5 step">
           <label class="nav-btn back" for="v4" title="Previous step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Previous step</span></label>
-          <figure class="shot"><img src="screenshots/5-blocked.webp" width="720" height="1480" alt="The apps list: Subway Surfers, outlined, is already under Blocked"><figcaption>It's blocked until you enter your code</figcaption></figure>
+          <figure class="shot"><img src="screenshots/5-blocked.webp" width="720" height="1480" alt="The apps list: Subway Surfers, outlined, is already under Blocked"><span class="num" aria-hidden="true">5</span><figcaption>It's blocked until you enter your code</figcaption></figure>
           <span class="nav-btn none" aria-hidden="true"></span>
         </div>
       </div>
