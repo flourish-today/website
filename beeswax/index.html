@@ -248,7 +248,8 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
 .shots .to { width: 40px; height: 40px; flex: none; color: var(--ink); margin-top: 226px; }
 .shots .step { align-items: flex-start; justify-content: center; gap: 26px; }
 .shots .step figcaption { width: 340px; max-width: calc(100vw - 44px); }
-.shots .step .num { display: none; }
+.shots .shot .num { display: none; }
+.shots .shot .num svg { width: 22px; height: 22px; margin-top: 2px; }
 .shots .nav-btn { width: 52px; height: 52px; flex: none; margin-top: 220px; display: grid; place-items: center; border-radius: 50%; background: var(--honey); border: 2px solid var(--ink); box-shadow: 0 3px 0 var(--ink); color: var(--ink); cursor: pointer; }
 .shots .nav-btn:hover { background: #F9D566; }
 .shots .nav-btn svg { width: 24px; height: 24px; }
@@ -272,7 +273,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
 #v1:checked ~ .controls .d1, #v2:checked ~ .controls .d2, #v3:checked ~ .controls .d3, #v4:checked ~ .controls .d4, #v5:checked ~ .controls .d5 { background-image: var(--hex); }
 #v0:focus-visible ~ .controls .show, #v1:focus-visible ~ .controls .d1, #v2:focus-visible ~ .controls .d2, #v3:focus-visible ~ .controls .d3, #v4:focus-visible ~ .controls .d4, #v5:focus-visible ~ .controls .d5 { outline: 3px solid var(--sky-deep); outline-offset: 3px; border-radius: 10px; }
 
-/* Wide screens: "Show each step" shows all five side by side, so the arrows and numbers aren't needed */
+/* Wide screens: "Show each step" shows all five side by side, so the arrows and the row of numbers aren't needed */
 @media (min-width: 981px) {
   .shots .stage { display: flex; justify-content: center; align-items: flex-start; gap: 24px; width: min(100vw - 44px, 1700px); position: relative; left: 50%; transform: translateX(-50%); }
   #v1:checked ~ .stage .step, #v2:checked ~ .stage .step, #v3:checked ~ .stage .step, #v4:checked ~ .stage .step, #v5:checked ~ .stage .step { display: flex; }
@@ -280,7 +281,11 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
   .shots .step { flex: 1 1 0; min-width: 0; }
   .shots .step .shot { width: 100%; max-width: 320px; }
   .shots .step figcaption { width: 100%; }
-  .shots .step .num { display: grid; width: 44px; height: 49px; font-size: 1.2rem; }
+  .shots .shot .num { display: grid; width: 44px; height: 49px; font-size: 1.2rem; }
+  /* Before and after: the same size as each step */
+  .shots .pair-row { --shot: min(320px, (min(100vw - 44px, 1700px) - 96px) / 5); }
+  .shots .pair-row .shot { width: var(--shot); }
+  .shots .to { margin-top: calc(var(--shot) * 1.028 - 20px); }
 }
 
 /* Responsive */
@@ -408,6 +413,8 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
   <symbol id="list" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3.5 6 1.6 1.6L8 4.7M3.5 12.5l1.6 1.6L8 11.2M3.5 19l1.6 1.6L8 17.7M11.5 6.2h9M11.5 12.7h9M11.5 19.2h9"/></g></symbol>
   <symbol id="copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></g></symbol>
   <symbol id="tick" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="lock-open" viewBox="0 0 24 24"><path d="M8 11V8a4 4 0 0 1 7.7-1.6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><rect x="5.5" y="11" width="13" height="9.5" rx="2.2" fill="currentColor"/></symbol>
+  <symbol id="lock-shut" viewBox="0 0 24 24"><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><rect x="5.5" y="11" width="13" height="9.5" rx="2.2" fill="currentColor"/></symbol>
   <symbol id="arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
 
   <!-- Round icons: a filled circle with an outline, line art on top -->
@@ -479,9 +486,9 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
       <input class="vh" type="radio" name="shots-view" id="v0" aria-label="Before and after" checked><input class="vh" type="radio" name="shots-view" id="v1" aria-label="Step 1"><input class="vh" type="radio" name="shots-view" id="v2" aria-label="Step 2"><input class="vh" type="radio" name="shots-view" id="v3" aria-label="Step 3"><input class="vh" type="radio" name="shots-view" id="v4" aria-label="Step 4"><input class="vh" type="radio" name="shots-view" id="v5" aria-label="Step 5">
       <div class="stage">
         <div class="view view0 pair-row">
-          <figure class="shot"><img src="screenshots/before.webp" width="720" height="1480" alt="App drawer before locking, with Brave, Instagram, Vanadium and YouTube"><figcaption>Before</figcaption></figure>
+          <figure class="shot"><img src="screenshots/before.webp" width="720" height="1480" alt="App drawer before locking, with Brave, Instagram, Vanadium and YouTube"><span class="num" aria-hidden="true"><svg><use href="#lock-open"/></svg></span><figcaption>Before</figcaption></figure>
           <svg class="to" aria-hidden="true"><use href="#arrow"/></svg>
-          <figure class="shot"><img src="screenshots/after.webp" width="720" height="1480" alt="App drawer after locking, without Brave, Instagram, Vanadium and YouTube"><figcaption>After locking</figcaption></figure>
+          <figure class="shot"><img src="screenshots/after.webp" width="720" height="1480" alt="App drawer after locking, without Brave, Instagram, Vanadium and YouTube"><span class="num" aria-hidden="true"><svg><use href="#lock-shut"/></svg></span><figcaption>After locking</figcaption></figure>
         </div>
         <div class="view view1 step">
           <span class="nav-btn back none" aria-hidden="true"></span>
