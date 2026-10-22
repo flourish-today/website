@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-BTgY61liRIx1kyKtr/4fk+d1g9CLhY8MgFsb6yJ3uIo='; style-src 'unsafe-inline'; img-src 'self' data:; font-src data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-It+O1+tE0mmPvpsJQZq8IjSyOGAMJZB722YUE0kSwL4='; style-src 'unsafe-inline'; img-src 'self' data:; font-src data:; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light">
 <title>Beeswax – Create a dumbphone on Android</title>
@@ -19,7 +19,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Beeswax: Create a dumbphone on Android">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='18 18 72 72'%3E%3Ccircle cx='54' cy='54' r='36' fill='%23A6C8E4'/%3E%3Cg transform='translate(0 5.2)'%3E%3Cpath fill='%23F7CB46' d='M43,60.5A11,13.5 0 1,1 65,60.5A11,13.5 0 1,1 43,60.5Z'/%3E%3Cpath fill='%231A1A1A' d='M43.03,59.5H64.97A11,13.5 0 0,1 64.93,62H43.07A11,13.5 0 0,1 43.03,59.5Z M43.78,65.5H64.22A11,13.5 0 0,1 63.15,68H44.85A11,13.5 0 0,1 43.78,65.5Z'/%3E%3Cpath stroke='%231A1A1A' stroke-width='2.2' fill='none' d='M43,60.5A11,13.5 0 1,1 65,60.5A11,13.5 0 1,1 43,60.5Z'/%3E%3Cpath stroke='%231A1A1A' stroke-width='2.2' stroke-linecap='round' fill='none' d='M51.2,28.2Q49.8,24.8 46.6,23.6 M56.8,28.2Q58.2,24.8 61.4,23.6'/%3E%3Cpath fill='%231A1A1A' d='M43,37.5A11,10 0 1,1 65,37.5A11,10 0 1,1 43,37.5Z'/%3E%3Cpath fill='%23C8CDD2' stroke='%231A1A1A' stroke-width='2.2' d='M38.56,49.02A12,6 -24 0,0 43.44,59.98C48.92,57.54 51,51 54,45.5C51,47 44.04,46.58 38.56,49.02Z'/%3E%3Cpath fill='%23C8CDD2' stroke='%231A1A1A' stroke-width='2.2' d='M69.44,49.02A12,6 24 0,1 64.56,59.98C59.08,57.54 57,51 54,45.5C57,47 63.96,46.58 69.44,49.02Z'/%3E%3Cpath fill='%23FFFFFF' stroke='%231A1A1A' stroke-width='2.2' d='M37.19,41.72A13.5,7.5 -14 0,0 40.81,56.28C48.09,54.47 50.5,48.5 54,45.5C50.5,44 44.47,39.91 37.19,41.72Z'/%3E%3Cpath fill='%23FFFFFF' stroke='%231A1A1A' stroke-width='2.2' d='M70.81,41.72A13.5,7.5 14 0,1 67.19,56.28C59.91,54.47 57.5,48.5 54,45.5C57.5,44 63.53,39.91 70.81,41.72Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='18%2018%2072%2072'%3E%3Ccircle%20cx='54'%20cy='54'%20r='36'%20fill='%23A6C8E4'/%3E%3Cg%20transform='translate(0%205.2)'%3E%3Cpath%20fill='%23F7CB46'%20d='M43,60.5A11,13.5%200%201,1%2065,60.5A11,13.5%200%201,1%2043,60.5Z'/%3E%3Cpath%20fill='%231A1A1A'%20d='M43.03,59.5H64.97A11,13.5%200%200,1%2064.93,62H43.07A11,13.5%200%200,1%2043.03,59.5Z%20M43.78,65.5H64.22A11,13.5%200%200,1%2063.15,68H44.85A11,13.5%200%200,1%2043.78,65.5Z'/%3E%3Cpath%20stroke='%231A1A1A'%20stroke-width='2.2'%20fill='none'%20d='M43,60.5A11,13.5%200%201,1%2065,60.5A11,13.5%200%201,1%2043,60.5Z'/%3E%3Cpath%20stroke='%231A1A1A'%20stroke-width='2.2'%20stroke-linecap='round'%20fill='none'%20d='M51.2,28.2Q49.8,24.8%2046.6,23.6%20M56.8,28.2Q58.2,24.8%2061.4,23.6'/%3E%3Cpath%20fill='%231A1A1A'%20d='M43,37.5A11,10%200%201,1%2065,37.5A11,10%200%201,1%2043,37.5Z'/%3E%3Cpath%20fill='%23C8CDD2'%20stroke='%231A1A1A'%20stroke-width='2.2'%20d='M38.56,49.02A12,6%20-24%200,0%2043.44,59.98C48.92,57.54%2051,51%2054,45.5C51,47%2044.04,46.58%2038.56,49.02Z'/%3E%3Cpath%20fill='%23C8CDD2'%20stroke='%231A1A1A'%20stroke-width='2.2'%20d='M69.44,49.02A12,6%2024%200,1%2064.56,59.98C59.08,57.54%2057,51%2054,45.5C57,47%2063.96,46.58%2069.44,49.02Z'/%3E%3Cpath%20fill='%23FFFFFF'%20stroke='%231A1A1A'%20stroke-width='2.2'%20d='M37.19,41.72A13.5,7.5%20-14%200,0%2040.81,56.28C48.09,54.47%2050.5,48.5%2054,45.5C50.5,44%2044.47,39.91%2037.19,41.72Z'/%3E%3Cpath%20fill='%23FFFFFF'%20stroke='%231A1A1A'%20stroke-width='2.2'%20d='M70.81,41.72A13.5,7.5%2014%200,1%2067.19,56.28C59.91,54.47%2057.5,48.5%2054,45.5C57.5,44%2063.53,39.91%2070.81,41.72Z'/%3E%3C/g%3E%3C/svg%3E">
 <!--
   Fonts built into this page: Fredoka (Copyright 2016 The Fredoka Project Authors) and
   Nunito (Copyright 2014 The Nunito Project Authors), both under the SIL Open Font License 1.1,
@@ -146,9 +146,9 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 
 /* Sky: clouds behind everything, all the way down */
 main { position: relative; overflow: hidden; }
-main > :not(.sky) { position: relative; z-index: 1; }
-.sky { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-.cloud { position: absolute; display: block; opacity: .6; }
+main > * { position: relative; z-index: 1; }
+/* Each cloud sits in a section, so opening the FAQ or the steps doesn't move the ones above */
+.cloud { position: absolute; z-index: -1; display: block; opacity: .6; pointer-events: none; }
 @media (prefers-reduced-motion: no-preference) {
   .cloud { animation: drift var(--d) ease-in-out infinite alternate; }
   @keyframes drift { to { transform: translateX(var(--x)); } }
@@ -234,24 +234,40 @@ footer ul a { font-weight: 600; color: #1E3517; text-decoration: none; }
 footer ul a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--ink); text-decoration-thickness: 3px; }
 footer .xmr { user-select: all; -webkit-user-select: all; font-family: var(--mono); font-size: 0.78rem; line-height: 1.6; overflow-wrap: anywhere; }
 
-/* Screenshots: a before and after, and the whole flow behind "Show the steps" (no script needed) */
-.shots .pair-row { display: flex; justify-content: center; align-items: center; gap: 26px; margin-top: 48px; }
-.shot { margin: 0; width: 240px; flex: none; display: grid; gap: 14px; justify-items: center; }
+/* Screenshots: the before and after, or one step at a time, in the same spot.
+   Radio buttons choose the view, so it needs no script; arrow keys move between steps. */
+#screenshots { scroll-margin-top: 14px; }
+.shots .vh { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; overflow: hidden; pointer-events: none; }
+.shots .stage { margin-top: 40px; display: grid; justify-items: center; }
+.shots .view { display: none; }
+.shots .pair-row { justify-content: center; align-items: flex-start; gap: 26px; }
+.shot { margin: 0; width: 240px; flex: none; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; justify-items: center; }
 .shot img { width: 100%; height: auto; display: block; border: 2px solid var(--ink); border-radius: 22px; background: #111A2C; }
-.shot figcaption { display: flex; align-items: center; gap: 10px; font: 600 1.1rem/1.25 var(--display); color: var(--ink); text-align: left; }
+.shot figcaption { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 2.6em; font: 600 1.1rem/1.25 var(--display); color: var(--ink); text-align: left; }
 .shot .num { width: 36px; height: 40px; font-size: 1rem; }
-.shots .to { width: 40px; height: 40px; flex: none; color: var(--ink); margin-top: -44px; }
-.shots details { margin-top: 40px; }
-.shots summary { list-style: none; display: flex; justify-content: center; }
-.shots summary > span { display: inline-flex; align-items: center; justify-content: center; min-width: 13.5em; gap: 10px; cursor: pointer; font: 600 1.05rem/1 var(--display); color: var(--ink); background: var(--honey); border: 2px solid var(--ink); border-radius: 14px; padding: 12px 18px; box-shadow: 0 3px 0 var(--ink); }
-.shots summary > span:hover { background: #F9D566; }
-.shots summary .plus { width: 26px; height: 26px; background: var(--white); transition: none; }
-.shots summary .when-open, .shots details[open] summary .when-closed { display: none; }
-.shots details[open] summary .when-open { display: inline; }
-.shots .flow-scroll { overflow-x: auto; margin-top: 36px; padding: 4px 0 12px; scroll-snap-type: x mandatory; }
-.shots .flow { display: flex; gap: 22px; width: max-content; margin: 0 auto; padding: 0 4px; }
-.shots .flow .shot { width: 196px; scroll-snap-align: center; }
-.shots .flow figcaption { font-size: 1rem; }
+.shots .to { width: 40px; height: 40px; flex: none; color: var(--ink); margin-top: 226px; }
+.shots .step { align-items: flex-start; justify-content: center; gap: 26px; }
+.shots .step figcaption { width: 340px; max-width: calc(100vw - 44px); }
+.shots .nav-btn { width: 52px; height: 52px; flex: none; margin-top: 220px; display: grid; place-items: center; border-radius: 50%; background: var(--honey); border: 2px solid var(--ink); box-shadow: 0 3px 0 var(--ink); color: var(--ink); cursor: pointer; }
+.shots .nav-btn:hover { background: #F9D566; }
+.shots .nav-btn svg { width: 24px; height: 24px; }
+.shots .nav-btn.back svg { transform: scaleX(-1); }
+.shots .nav-btn.none { visibility: hidden; }
+.shots .controls { margin-top: 22px; min-height: 52px; display: flex; justify-content: center; align-items: center; }
+.shots .ctl-pair, .shots .ctl-steps { display: none; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.shots .show { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font: 600 1.05rem/1 var(--display); color: var(--ink); background: var(--honey); border: 2px solid var(--ink); border-radius: 14px; padding: 12px 18px; box-shadow: 0 3px 0 var(--ink); }
+.shots .show:hover { background: #F9D566; }
+.shots .show svg { width: 20px; height: 20px; }
+.shots .dot { width: 40px; height: 44px; display: grid; place-items: center; cursor: pointer; font: 700 1rem/1 var(--display); color: var(--ink); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 62'%3E%3Cpath d='M28 2.5 53.5 17v28L28 59.5 2.5 45V17Z' fill='%23FFFFFF' stroke='%231A1A1A' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+.shots .dot:hover { background-image: var(--hex); }
+.shots .back-link { margin-left: 12px; font-weight: 700; color: var(--text); cursor: pointer; text-decoration: underline; text-decoration-color: var(--honey); text-decoration-thickness: 3px; text-underline-offset: 3px; }
+.shots .back-link:hover { color: var(--ink); }
+#v0:checked ~ .stage .view0 { display: flex; }
+#v0:checked ~ .controls .ctl-pair { display: flex; }
+#v1:checked ~ .stage .view1, #v2:checked ~ .stage .view2, #v3:checked ~ .stage .view3, #v4:checked ~ .stage .view4, #v5:checked ~ .stage .view5 { display: flex; }
+#v1:checked ~ .controls .ctl-steps, #v2:checked ~ .controls .ctl-steps, #v3:checked ~ .controls .ctl-steps, #v4:checked ~ .controls .ctl-steps, #v5:checked ~ .controls .ctl-steps { display: flex; }
+#v1:checked ~ .controls .d1, #v2:checked ~ .controls .d2, #v3:checked ~ .controls .d3, #v4:checked ~ .controls .d4, #v5:checked ~ .controls .d5 { background-image: var(--hex); }
+#v0:focus-visible ~ .controls .show, #v1:focus-visible ~ .controls .d1, #v2:focus-visible ~ .controls .d2, #v3:focus-visible ~ .controls .d3, #v4:focus-visible ~ .controls .d4, #v5:focus-visible ~ .controls .d5 { outline: 3px solid var(--sky-deep); outline-offset: 3px; border-radius: 10px; }
 
 /* Responsive */
 @media (max-width: 980px) {
@@ -290,8 +306,11 @@ footer .xmr { user-select: all; -webkit-user-select: all; font-family: var(--mon
   .comb-c, .comb-d { width: 80px; height: 71px; }
   .shots .pair-row { gap: 12px; }
   .shots .pair-row .shot { width: calc(50% - 32px); max-width: 200px; }
-  .shots .to { width: 28px; height: 28px; margin-top: -36px; }
-  .shots .flow .shot { width: 180px; }
+  .shots .to { width: 28px; height: 28px; margin-top: 140px; }
+  .shots .step { gap: 10px; }
+  .shots .step .shot { width: calc(100% - 104px); max-width: 200px; }
+  .shots .nav-btn { width: 42px; height: 42px; margin-top: 180px; }
+  .shots .dot { width: 34px; height: 38px; }
 }
 </style>
 </head>
@@ -393,13 +412,6 @@ footer .xmr { user-select: all; -webkit-user-select: all; font-family: var(--mon
 </header>
 
 <main id="main">
-  <div class="sky" aria-hidden="true">
-    <svg class="cloud" style="top:12%;left:-60px;width:260px;height:100px;--d:44s;--x:36px"><use href="#cloud"/></svg>
-    <svg class="cloud" style="top:31%;right:-50px;width:240px;height:92px;--d:53s;--x:-36px"><use href="#cloud"/></svg>
-    <svg class="cloud" style="top:50%;left:-40px;width:220px;height:84px;--d:62s;--x:36px"><use href="#cloud"/></svg>
-    <svg class="cloud" style="top:69%;right:-60px;width:260px;height:100px;--d:71s;--x:-36px"><use href="#cloud"/></svg>
-    <svg class="cloud" style="top:87%;left:-50px;width:240px;height:92px;--d:80s;--x:36px"><use href="#cloud"/></svg>
-  </div>
 
   <div class="hero" id="top">
     <svg class="deco trail-a" viewBox="0 0 120 230" aria-hidden="true"><path d="M60 4C24 40 8 90 44 116s44 58 4 92" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7"/></svg>
@@ -434,30 +446,52 @@ footer .xmr { user-select: all; -webkit-user-select: all; font-family: var(--mon
 
 
   <section class="shots" id="screenshots" aria-labelledby="shots-h">
+    <svg class="cloud" aria-hidden="true" style="top:-114px;left:-60px;width:260px;height:100px;--d:44s;--x:36px"><use href="#cloud"/></svg>
     <div class="wrap">
       <h2 id="shots-h">Screenshots</h2>
-      <p class="lead">Browsers and the apps you pick disappear when you lock. Anything you install afterward is blocked until you unlock. Updates continue as normal.</p>
-      <div class="pair-row">
-        <figure class="shot"><img src="screenshots/before.webp" width="720" height="1480" alt="App drawer before locking, with Brave, Instagram, Vanadium and YouTube"><figcaption>Before</figcaption></figure>
-        <svg class="to" aria-hidden="true"><use href="#arrow"/></svg>
-        <figure class="shot"><img src="screenshots/after.webp" width="720" height="1480" alt="App drawer after locking, without Brave, Instagram, Vanadium and YouTube"><figcaption>After locking</figcaption></figure>
-      </div>
-      <details>
-        <summary><span><span class="when-closed">Show each step</span><span class="when-open">Hide</span><span class="plus" aria-hidden="true"></span></span></summary>
-        <div class="flow-scroll">
-          <div class="flow">
-            <figure class="shot"><img src="screenshots/1-pick.webp" width="720" height="1480" alt="Beeswax before locking: Brave, Instagram, Vanadium and YouTube under Blocked; Aurora Store, Bitwarden, Obtainium, Organic Maps and Signal under Allowed"><figcaption><span class="num">1</span>Pick what to block</figcaption></figure>
-            <figure class="shot"><img src="screenshots/2-code.webp" width="720" height="1480" alt="The new lock code, shown once to save"><figcaption><span class="num">2</span>Save your lock code</figcaption></figure>
-            <figure class="shot"><img src="screenshots/3-locked.webp" width="720" height="1480" alt="Beeswax locked, asking for the lock code"><figcaption><span class="num">3</span>Lock it</figcaption></figure>
-            <figure class="shot"><img src="screenshots/4-install.webp" width="720" height="1480" alt="Aurora Store downloading Subway Surfers"><figcaption><span class="num">4</span>Later, you install a game</figcaption></figure>
-            <figure class="shot"><img src="screenshots/5-blocked.webp" width="720" height="1480" alt="The apps list: Subway Surfers, outlined, is already under Blocked"><figcaption><span class="num">5</span>It's blocked straight away—you can't open it without the lock code</figcaption></figure>
-          </div>
+      <p class="lead">Browsers and the apps you pick disappear when you lock. Anything you install afterward is blocked until you enter your code and unblock it. Updates continue as normal.</p>
+      <input class="vh" type="radio" name="shots-view" id="v0" aria-label="Before and after" checked><input class="vh" type="radio" name="shots-view" id="v1" aria-label="Step 1"><input class="vh" type="radio" name="shots-view" id="v2" aria-label="Step 2"><input class="vh" type="radio" name="shots-view" id="v3" aria-label="Step 3"><input class="vh" type="radio" name="shots-view" id="v4" aria-label="Step 4"><input class="vh" type="radio" name="shots-view" id="v5" aria-label="Step 5">
+      <div class="stage">
+        <div class="view view0 pair-row">
+          <figure class="shot"><img src="screenshots/before.webp" width="720" height="1480" alt="App drawer before locking, with Brave, Instagram, Vanadium and YouTube"><figcaption>Before</figcaption></figure>
+          <svg class="to" aria-hidden="true"><use href="#arrow"/></svg>
+          <figure class="shot"><img src="screenshots/after.webp" width="720" height="1480" alt="App drawer after locking, without Brave, Instagram, Vanadium and YouTube"><figcaption>After locking</figcaption></figure>
         </div>
-      </details>
+        <div class="view view1 step">
+          <span class="nav-btn back none" aria-hidden="true"></span>
+          <figure class="shot"><img src="screenshots/1-pick.webp" width="720" height="1480" alt="Beeswax before locking: Brave, Instagram, Vanadium and YouTube under Blocked; Aurora Store, Bitwarden, Obtainium, Organic Maps and Signal under Allowed"><figcaption><span class="num">1</span>Pick what to block</figcaption></figure>
+          <label class="nav-btn" for="v2" title="Next step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Next step</span></label>
+        </div>
+        <div class="view view2 step">
+          <label class="nav-btn back" for="v1" title="Previous step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Previous step</span></label>
+          <figure class="shot"><img src="screenshots/2-code.webp" width="720" height="1480" alt="The new lock code, shown once to save"><figcaption><span class="num">2</span>Save your lock code</figcaption></figure>
+          <label class="nav-btn" for="v3" title="Next step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Next step</span></label>
+        </div>
+        <div class="view view3 step">
+          <label class="nav-btn back" for="v2" title="Previous step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Previous step</span></label>
+          <figure class="shot"><img src="screenshots/3-locked.webp" width="720" height="1480" alt="Beeswax locked, asking for the lock code"><figcaption><span class="num">3</span>Lock it</figcaption></figure>
+          <label class="nav-btn" for="v4" title="Next step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Next step</span></label>
+        </div>
+        <div class="view view4 step">
+          <label class="nav-btn back" for="v3" title="Previous step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Previous step</span></label>
+          <figure class="shot"><img src="screenshots/4-install.webp" width="720" height="1480" alt="Aurora Store downloading Subway Surfers"><figcaption><span class="num">4</span>Later, you install a game</figcaption></figure>
+          <label class="nav-btn" for="v5" title="Next step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Next step</span></label>
+        </div>
+        <div class="view view5 step">
+          <label class="nav-btn back" for="v4" title="Previous step"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh">Previous step</span></label>
+          <figure class="shot"><img src="screenshots/5-blocked.webp" width="720" height="1480" alt="The apps list: Subway Surfers, outlined, is already under Blocked"><figcaption><span class="num">5</span>It's blocked straight away—you can't open it without the lock code</figcaption></figure>
+          <span class="nav-btn none" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="ctl-pair"><label class="show" for="v1">Show each step<svg aria-hidden="true"><use href="#arrow"/></svg></label></div>
+        <div class="ctl-steps"><label class="dot d1" for="v1" title="Step 1">1</label><label class="dot d2" for="v2" title="Step 2">2</label><label class="dot d3" for="v3" title="Step 3">3</label><label class="dot d4" for="v4" title="Step 4">4</label><label class="dot d5" for="v5" title="Step 5">5</label><label class="back-link" for="v0">Back to before and after</label></div>
+      </div>
     </div>
   </section>
 
   <section class="why" id="why" aria-labelledby="why-h">
+    <svg class="cloud" aria-hidden="true" style="top:-25px;right:-50px;width:240px;height:92px;--d:53s;--x:-36px"><use href="#cloud"/></svg>
     <div class="wrap">
       <h2 id="why-h">Why Beeswax?</h2>
       <div class="grid">
@@ -486,6 +520,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; font-family: var(--mon
   </section>
 
   <section class="privacy" id="privacy" aria-labelledby="privacy-h">
+    <svg class="cloud" aria-hidden="true" style="top:440px;left:-40px;width:220px;height:84px;--d:62s;--x:36px"><use href="#cloud"/></svg>
     <div class="wrap">
       <h2 id="privacy-h">Privacy and security</h2>
       <p class="lead">Beeswax collects and shares no personal data. It has no telemetry, one permission, and no network access. A list of all Android device management APIs used is in PRIVACY.md. Beeswax has reproducible builds so you can verify the source code is what runs on your device.</p>
@@ -527,6 +562,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; font-family: var(--mon
   </section>
 
   <section class="faq" id="faq" aria-labelledby="faq-h">
+    <svg class="cloud" aria-hidden="true" style="top:-52px;right:-60px;width:260px;height:100px;--d:71s;--x:-36px"><use href="#cloud"/></svg>
     <div class="wrap">
       <h2 id="faq-h">FAQ</h2>
       <div class="list">
@@ -564,6 +600,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; font-family: var(--mon
   </section>
 
   <section class="download" id="download" aria-labelledby="dl-h">
+    <svg class="cloud" aria-hidden="true" style="top:-7px;left:-50px;width:240px;height:92px;--d:80s;--x:36px"><use href="#cloud"/></svg>
     <div class="wrap">
       <div class="card dl-card">
       <svg class="deco comb-c" aria-hidden="true"><use href="#comb"/></svg>
@@ -649,6 +686,21 @@ for (const b of document.querySelectorAll('.buzz')) {
   b.addEventListener('click', () => {
     b.classList.add('say');
     clearTimeout(b.t); b.t = setTimeout(() => b.classList.remove('say'), 1400);
+  });
+}
+// Swipe between the screenshot steps on touch screens. Without JavaScript, the arrows and numbers do the same.
+const stage = document.querySelector('.shots .stage');
+if (stage) {
+  let sx = null, sy = 0;
+  stage.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  stage.addEventListener('touchend', e => {
+    if (sx === null) return;
+    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    sx = null;
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    const now = Number(document.querySelector('input[name="shots-view"]:checked').id.slice(1));
+    const next = document.getElementById('v' + (now + (dx < 0 ? 1 : -1)));
+    if (next) next.checked = true;
   });
 }
 </script>
