@@ -2,7 +2,7 @@
 
 This page sets the direction. Changes keep this look and do not redesign it.
 
-Dial: ENERGY 3 / RHYTHM 2 / MOTION 1
+Dial: ENERGY 3 / RHYTHM 2 / MOTION 1 (smooth in-page scrolling only)
 
 ## Identity
 
@@ -42,11 +42,12 @@ Bee stickers: everything looks like a die-cut sticker. Flat fills and dark ink o
 
 ## Motion
 
-Nothing moves. Hover changes color only. No lifts, slides, pulses, drifting or smooth scrolling.
+Hover changes color only. No lifts, slides, pulses or drifting. The one exception: links within the page (like Download) scroll smoothly, and jump instead when the visitor's system asks for reduced motion.
 
 ## Rules
 
 - Fonts and images stay built in or local. The script's sha256 is in the CSP `script-src`.
-- The page works fully without JavaScript. The screenshot views are radio inputs (`#v0` to `#v5`) that stay siblings of `.stage` and `.controls`.
-- Tap targets are at least 44px. Every focusable element shows the focus ring.
+- The page works fully without JavaScript. The script only adds the copy buttons and the bees' "bzz".
+- Tap targets are at least 44px (small copy buttons get an invisible 44px hit area). Every focusable element shows the focus ring.
+- `og.png` (1200×630) is the link preview: the hero's headline, first sentence and before and after. Re-render it when the hero changes.
 - No horizontal scroll at any width.
