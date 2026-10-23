@@ -205,6 +205,7 @@ details[open] > summary .plus { transform: rotate(45deg); }
 .faq summary { padding: 20px 24px; }
 .faq .ans { padding: 0 24px 24px; max-width: 46em; }
 .faq .ans p + p { margin-top: 12px; }
+.faq .ans ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
 
 /* Download */
 .download { text-align: center; padding-top: 12px; padding-bottom: 24px; }
@@ -240,7 +241,7 @@ footer ul a:hover { color: var(--ink); text-decoration: underline; text-decorati
 footer .xmr-label { display: flex; align-items: center; min-height: 44px; gap: 8px; font-weight: 600; }
 footer .xmr-label svg { width: 22px; height: 22px; flex: none; }
 footer .xmr-box { margin-top: 6px; background: #1D2229; border-radius: 12px; padding: 10px 12px; font: 500 0.78rem/1.6 var(--mono); }
-footer .xmr-box .copy { position: relative; float: right; width: 28px; height: 28px; border-radius: 8px; margin: 0 0 4px 8px; }
+footer .xmr-box .copy { position: relative; inset: auto; float: right; width: 28px; height: 28px; border-radius: 8px; margin: 0 0 4px 8px; }
 footer .xmr-box .copy svg { width: 14px; height: 14px; }
 footer .xmr-box .copy::before { inset: -10px; }
 footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #EEF1F5; overflow-wrap: anywhere; }
@@ -393,8 +394,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
   <symbol id="i-globe-off" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="11" fill="#FFFFFF"/><ellipse cx="24" cy="24" rx="4.5" ry="11"/><path d="M13 24h22"/></g><path d="M12 12l24 24" stroke="#F7CB46" stroke-width="7" stroke-linecap="round"/><path d="M12 12l24 24" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"/></symbol>
   <symbol id="i-lock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 22v-3.5a5.5 5.5 0 0 1 11 0V22" fill="none"/><rect x="14.5" y="21.5" width="19" height="14" rx="3.5" fill="#FFFFFF"/><path d="M24 26.5v4" fill="none"/></g></symbol>
   <symbol id="i-shield" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 11.5 34 15.5v7c0 7-4.5 11.5-10 13.5-5.5-2-10-6.5-10-13.5v-7Z" fill="#FFFFFF"/><path d="m19.5 24 3.2 3.2 6-6.4" fill="none"/></g></symbol>
-  <symbol id="i-update" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g fill="none" stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 20a8.6 8.6 0 0 0-15.5-1.5"/><path d="M32.5 13.5V20H26"/><path d="M16 28a8.6 8.6 0 0 0 15.5 1.5"/><path d="M15.5 34.5V28H22"/></g></symbol>
-  <symbol id="i-check" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><path d="m15.5 24.5 6 6 11-12" fill="none" stroke="#1A1A1A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-new-off" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="12.5" y="12.5" width="19" height="19" rx="5" fill="#FFFFFF"/><path d="M22 17.5v9M17.5 22h9" fill="none"/><path d="M28.5 29.5v-2a3.5 3.5 0 0 1 7 0v2" fill="none"/><rect x="26" y="29" width="12" height="9" rx="2.5" fill="#FFFFFF"/></g></symbol>
 </svg>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -469,18 +469,18 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
         </article>
         <article class="card">
           <svg class="ic ic-lg" aria-hidden="true"><use href="#i-globe-off"/></svg>
-          <h3>Block browsers and new apps</h3>
-          <p>Block any browser, even the built-in one that can't be uninstalled. Every app you install after locking is blocked to prevent bypassing.</p>
+          <h3>Block browsers</h3>
+          <p>Block any browser, even the built-in one that can't be uninstalled.</p>
+        </article>
+        <article class="card">
+          <svg class="ic ic-lg" aria-hidden="true"><use href="#i-new-off"/></svg>
+          <h3>Block new apps</h3>
+          <p>Every app you install after locking is blocked to prevent bypassing.</p>
         </article>
         <article class="card">
           <svg class="ic ic-lg" aria-hidden="true"><use href="#i-shield"/></svg>
           <h3>No easy bypass</h3>
           <p>The only ways around Beeswax's restrictions are entering the lock code or doing a factory reset.</p>
-        </article>
-        <article class="card">
-          <svg class="ic ic-lg" aria-hidden="true"><use href="#i-update"/></svg>
-          <h3>Apps still update</h3>
-          <p>Beeswax lets you update your apps without letting you access new ones.</p>
         </article>
       </div>
     </div>
@@ -540,8 +540,13 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
           <div class="ans"><p>Without your lock code, you can't access new apps you install and can't access a web browser. You can still export all your data and access the apps you already have. If you need to install new apps or access a browser, you'll need to factory reset your phone.</p></div>
         </details>
         <details class="card">
-          <summary>Can apps still open web pages?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>Some can. An app with a built-in browser, like a help link or an in-app browser, may still open websites. Choose the apps you keep with that in mind.</p></div>
+          <summary>What doesn't work with Beeswax?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><ul>
+            <li>You can't use Private Space, and you can't add other users while Beeswax is locked.</li>
+            <li>Links that would open in a browser don't open while Beeswax is locked.</li>
+            <li>Apps with a built-in browser, like a help link or an in-app browser, may still open websites. Choose the apps you keep with that in mind.</li>
+            <li>Wi-Fi sign-in pages, like at a hotel or café, still open.</li>
+          </ul></div>
         </details>
         <details class="card">
           <summary>How do I remove Beeswax?<span class="plus" aria-hidden="true"></span></summary>
