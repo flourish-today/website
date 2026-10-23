@@ -62,6 +62,7 @@ code { font-family: var(--mono); font-size: 0.86em; background: var(--honey-pale
 .narrow { max-width: 900px; }
 .skip { position: absolute; left: -999px; top: 8px; z-index: 20; background: var(--ink); color: #fff; padding: 12px 14px; border-radius: 10px; }
 .skip:focus { left: 12px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 section { padding: 84px 0; scroll-margin-top: 76px; }
 #download { scroll-margin-top: 82px; }
 .lead { font-size: clamp(1.1rem, 2.1vw, 1.3rem); line-height: 1.55; max-width: 38em; margin: 20px auto 0; text-align: center; }
@@ -90,7 +91,7 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 .btn-light { background: #99D27F; }
 .btn-light:hover { background: #B3DE9C; }
 .minor { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px 34px; margin-top: 30px; }
-.minor a, .more a { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text); text-decoration-color: transparent; }
+.minor a, .more a { display: inline-flex; align-items: center; min-height: 44px; gap: 8px; font-weight: 700; color: var(--text); text-decoration-color: transparent; }
 .minor a:hover, .more a:hover { color: var(--ink); text-decoration-color: var(--honey); }
 .more a { padding: 8.5px 0; margin: -8.5px 0; }
 .minor svg { width: 21px; height: 21px; }
@@ -216,6 +217,7 @@ details[open] > summary .plus { transform: rotate(45deg); }
 .copy { position: absolute; top: 12px; right: 12px; z-index: 1; width: 36px; height: 36px; border-radius: 10px; border: 2px solid var(--ink); background: var(--honey); color: var(--ink); display: grid; place-items: center; cursor: pointer; padding: 0; }
 .copy:hover { background: #F9D566; }
 .copy svg { width: 18px; height: 18px; }
+.copy::before { content: ""; position: absolute; inset: -6px; }
 .copy .done { display: none; }
 .copy.ok .idle { display: none; }
 .copy.ok .done { display: block; }
@@ -228,18 +230,19 @@ details[open] > summary .plus { transform: rotate(45deg); }
 /* Footer: one style for every column */
 footer { background: #84C46B; color: var(--ink); padding: 40px 0 64px; margin-top: -1px; }
 .foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 44px; }
-footer .brand { margin-bottom: 16px; }
+footer .brand { min-height: 44px; margin-bottom: 12px; }
 footer p a { font-weight: 600; text-decoration-color: var(--ink); }
-footer h3 { font: 600 1.05rem/1 var(--display); margin-bottom: 16px; }
-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+footer h3 { font: 600 1.05rem/1 var(--display); margin-bottom: 6px; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; }
 footer li, footer p { color: #1E3517; font-size: 0.97rem; }
-footer ul a { font-weight: 600; color: #1E3517; text-decoration: none; }
+footer ul a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; color: #1E3517; text-decoration: none; }
 footer ul a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--ink); text-decoration-thickness: 3px; }
-footer .xmr-label { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+footer .xmr-label { display: flex; align-items: center; min-height: 44px; gap: 8px; font-weight: 600; }
 footer .xmr-label svg { width: 22px; height: 22px; flex: none; }
-footer .xmr-box { background: #1D2229; border-radius: 12px; padding: 10px 12px; font: 500 0.78rem/1.6 var(--mono); }
-footer .xmr-box .copy { position: static; float: right; width: 28px; height: 28px; border-radius: 8px; margin: 0 0 4px 8px; }
+footer .xmr-box { margin-top: 6px; background: #1D2229; border-radius: 12px; padding: 10px 12px; font: 500 0.78rem/1.6 var(--mono); }
+footer .xmr-box .copy { position: relative; float: right; width: 28px; height: 28px; border-radius: 8px; margin: 0 0 4px 8px; }
 footer .xmr-box .copy svg { width: 14px; height: 14px; }
+footer .xmr-box .copy::before { inset: -10px; }
 footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #EEF1F5; overflow-wrap: anywhere; }
 
 /* Screenshots: the five steps in one row; on narrower screens the row scrolls sideways inside itself */
@@ -462,22 +465,22 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
         <article class="card">
           <svg class="ic ic-lg" aria-hidden="true"><use href="#i-lock"/></svg>
           <h3>Block any app</h3>
-          <p>Pick the apps you want to block, like Instagram or YouTube. They disappear from your phone until you allow them with your lock code.</p>
+          <p>Pick any app, like Instagram or YouTube, and it disappears from your phone.</p>
         </article>
         <article class="card">
           <svg class="ic ic-lg" aria-hidden="true"><use href="#i-globe-off"/></svg>
-          <h3>Browsers and new apps, blocked</h3>
-          <p>Every web browser, even the built-in one that can't be uninstalled, and every app you install after locking are blocked by default.</p>
+          <h3>Block browsers and new apps</h3>
+          <p>Block any browser, even the built-in one that can't be uninstalled. Every app you install after locking is blocked to prevent bypassing.</p>
         </article>
         <article class="card">
           <svg class="ic ic-lg" aria-hidden="true"><use href="#i-shield"/></svg>
           <h3>No easy bypass</h3>
-          <p>Restarting, booting into safe mode, or connecting with ADB won't get you around it. Only the lock code or a factory reset get through.</p>
+          <p>The only ways around Beeswax's restrictions are entering the lock code or doing a factory reset.</p>
         </article>
         <article class="card">
           <svg class="ic ic-lg" aria-hidden="true"><use href="#i-update"/></svg>
           <h3>Apps still update</h3>
-          <p>Unlike blockers that use separate user or work profiles, Beeswax lets you update your apps without letting you access new ones.</p>
+          <p>Beeswax lets you update your apps without letting you access new ones.</p>
         </article>
       </div>
     </div>
@@ -525,20 +528,24 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
       <h2 id="faq-h">FAQ</h2>
       <div class="list">
         <details class="card">
+          <summary>Does Beeswax work on my phone?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>Beeswax has only been tested on GrapheneOS so far. Other versions of Android haven't been tested yet.</p></div>
+        </details>
+        <details class="card">
+          <summary>Do I need a computer or a factory reset?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>You need a computer with ADB once, during setup. Android only lets Beeswax manage a phone with no accounts, no other users and no Private Space, so you'll remove those first. A factory reset always works if that's easier.</p></div>
+        </details>
+        <details class="card">
           <summary>What if I forget my lock code?<span class="plus" aria-hidden="true"></span></summary>
           <div class="ans"><p>Without your lock code, you can't access new apps you install and can't access a web browser. You can still export all your data and access the apps you already have. If you need to install new apps or access a browser, you'll need to factory reset your phone.</p></div>
         </details>
         <details class="card">
+          <summary>Can apps still open web pages?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>Some can. An app with a built-in browser, like a help link or an in-app browser, may still open websites. Choose the apps you keep with that in mind.</p></div>
+        </details>
+        <details class="card">
           <summary>How do I remove Beeswax?<span class="plus" aria-hidden="true"></span></summary>
           <div class="ans"><p>Enter your lock code, tap Unlock, then tap Deactivate and confirm. See the <a href="https://github.com/flourish-today/beeswax/blob/main/SETUP.md">setup guide</a> for more info.</p></div>
-        </details>
-        <details class="card">
-          <summary>Was Beeswax made with AI?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>Yes, it was written and reviewed with Claude Opus 5.5. The app itself contains no AI and never connects to the internet. More reviews are welcome.</p></div>
-        </details>
-        <details class="card">
-          <summary>Will I always need ADB?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>If GrapheneOS adds support for QR code provisioning during setup, Beeswax could be set up without a computer by scanning a QR code during initial phone setup (<a href="https://github.com/GrapheneOS/platform_packages_apps_SetupWizard2/issues/35">issue</a> / <a href="https://github.com/GrapheneOS/platform_packages_apps_SetupWizard2/pull/40">earlier attempt, closed</a>). You can react to the issue to show support, but please only comment if you have something meaningful to add.</p></div>
         </details>
       </div>
       <p class="more"><a href="https://github.com/flourish-today/beeswax/blob/main/FAQ.md"><svg aria-hidden="true"><use href="#doc"/></svg>Full FAQ</a></p>
