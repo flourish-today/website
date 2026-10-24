@@ -386,10 +386,10 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
   <symbol id="arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
 
   <!-- Round icons: a filled circle with an outline, line art on top -->
-  <symbol id="i-globe-off" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="11" fill="#FFFFFF"/><ellipse cx="24" cy="24" rx="4.5" ry="11"/><path d="M13 24h22"/></g><path d="M12 12l24 24" stroke="#F7CB46" stroke-width="7" stroke-linecap="round"/><path d="M12 12l24 24" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="i-globe-off" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="11" fill="#FFFFFF"/><ellipse cx="24" cy="24" rx="4.5" ry="11"/><path d="M13 24h22"/></g><path d="M14.5 14.5l19 19" stroke="#F7CB46" stroke-width="7" stroke-linecap="round"/><path d="M14.5 14.5l19 19" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"/></symbol>
   <symbol id="i-lock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 22v-3.5a5.5 5.5 0 0 1 11 0V22" fill="none"/><rect x="14.5" y="21.5" width="19" height="14" rx="3.5" fill="#FFFFFF"/><path d="M24 26.5v4" fill="none"/></g></symbol>
   <symbol id="i-shield" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 11.5 34 15.5v7c0 7-4.5 11.5-10 13.5-5.5-2-10-6.5-10-13.5v-7Z" fill="#FFFFFF"/><path d="m19.5 24 3.2 3.2 6-6.4" fill="none"/></g></symbol>
-  <symbol id="i-new-off" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="12.5" y="12.5" width="19" height="19" rx="5" fill="#FFFFFF"/><path d="M22 17.5v9M17.5 22h9" fill="none"/><path d="M28.5 29.5v-2a3.5 3.5 0 0 1 7 0v2" fill="none"/><rect x="26" y="29" width="12" height="9" rx="2.5" fill="#FFFFFF"/></g></symbol>
+  <symbol id="i-install" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M24 11v14m0 0-6-6m6 6 6-6"/><path d="M13.5 27v6.5a2 2 0 0 0 2 2h17a2 2 0 0 0 2-2V27" fill="#FFFFFF"/></g></symbol>
 </svg>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -463,7 +463,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
           <p>Block any browser, even the built-in one that can't be uninstalled.</p>
         </article>
         <article class="card">
-          <svg class="ic ic-lg" aria-hidden="true"><use href="#i-new-off"/></svg>
+          <svg class="ic ic-lg" aria-hidden="true"><use href="#i-install"/></svg>
           <h3>Block new apps</h3>
           <p>Every app you install after locking is blocked to prevent bypassing.</p>
         </article>
@@ -534,19 +534,18 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
         <details class="card">
           <summary>What doesn't work with Beeswax?<span class="plus" aria-hidden="true"></span></summary>
           <div class="ans"><ul>
-            <li>You can't use Private Space, and you can't add other users while Beeswax is locked.</li>
+            <li>You can't use Private Spaces or create other user profiles.</li>
             <li>Links that would open in a browser don't open while Beeswax is locked, unless you've allowed a browser.</li>
             <li>Apps with a built-in browser, like a help link or an in-app browser, may still open websites. Choose the apps you keep with that in mind.</li>
-            <li>Wi-Fi sign-in pages, like at a hotel or café, still open.</li>
           </ul></div>
-        </details>
-        <details class="card">
-          <summary>What if I have an iPhone or iPad that I want to achieve the same result on?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>You should use Apple Configurator (<a href="https://redlib.catsarch.com/r/nosurf/comments/1731ozp/how_to_turn_your_your_iphone_into_dumb_phone/">guide1</a> / <a href="https://stopa.io/post/297">guide2</a>) to manage your devices, remove the browser and prevent new app installs. A macOS device and a factory reset of your iPhone/iPad are required for the initial setup. A <a href="https://news.ycombinator.com/item?id=49982974">new app</a> that claims to allow this setup without a factory reset has been released but I have not looked into it at all and this is not a recommendation.</p></div>
         </details>
         <details class="card">
           <summary>How do I remove Beeswax?<span class="plus" aria-hidden="true"></span></summary>
           <div class="ans"><p>Enter your lock code, tap Unlock, then tap Deactivate and confirm. See the <a href="https://github.com/flourish-today/beeswax/blob/main/SETUP.md">setup guide</a> for more info.</p></div>
+        </details>
+        <details class="card">
+          <summary>What if I have an iPhone or iPad?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>You should use Apple Configurator (<a href="https://redlib.catsarch.com/r/nosurf/comments/1731ozp/how_to_turn_your_your_iphone_into_dumb_phone/">guide1</a> / <a href="https://stopa.io/post/297">guide2</a>) to manage your devices, remove the browser and prevent new app installs. A macOS device and a factory reset of your iPhone/iPad are required for the initial setup. A <a href="https://news.ycombinator.com/item?id=49982974">new app</a> that claims to allow this setup without a factory reset has been released but I have not looked into it.</p></div>
         </details>
       </div>
       <p class="more"><a href="https://github.com/flourish-today/beeswax/blob/main/FAQ.md"><svg aria-hidden="true"><use href="#doc"/></svg>Full FAQ</a></p>
