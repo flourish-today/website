@@ -99,10 +99,6 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 .more { display: flex; justify-content: center; margin-top: 34px; }
 .more svg { width: 21px; height: 21px; }
 
-/* Beta notice: a thin bar above the header */
-.beta { background: var(--honey); color: var(--ink); border-bottom: 2px solid var(--ink); }
-.beta p { max-width: none; padding: 10px 32px; font-size: 0.92rem; line-height: 1.5; }
-
 /* Header */
 .top { position: sticky; top: 0; z-index: 10; background: var(--white); border-bottom: 2px solid var(--ink); }
 .top .wrap { display: flex; align-items: center; gap: 40px; height: 74px; max-width: none; padding: 0 32px; }
@@ -302,7 +298,6 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
 }
 @media (max-width: 460px) {
   .top .wrap { gap: 12px; padding: 0 16px; }
-  .beta p { padding: 10px 16px; }
   .btn-light { padding: 12px; }
   .btn-light .lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
@@ -398,10 +393,6 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
 </svg>
 
 <a class="skip" href="#main">Skip to content</a>
-
-<div class="beta" role="note">
-  <p class="wrap"><strong>Beeswax is in beta.</strong> It has only been tested on GrapheneOS.</p>
-</div>
 
 <header class="top">
   <div class="wrap">
@@ -528,7 +519,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
       <div class="list">
         <details class="card">
           <summary>Does Beeswax work on my phone?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>Beeswax has only been tested on GrapheneOS so far. Other versions of Android haven't been tested yet.</p></div>
+          <div class="ans"><p>Beeswax has only been tested on GrapheneOS and stock Pixel OS so far. Other versions of Android haven't been tested yet.</p></div>
         </details>
         <details class="card">
           <summary>Do I need a computer or a factory reset?<span class="plus" aria-hidden="true"></span></summary>
@@ -544,7 +535,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
           <summary>What doesn't work with Beeswax?<span class="plus" aria-hidden="true"></span></summary>
           <div class="ans"><ul>
             <li>You can't use Private Space, and you can't add other users while Beeswax is locked.</li>
-            <li>Links that would open in a browser don't open while Beeswax is locked.</li>
+            <li>Links that would open in a browser don't open while Beeswax is locked, unless you've allowed a browser.</li>
             <li>Apps with a built-in browser, like a help link or an in-app browser, may still open websites. Choose the apps you keep with that in mind.</li>
             <li>Wi-Fi sign-in pages, like at a hotel or café, still open.</li>
           </ul></div>
@@ -570,7 +561,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
       <svg class="deco comb-d" aria-hidden="true"><use href="#comb"/></svg>
       <svg class="mascot" aria-hidden="true"><use href="#icon"/></svg>
       <h2 id="dl-h">Download</h2>
-      <div class="btn-row"><a class="btn" href="https://github.com/flourish-today/beeswax/releases"><svg aria-hidden="true"><use href="#gh"/></svg>Get it on GitHub<svg aria-hidden="true"><use href="#arrow"/></svg></a></div>
+      <div class="btn-row"><a class="btn" href="https://github.com/flourish-today/Beeswax/releases/latest"><svg aria-hidden="true"><use href="#gh"/></svg>Get it on GitHub<svg aria-hidden="true"><use href="#arrow"/></svg></a></div>
       <div class="minor">
         <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/flourish-today/beeswax/releases"><svg aria-hidden="true"><use href="#dl"/></svg>Get it on Obtainium</a>
         <a href="https://github.com/flourish-today/beeswax#readme"><svg aria-hidden="true"><use href="#doc"/></svg>README</a>
