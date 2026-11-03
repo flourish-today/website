@@ -22,7 +22,7 @@ Bee stickers: everything looks like a die-cut sticker. Flat fills and dark ink o
 
 - Fredoka 600/700 for headings, buttons, captions and labels. Rounded letters match the sticker shapes.
 - Nunito 400/700 for body text.
-- Both are built into the page as base64 (the CSP allows no outside fonts). Code uses the system monospace.
+- Both are local files in `fonts/`, loaded by `style.css` (the CSP allows no outside fonts). Code uses the system monospace.
 - The headline's key words are stickers too: honey or green fill, ink stroke.
 
 ## Layout
@@ -32,6 +32,10 @@ Bee stickers: everything looks like a die-cut sticker. Flat fills and dark ink o
 - Screenshots: the five steps in one row, each with a hexagon number and a caption. Narrower screens scroll the row sideways inside itself.
 - Section headings stay centered.
 - Bees: each has a dotted flight path ("tail") and sits at its end. Two path shapes, flipped, tilted and sized differently per bee, scattered by the before and after and through Screenshots, Why, Privacy, Setup and FAQ. They never cover text.
+
+## Small pages
+
+`/setup/`, `/faq/`, `/privacy/` and `/monero/` share the main page's header, footer, colors, type and cards, with much less going on: a centered title with one bee and its flight path, two clouds, one white card of text, and a short ground (hive, flowers, one bee). The Setup, FAQ and Privacy pages carry the public docs (`SETUP.md`, `FAQ.md`, `PRIVACY.md`) word for word. Every link in a page's card shows its full address after its words.
 
 ## Shapes
 
@@ -46,8 +50,8 @@ Hover changes color only. No lifts, slides, pulses or drifting. The one exceptio
 
 ## Rules
 
-- Fonts and images stay built in or local. The script's sha256 is in the CSP `script-src`.
-- The page works fully without JavaScript. The script only adds the copy buttons and the bees' "bzz".
+- Fonts, images, styles and the script stay local. Every page shares `style.css`, `fonts/` and `site.js`; the CSP allows scripts, styles and fonts only from the site itself (`'self'`).
+- The page works fully without JavaScript. The script (`site.js`) only adds the copy buttons and the bees' "bzz".
 - Tap targets are at least 44px (small copy buttons get an invisible 44px hit area). Every focusable element shows the focus ring.
 - `og.png` (1200×630) is the link preview: the hero's headline, first sentence and before and after. Re-render it when the hero changes.
 - No horizontal scroll at any width.
