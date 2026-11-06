@@ -109,18 +109,16 @@
 </header>
 
 <main id="main" class="page">
-  <!-- Scattered sky: clouds behind the card, bees only in the side margins on wide screens -->
-  <svg class="cloud" aria-hidden="true" style="top:16.0%;left:-33px;width:162px;height:65px;opacity:.55"><use href="#cloud-b"/></svg>
-  <svg class="cloud" aria-hidden="true" style="top:34.3%;right:3%;width:218px;height:87px;opacity:.4"><use href="#cloud-b"/></svg>
-  <svg class="cloud" aria-hidden="true" style="top:52.6%;left:7%;width:168px;height:67px;opacity:.4"><use href="#cloud-b"/></svg>
-  <svg class="cloud" aria-hidden="true" style="top:64.0%;right:-65px;width:244px;height:98px;opacity:.55"><use href="#cloud-b"/></svg>
-  <svg class="cloud" aria-hidden="true" style="top:91.7%;left:-51px;width:126px;height:48px;opacity:.4"><use href="#cloud"/></svg>
-  <div class="flight side to-left flip" style="top:14.7%;right:2.4%;--w:141px;--tilt:-10deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 70C26 84 52 74 64 56s0-34-16-26 2 40 40 38 72-30 108-30" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bz</span></span></div>
-  <div class="flight side to-left" style="top:53.5%;left:1.2%;--w:129px;--tilt:16deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzzz</span></span></div>
-  <div class="flight side flip" style="top:85.8%;right:1.9%;--w:136px;--tilt:-9deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 70C26 84 52 74 64 56s0-34-16-26 2 40 40 38 72-30 108-30" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzzzz</span></span></div>
+  <!-- Scattered sky: clouds behind the card, each bee near a cloud, bees only in the side margins on wide screens -->
+  <svg class="cloud" aria-hidden="true" style="top:2.0%;left:-38px;width:157px;height:60px;opacity:0.49;--d:39s;--x:-40px"><use href="#cloud"/></svg>
+  <svg class="cloud" aria-hidden="true" style="top:34.5%;right:-97px;width:252px;height:97px;opacity:0.59;--d:66s;--x:-36px"><use href="#cloud"/></svg>
+  <svg class="cloud" aria-hidden="true" style="top:61.6%;left:6.6%;width:135px;height:52px;opacity:0.49;--d:48s;--x:26px"><use href="#cloud"/></svg>
+  <svg class="cloud" aria-hidden="true" style="top:87.8%;right:8.3%;width:156px;height:62px;opacity:0.56;--d:42s;--x:-40px"><use href="#cloud-b"/></svg>
+  <div class="flight side flip" style="top:60.5%;left:2.1%;--w:152px;--tilt:10deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
+  <div class="flight side to-left flip" style="top:86.2%;right:2.8%;--w:152px;--tilt:-8deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
   <div class="wrap">
     <div class="page-head">
-      <div class="flight fl-page to-left" style="--w:170px;--tilt:-8deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
+      <div class="flight fl-page flip" style="right:9%;left:auto;--w:184px;--tilt:4deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
       <h1>Donate with Monero</h1>
     </div>
     <article class="card doc">
@@ -130,14 +128,12 @@
         <div class="addr-box"><span class="xmr-addr" id="address-text">82omZG3aUU7gqJhR6dZGSReYvKD7kHFuxj5MGKMAGiJdcSYLnMb9Nky9UBxeuadSSzCNYpwfUueQBdQPEaTXmLH4Tkmbv39</span><button class="copy" type="button" data-copy="address-text" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button></div>
       </div>
       <h2 id="why-monero">Why Monero?</h2>
-      <p>Monero keeps payments private: no one can see who sent a payment, who received it or how much it was.</p>
+      <blockquote class="quote"><p>“Privacy in an open society requires anonymous transaction systems. Until now, cash has been the primary such system.”</p><p class="cite">Eric Hughes, <a href="https://www.activism.net/cypherpunk/manifesto.html">A Cypherpunk's Manifesto</a> (1993)</p></blockquote>
       <h2 id="learn-more">Learn more</h2>
       <ul>
-        <li><a href="https://www.privacyguides.org/en/cryptocurrency/">Privacy Guides: Cryptocurrency</a></li>
-        <li><a href="https://www.privacyguides.org/en/advanced/payments/#cryptocurrency">Privacy Guides: Private payments</a></li>
-        <li><a href="https://www.getmonero.org/">The Monero Project</a></li>
-        <li><a href="https://monero.eco/">monero.eco</a>, a map of Monero wallets, exchanges and services.</li>
-        <li><a href="https://kycnot.me/">KYCnot.me</a>, a directory of services that don't ask for your ID. Check any service yourself before you use it.</li>
+        <li><a href="https://www.privacyguides.org/en/cryptocurrency/">Privacy Guides on Monero</a>, a third-party review.</li>
+        <li><a href="https://eylenburg.github.io/payments.htm">Comparison of payment methods</a>, from cash and cards to cryptocurrencies.</li>
+        <li><a href="https://monerica.com/">Monerica</a>, a directory of places to spend Monero. Check any service yourself before you use it.</li>
       </ul>
     </article>
   </div>

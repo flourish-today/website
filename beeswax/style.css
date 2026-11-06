@@ -280,7 +280,7 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
 }
 
 /* Small pages (Setup, FAQ, Privacy and security, Monero): a title and one card of text on the sky */
-.page { padding: 64px 0 24px; }
+.page { padding: 64px 0 24px; isolation: isolate; }
 .page-head { position: relative; }
 .page h1 { font-weight: 700; font-size: clamp(2.5rem, 6.5vw, 3.8rem); line-height: 1.05; text-align: center; }
 .fl-page { right: 4%; top: -34px; }
@@ -326,3 +326,7 @@ footer a.xmr-label:hover { color: var(--ink); text-decoration: underline; text-d
 }
 .doc td code { overflow-wrap: normal; }
 .doc .table table { min-width: 600px; }
+.hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
+.doc blockquote.quote { margin: 4px 0 0; padding: 4px 0 4px 22px; border-left: 5px solid var(--honey); }
+.quote p { font: 600 1.3rem/1.45 var(--display); color: var(--ink); }
+.quote .cite { margin-top: 10px; font-size: 0.95rem; }
