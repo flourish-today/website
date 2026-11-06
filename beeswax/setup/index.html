@@ -24,8 +24,8 @@
 <link rel="preload" href="/fonts/fredoka-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/nunito-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/nunito-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css">
-<script src="/site.js" defer></script>
+<link rel="stylesheet" href="/style.css?v=bf5c2a8e">
+<script src="/site.js?v=6be7deae" defer></script>
 </head>
 <body>
 
@@ -109,21 +109,22 @@
 </header>
 
 <main id="main" class="page">
-  <!-- Scattered sky: clouds behind the card, each bee near a cloud, bees only in the side margins on wide screens -->
-  <svg class="cloud" aria-hidden="true" style="top:11.5%;left:-66px;width:238px;height:95px;opacity:0.48;--d:69s;--x:22px"><use href="#cloud-b"/></svg>
-  <svg class="cloud" aria-hidden="true" style="top:40.3%;right:-27px;width:173px;height:66px;opacity:0.59;--d:68s;--x:24px"><use href="#cloud"/></svg>
-  <svg class="cloud" aria-hidden="true" style="top:67.4%;right:4.1%;width:152px;height:58px;opacity:0.62;--d:57s;--x:-24px"><use href="#cloud"/></svg>
-  <div class="flight side to-left" style="top:46.7%;right:1.2%;--w:162px;--tilt:-14deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 70C26 84 52 74 64 56s0-34-16-26 2 40 40 38 72-30 108-30" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
-  <div class="flight side " style="top:65.6%;right:1.9%;--w:150px;--tilt:-7deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzzz</span></span></div>
   <div class="wrap">
     <div class="page-head">
       <div class="flight fl-page to-left" style="left:5%;right:auto;--w:197px;--tilt:-1deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
       <h1>Setup</h1>
     </div>
     <article class="card doc">
-<p>You need a phone with Android 13 or newer, a USB cable and a computer with <a href="https://developer.android.com/tools/adb">ADB</a>.</p>
-<ol><li>Back up your phone. Then remove every account, other user profile and Private Space from it, which Android requires, or factory reset it.</li><li>Install Beeswax.</li><li>Turn on USB debugging: in Settings → About phone, tap Build number seven times. Then turn on Settings → System → Developer options → USB debugging.</li><li>Connect the phone to your computer and tap Allow on the phone.</li><li>On your computer, open a terminal and run:<div class="copyable"><button class="copy" type="button" data-copy="cmd" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button><pre id="cmd">adb shell dpm set-device-owner org.getflourish.beeswax/.Receiver</pre></div>Beeswax now lists your apps.</li><li>Turn off Developer options.</li><li>In Beeswax, switch off every app you want blocked. Rotating the phone resets the switches, so check them just before you lock.</li><li>Tap Lock, save the lock code, type it back and tap Lock again. Save it somewhere you can't easily get to, or have someone you trust do this step.</li></ol>
+<p>You need a phone with Android 13 or newer, and ADB on a computer or on the phone itself.</p>
+<ol><li>Back up your phone. Then remove every account, other user profile and Private Space from it, which Android requires, or factory reset it.</li><li>Install Beeswax.</li><li>Turn on Developer options: in Settings → About phone, tap Build number seven times.</li><li>Connect ADB, from a computer or from the phone itself. See <a href="#connecting-adb">Connecting ADB</a> below.</li><li>Run this command:<div class="copyable"><button class="copy" type="button" data-copy="cmd" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button><pre id="cmd">adb shell dpm set-device-owner org.getflourish.beeswax/.Receiver</pre></div>Beeswax now lists your apps.</li><li>Turn off Developer options.</li><li>In Beeswax, switch off every app you want blocked. Rotating the phone resets the switches, so check them just before you lock.</li><li>Tap Lock, save the lock code, type it back and tap Lock again. Save it somewhere you can't easily get to, or have someone you trust do this step.</li></ol>
 <p>That's it. The apps you switched off are gone from the home screen. If something doesn't work, see the <a href="/faq/#what-if-setup-doesnt-work">FAQ</a>.</p>
+<h2 id="connecting-adb">Connecting ADB</h2>
+<h3 id="with-a-computer">With a computer</h3>
+<ol><li>Install <a href="https://developer.android.com/tools/releases/platform-tools">ADB</a> on your computer.</li><li>On the phone, turn on Settings → System → Developer options → USB debugging.</li><li>Connect the phone with a USB cable, and tap Allow on the phone.</li><li>Open a terminal on the computer (Command Prompt on Windows) and run step 5's command there.</li></ol>
+<h3 id="without-a-computer">Without a computer</h3>
+<p>This uses <a href="https://f-droid.org/packages/com.termux/">Termux</a>, a terminal app, and wireless debugging. The phone needs to be on Wi-Fi.</p>
+<ol><li>Install Termux, open it and run <code>pkg install android-tools</code>.</li><li>Turn on Settings → System → Developer options → Wireless debugging.</li><li>Put Settings and Termux side by side in split screen. In Wireless debugging, tap Pair device with pairing code. In Termux, run <code>adb pair localhost:</code> followed by the port shown under the code, then type the code.</li><li>Run <code>adb connect localhost:</code> followed by the port under "IP address &amp; Port" on the Wireless debugging screen.</li><li>Run step 5's command in Termux.</li></ol>
+<p>After setup, uninstall Termux or switch it off in Beeswax, because it can browse the web.</p>
     </article>
   </div>
 </main>
@@ -148,11 +149,9 @@
     <div>
       <h3>Learn more</h3>
       <ul>
-        <li><a href="https://github.com/flourish-today/beeswax#readme">README</a></li>
         <li><a href="/setup/">Setup guide</a></li>
         <li><a href="/faq/">FAQ</a></li>
         <li><a href="/privacy/">Privacy and security</a></li>
-        <li><a href="https://github.com/flourish-today/beeswax/issues">Issues</a></li>
       </ul>
     </div>
     <div>
