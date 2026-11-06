@@ -24,8 +24,8 @@
 <link rel="preload" href="/fonts/fredoka-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/nunito-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/nunito-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=527f7ec6">
-<script src="/site.js?v=6be7deae" defer></script>
+<link rel="stylesheet" href="/style.css?v=f98e9de2">
+<script src="/site.js?v=9b1f481c" defer></script>
 </head>
 <body>
 
@@ -94,6 +94,12 @@
   <symbol id="copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></g></symbol>
   <symbol id="tick" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
   <symbol id="arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <!-- Small pages: round icons for the ways to connect ADB, and for notes -->
+  <symbol id="i-usb" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 19.5v-6M28 19.5v-6" fill="none"/><path d="M16 19.5h16v6.5a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6Z" fill="#FFFFFF"/><path d="M24 32v6.5" fill="none"/></g></symbol>
+  <symbol id="i-wifi" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g fill="none" stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round"><path d="M12.5 21.5a16.5 16.5 0 0 1 23 0"/><path d="M17 26.2a10 10 0 0 1 14 0"/><path d="M21.3 30.6a3.8 3.8 0 0 1 5.4 0"/></g><circle cx="24" cy="35" r="2.2" fill="#1A1A1A"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="16.5" y="11" width="15" height="26" rx="3.5" fill="#FFFFFF"/><path d="M21.5 32.5h5" fill="none"/></g></symbol>
+  <symbol id="i-ok" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#99D27F" stroke="#1A1A1A" stroke-width="3"/><path d="m15.5 24.5 6 6 11-12" fill="none" stroke="#1A1A1A" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="3"/><path d="M24 13.5v13" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/><circle cx="24" cy="33.5" r="2.6" fill="#1A1A1A"/></symbol>
 </svg>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -109,29 +115,52 @@
 </header>
 
 <main id="main" class="page">
-  <div class="wrap">
-    <div class="page-head">
-      <div class="flight fl-page to-left" style="left:5%;right:auto;--w:197px;--tilt:-1deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
+  <header class="page-head">
+    <div class="flight b-r to-left" style="--dx:140px;--y:-4px;--w:170px;--tilt:-6deg;--ym:-46px" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
+    <svg class="cloud nm" aria-hidden="true" style="top:-24px;left:6%;width:200px;height:77px;opacity:0.55"><use href="#cloud"/></svg>
+    <svg class="cloud" aria-hidden="true" style="top:196px;right:-44px;width:230px;height:92px;opacity:0.6"><use href="#cloud-b"/></svg>
+    <div class="wrap">
       <h1>Setup</h1>
+      <p class="lead">You need a phone with Android 13 or newer, and ADB on a computer or on the phone itself.</p>
     </div>
-    <article class="card doc">
-<p>You need a phone with Android 13 or newer, and ADB on a computer or on the phone itself.</p>
+  </header>
+  <section class="part">
+    <svg class="cloud" aria-hidden="true" style="top:470px;right:4%;width:150px;height:57px;opacity:0.45"><use href="#cloud"/></svg>
+    <svg class="cloud" aria-hidden="true" style="top:640px;left:-50px;width:220px;height:88px;opacity:0.55"><use href="#cloud-b"/></svg>
+    <div class="wrap">
+      <div class="card sheet">
 <ol><li>Back up your phone. Then remove every account, other user profile and Private Space from it, which Android requires, or factory reset it.</li><li>Install Beeswax.</li><li>Turn on Developer options: in Settings → About phone, tap Build number seven times.</li><li>Connect ADB, from a computer or from the phone itself. See <a href="#connecting-adb">Connecting ADB</a> below.</li><li>Run this command:<div class="copyable"><button class="copy" type="button" data-copy="cmd" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button><pre id="cmd">adb shell dpm set-device-owner org.getflourish.beeswax/.Receiver</pre></div>Beeswax now lists your apps.</li><li>Turn off Developer options.</li><li>In Beeswax, switch off every app you want blocked. Rotating the phone resets the switches, so check them just before you lock.</li><li>Tap Lock, save the lock code, type it back and tap Lock again. Save it somewhere you can't easily get to, or have someone you trust do this step.</li></ol>
-<p class="note">That's it. The apps you switched off are gone from the home screen. If something doesn't work, see the <a href="/faq/#what-if-setup-doesnt-work">FAQ</a>.</p>
-<h2 id="connecting-adb">Connecting ADB</h2>
-<div class="opt"><h3 id="with-a-usb-cable">With a computer and a USB cable</h3>
+<div class="note"><svg aria-hidden="true"><use href="#i-ok"/></svg><p>That's it. The apps you switched off are gone from the home screen. If something doesn't work, see the <a href="/faq/#what-if-setup-doesnt-work">FAQ</a>.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="part" aria-labelledby="connecting-adb">
+    <div class="flight b-l flip" style="--dx:200px;--y:48px;--w:160px;--tilt:10deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 70C26 84 52 74 64 56s0-34-16-26 2 40 40 38 72-30 108-30" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzzz</span></span></div>
+    <div class="flight b-l wide" style="--dx:470px;--y:1010px;--w:150px;--tilt:-12deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 60C30 70 50 30 80 40s10 34-12 26S90 10 130 18s46 30 66 22" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bz</span></span></div>
+    <svg class="cloud nm" aria-hidden="true" style="top:24px;right:-30px;width:210px;height:80px;opacity:0.55"><use href="#cloud"/></svg>
+    <svg class="cloud" aria-hidden="true" style="top:640px;left:4%;width:160px;height:61px;opacity:0.45"><use href="#cloud"/></svg>
+    <svg class="cloud" aria-hidden="true" style="top:1240px;right:5%;width:170px;height:68px;opacity:0.5"><use href="#cloud-b"/></svg>
+    <div class="wrap">
+      <h2 id="connecting-adb">Connecting ADB</h2>
+      <div class="opts">
+      <div class="card sheet">
+<div class="opt-h"><svg class="ic" aria-hidden="true"><use href="#i-usb"/></svg><h3 id="with-a-usb-cable">With a computer and a USB cable</h3></div>
 <ol><li>Install <a href="https://developer.android.com/tools/releases/platform-tools">ADB</a> on your computer.</li><li>On the phone, turn on Settings → System → Developer options → USB debugging.</li><li>Connect the phone with a USB cable, and tap Allow on the phone.</li><li>Open a terminal on the computer (Command Prompt on Windows) and run step 5's command there.</li></ol>
-</div>
-<div class="opt"><h3 id="over-wi-fi">With a computer, over Wi-Fi</h3>
+      </div>
+      <div class="card sheet">
+<div class="opt-h"><svg class="ic" aria-hidden="true"><use href="#i-wifi"/></svg><h3 id="over-wi-fi">With a computer, over Wi-Fi</h3></div>
 <p>No cable needed. The phone and computer need to be on the same Wi-Fi.</p>
 <ol><li>Install <a href="https://developer.android.com/tools/releases/platform-tools">ADB</a> on your computer, and open a terminal (Command Prompt on Windows).</li><li>On the phone, turn on Settings → System → Developer options → Wireless debugging, then tap Pair device with pairing code.</li><li>On the computer, run <code>adb pair</code> followed by the IP address and port shown under the code, then type the code.</li><li>Run <code>adb connect</code> followed by the IP address and port under "IP address &amp; Port" on the Wireless debugging screen.</li><li>Run step 5's command.</li></ol>
-</div>
-<div class="opt"><h3 id="without-a-computer">Without a computer</h3>
+      </div>
+      <div class="card sheet">
+<div class="opt-h"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><h3 id="without-a-computer">Without a computer</h3></div>
 <p>This uses <a href="https://f-droid.org/packages/com.termux/">Termux</a>, a terminal app, and wireless debugging. The phone needs to be on Wi-Fi.</p>
 <ol><li>Install Termux, open it and run <code>pkg install android-tools</code>.</li><li>Turn on Settings → System → Developer options → Wireless debugging.</li><li>Put Settings and Termux side by side in split screen. In Wireless debugging, tap Pair device with pairing code. In Termux, run <code>adb pair localhost:</code> followed by the port shown under the code, then type the code.</li><li>Run <code>adb connect localhost:</code> followed by the port under "IP address &amp; Port" on the Wireless debugging screen.</li><li>Run step 5's command in Termux.</li></ol>
-<p class="note">After setup, uninstall Termux or switch it off in Beeswax, because it can browse the web.</p></div>
-    </article>
-  </div>
+<div class="note"><svg aria-hidden="true"><use href="#i-warn"/></svg><p>After setup, uninstall Termux or switch it off in Beeswax, because it can browse the web.</p></div>
+      </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <div class="ground" aria-hidden="true">

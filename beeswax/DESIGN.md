@@ -35,13 +35,16 @@ Bee stickers: everything looks like a die-cut sticker. Flat fills and dark ink o
 
 ## Small pages
 
-`/setup/`, `/faq/`, `/privacy/` and `/monero/` share the main page's header, footer, colors, type and cards, with much less going on: a centered title with one bee and its flight path, the text, and a short ground (hive, flowers, one bee). The Setup, FAQ and Privacy pages carry the public docs (`SETUP.md`, `FAQ.md`, `PRIVACY.md`); links show only their words.
+`/setup/`, `/faq/`, `/privacy/` and `/monero/` are built like the main page's sections, made for reading. The Setup, FAQ and Privacy pages carry the public docs (`SETUP.md`, `FAQ.md`, `PRIVACY.md`); links show only their words.
 
-- Text accents are green, not honey: link underlines, inline code, table headers, quotes, note boxes, the Monero address box. Honey stays for the main buttons.
-- Sections are split by a thin line, and each heading has a small green hexagon. Numbered steps have green round number badges. A note is a pale green box with a green border. Setup's three ways to connect ADB are each in an outlined box.
+- The head: a big centered title, then the doc's first sentence as a centered lede (the main page's `.lead`). Monero shows its round symbol above the title.
+- Each part is a centered heading on the sky over one white card. No dividers, no heading ornaments.
+- Accents stay quiet and match the main page: honey link underlines, inline code on light grey, tables framed by the card (an ink rule under the header, hairlines between rows). Numbered steps are plain bold Fredoka numbers. A note is one round sticker icon (green tick, honey "!") on a pale grey panel.
+- Setup's three ways to connect ADB are three cards like the main page's features, each with a round honey icon.
+- Privacy lists its parts under the lede as quiet links, like the download card's.
+- Monero: orange only in the symbol at the top. The address is the dark code box with a copy button, and Learn more is three columns.
 - The FAQ page is the main page's FAQ: every question a card that opens with the green "+". A link to a question opens it.
-- The privacy page starts with the main page's three green privacy facts, then a row of section links.
-- The sky is laid out by `site.js` on each visit, around the real page: the title bee, then at most one bee every 1100 to 1700px, each beside a heading in a side margin wide enough for it; clouds about one per 500px, spread apart, up to 40% tucked behind the text. Nothing overlaps: bees keep clear of clouds, other bees, the title and the text. Phones get clouds only.
+- Bees and clouds are placed by hand in each page's markup, like the main page's, not at random. A bee sits beside a heading (`--dx` from the centre, `--y` from the top of its part); "wide" bees beside the cards show only from 1200px. Below 720px bees sit above their heading at the edge, and clouds marked `nm` hide where they'd sit behind a heading. Nothing overlaps: bees stay off text, cards, clouds and each other. Density is about the main page's.
 - `style.css` and `site.js` are linked with `?v=` and the first 8 characters of their SHA-256, so browsers fetch new versions.
 
 ## Shapes
@@ -58,7 +61,7 @@ Hover changes color only. No lifts, slides, pulses or drifting. The one exceptio
 ## Rules
 
 - Fonts, images, styles and the script stay local. Every page shares `style.css`, `fonts/` and `site.js`; the CSP allows scripts, styles and fonts only from the site itself (`'self'`).
-- The page works fully without JavaScript. The script (`site.js`) only adds the copy buttons, the bees' "bzz", the small pages' sky and opening a linked FAQ question.
+- The page works fully without JavaScript. The script (`site.js`) only adds the copy buttons, the bees' "bzz" and opening a linked FAQ question.
 - Tap targets are at least 44px (small copy buttons get an invisible 44px hit area). Every focusable element shows the focus ring.
 - `og.png` (1200×630) is the link preview: the hero's headline, first sentence and before and after. Re-render it when the hero changes.
 - No horizontal scroll at any width.

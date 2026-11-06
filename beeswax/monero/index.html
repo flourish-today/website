@@ -24,8 +24,8 @@
 <link rel="preload" href="/fonts/fredoka-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/nunito-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/nunito-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=527f7ec6">
-<script src="/site.js?v=6be7deae" defer></script>
+<link rel="stylesheet" href="/style.css?v=f98e9de2">
+<script src="/site.js?v=9b1f481c" defer></script>
 </head>
 <body>
 
@@ -94,6 +94,12 @@
   <symbol id="copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5"/></g></symbol>
   <symbol id="tick" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
   <symbol id="arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <!-- Small pages: round icons for the ways to connect ADB, and for notes -->
+  <symbol id="i-usb" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 19.5v-6M28 19.5v-6" fill="none"/><path d="M16 19.5h16v6.5a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6Z" fill="#FFFFFF"/><path d="M24 32v6.5" fill="none"/></g></symbol>
+  <symbol id="i-wifi" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g fill="none" stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round"><path d="M12.5 21.5a16.5 16.5 0 0 1 23 0"/><path d="M17 26.2a10 10 0 0 1 14 0"/><path d="M21.3 30.6a3.8 3.8 0 0 1 5.4 0"/></g><circle cx="24" cy="35" r="2.2" fill="#1A1A1A"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="16.5" y="11" width="15" height="26" rx="3.5" fill="#FFFFFF"/><path d="M21.5 32.5h5" fill="none"/></g></symbol>
+  <symbol id="i-ok" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#99D27F" stroke="#1A1A1A" stroke-width="3"/><path d="m15.5 24.5 6 6 11-12" fill="none" stroke="#1A1A1A" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="3"/><path d="M24 13.5v13" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/><circle cx="24" cy="33.5" r="2.6" fill="#1A1A1A"/></symbol>
 </svg>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -108,29 +114,55 @@
   </div>
 </header>
 
-<main id="main" class="page">
-  <div class="wrap">
-    <div class="page-head">
-      <div class="flight fl-page flip" style="right:9%;left:auto;--w:184px;--tilt:4deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
+<main id="main" class="page xmr-page">
+  <header class="page-head">
+    <div class="flight b-l" style="--dx:110px;--y:6px;--w:160px;--tilt:6deg;--ym:-30px" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
+    <svg class="cloud" aria-hidden="true" style="top:10px;right:6%;width:200px;height:80px;opacity:0.55"><use href="#cloud-b"/></svg>
+    <svg class="cloud" aria-hidden="true" style="top:210px;left:-40px;width:220px;height:84px;opacity:0.6"><use href="#cloud"/></svg>
+    <div class="wrap">
+      <svg class="page-mark" aria-hidden="true"><use href="#xmr-logo"/></svg>
       <h1>Donate with Monero</h1>
     </div>
-    <article class="card doc">
-      <div class="donate">
-        <div class="qr"><img src="/monero/qr.png" width="640" height="640" alt="QR code for Beeswax's Monero address"></div>
-        <h2 id="address">Monero address</h2>
-        <div class="addr-box"><span class="xmr-addr" id="address-text">82omZG3aUU7gqJhR6dZGSReYvKD7kHFuxj5MGKMAGiJdcSYLnMb9Nky9UBxeuadSSzCNYpwfUueQBdQPEaTXmLH4Tkmbv39</span><button class="copy" type="button" data-copy="address-text" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button></div>
+  </header>
+  <section class="part">
+    <svg class="cloud" aria-hidden="true" style="top:330px;right:-36px;width:210px;height:80px;opacity:0.55"><use href="#cloud"/></svg>
+    <svg class="cloud" aria-hidden="true" style="top:560px;left:4%;width:150px;height:60px;opacity:0.45"><use href="#cloud-b"/></svg>
+    <div class="wrap">
+      <div class="card sheet">
+<div class="donate">
+<div class="qr"><img src="/monero/qr.png" width="640" height="640" alt="QR code for Beeswax's Monero address"></div>
+<h2 id="address">Monero address</h2>
+<div class="copyable"><button class="copy" type="button" data-copy="address-text" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button><pre id="address-text">82omZG3aUU7gqJhR6dZGSReYvKD7kHFuxj5MGKMAGiJdcSYLnMb9Nky9UBxeuadSSzCNYpwfUueQBdQPEaTXmLH4Tkmbv39</pre></div>
+</div>
       </div>
+    </div>
+  </section>
+  <section class="part" aria-labelledby="why-monero">
+    <div class="flight b-r to-left flip" style="--dx:170px;--y:40px;--w:186px;--tilt:-6deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 70C26 84 52 74 64 56s0-34-16-26 2 40 40 38 72-30 108-30" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzzz</span></span></div>
+    <svg class="cloud" aria-hidden="true" style="top:120px;left:-50px;width:200px;height:77px;opacity:0.5"><use href="#cloud"/></svg>
+    <div class="wrap">
       <h2 id="why-monero">Why Monero?</h2>
-      <blockquote class="quote"><p>“When I purchase a magazine at a store and hand cash to the clerk, there is no need to know who I am.”</p><p class="cite">Eric Hughes, <a href="https://www.activism.net/cypherpunk/manifesto.html">A Cypherpunk's Manifesto</a> (1993)</p></blockquote>
+      <div class="card sheet">
+<blockquote class="quote"><p>“Privacy in an open society requires anonymous transaction systems. Until now, cash has been the primary such system.”</p><p class="cite">Eric Hughes, <a href="https://www.activism.net/cypherpunk/manifesto.html">A Cypherpunk's Manifesto</a> (1993)</p></blockquote>
+      </div>
+    </div>
+  </section>
+  <section class="part" aria-labelledby="learn-more">
+    <svg class="cloud" aria-hidden="true" style="top:150px;right:4%;width:170px;height:68px;opacity:0.5"><use href="#cloud-b"/></svg>
+    <div class="wrap">
       <h2 id="learn-more">Learn more</h2>
-      <h3>Official website</h3>
-      <ul><li><a href="https://www.getmonero.org/">The Monero Project</a></li></ul>
-      <h3>Third-party analysis</h3>
-      <ul><li><a href="https://www.privacyguides.org/en/cryptocurrency/">Privacy Guides</a></li><li><a href="https://eylenburg.github.io/payments.htm">Comparison of payment methods</a></li></ul>
-      <h3>Indexes</h3>
-      <ul><li><a href="https://monero.eco/">monero.eco</a></li><li><a href="https://kycnot.me/">KYCnot.me</a></li><li><a href="https://monerica.com/">Monerica</a></li></ul>
-    </article>
-  </div>
+      <div class="card sheet">
+<div class="cols">
+<div><h3>Official website</h3>
+<ul><li><a href="https://www.getmonero.org/">The Monero Project</a></li></ul></div>
+<div><h3>Third-party analysis</h3>
+<ul><li><a href="https://www.privacyguides.org/en/cryptocurrency/">Privacy Guides</a></li><li><a href="https://eylenburg.github.io/payments.htm">Comparison of payment methods</a></li></ul></div>
+<div><h3>Indexes</h3>
+<ul><li><a href="https://monero.eco/">monero.eco</a></li><li><a href="https://kycnot.me/">KYCnot.me</a></li><li><a href="https://monerica.com/">Monerica</a></li></ul></div>
+</div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <div class="ground" aria-hidden="true">
