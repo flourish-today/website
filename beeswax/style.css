@@ -291,7 +291,6 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
 .doc ul, .doc ol { margin-bottom: 0; padding-left: 1.4em; display: grid; gap: 10px; }
 .doc li > ul, .doc li > ol, .doc li > p + *, .doc li > .copyable { margin-top: 12px; }
 .doc li::marker { font-weight: 700; color: var(--ink); }
-.doc .addr { font: 400 0.8em/1.4 var(--mono); color: var(--text); overflow-wrap: anywhere; }
 .doc pre { margin: 0; background: #1D2229; color: #EEF1F5; border-radius: 14px; padding: 16px 64px 16px 20px; font: 500 0.82rem/1.75 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
 .doc blockquote { margin: 12px 0 0; padding: 2px 0 2px 18px; border-left: 4px solid var(--honey); }
 .doc .table { overflow-x: auto; border: 2px solid var(--ink); border-radius: 16px; }
@@ -302,18 +301,28 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
 .how summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 18px 22px; font: 600 1.12rem/1.35 var(--display); color: var(--ink); }
 .how .ans { padding: 0 22px 22px; }
 .doc .doc-steps { margin-top: 24px; gap: 14px; }
-.donate { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 32px; align-items: center; }
-.donate img { width: 240px; height: 240px; display: block; border: 2px solid var(--ink); border-radius: 16px; image-rendering: pixelated; }
-.donate h2 { margin-bottom: 14px; }
+/* Monero: the QR code in a white sticker frame, then the address under it, all centered */
+.donate { display: grid; justify-items: center; text-align: center; gap: 18px; }
+.donate .qr { width: min(300px, 100%); padding: 12px; background: var(--white); border: 2px solid var(--ink); border-radius: 22px; }
+.donate .qr img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.donate h2 { text-align: center; margin-top: 10px; }
+.addr-box { display: flex; align-items: center; gap: 14px; width: 100%; max-width: 560px; background: var(--honey-pale); border: 2px solid var(--ink); border-radius: 16px; padding: 14px 14px 14px 20px; text-align: left; }
+.xmr-addr { flex: 1; min-width: 0; font: 500 0.92rem/1.6 var(--mono); color: var(--ink); overflow-wrap: anywhere; user-select: all; -webkit-user-select: all; }
+.addr-box .copy { position: relative; inset: auto; flex: none; }
+/* FAQ contents */
+.toc { background: var(--honey-pale); border: 2px solid var(--ink); border-radius: 16px; padding: 20px 24px 22px; }
+.toc h2 { font-size: 1.3rem; margin-bottom: 10px; }
+.doc .toc ul { list-style: none; padding: 0; gap: 2px; }
+.toc a { display: inline-block; padding: 6px 0; font-weight: 700; }
+/* Bees in the side margins: only where the margins are wide enough to keep them off the text */
+.flight.side { display: none; }
+@media (min-width: 1280px) { .flight.side { display: block; } }
 footer a.xmr-label { color: #1E3517; text-decoration: none; }
 footer a.xmr-label:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--ink); text-decoration-thickness: 3px; }
 @media (max-width: 720px) {
   .page { padding-top: 56px; }
   .fl-page { top: -44px; }
   .doc { padding: 26px 20px 28px; border-radius: 18px; }
-  .donate { grid-template-columns: 1fr; justify-items: center; gap: 22px; }
-  .donate > div { width: 100%; }
-  .donate img { width: 200px; height: 200px; }
 }
 .doc td code { overflow-wrap: normal; }
 .doc .table table { min-width: 600px; }
