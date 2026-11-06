@@ -24,7 +24,7 @@
 <link rel="preload" href="/fonts/fredoka-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/nunito-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/nunito-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=bf5c2a8e">
+<link rel="stylesheet" href="/style.css?v=527f7ec6">
 <script src="/site.js?v=6be7deae" defer></script>
 </head>
 <body>
@@ -117,17 +117,19 @@
     <article class="card doc">
 <p>You need a phone with Android 13 or newer, and ADB on a computer or on the phone itself.</p>
 <ol><li>Back up your phone. Then remove every account, other user profile and Private Space from it, which Android requires, or factory reset it.</li><li>Install Beeswax.</li><li>Turn on Developer options: in Settings → About phone, tap Build number seven times.</li><li>Connect ADB, from a computer or from the phone itself. See <a href="#connecting-adb">Connecting ADB</a> below.</li><li>Run this command:<div class="copyable"><button class="copy" type="button" data-copy="cmd" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button><pre id="cmd">adb shell dpm set-device-owner org.getflourish.beeswax/.Receiver</pre></div>Beeswax now lists your apps.</li><li>Turn off Developer options.</li><li>In Beeswax, switch off every app you want blocked. Rotating the phone resets the switches, so check them just before you lock.</li><li>Tap Lock, save the lock code, type it back and tap Lock again. Save it somewhere you can't easily get to, or have someone you trust do this step.</li></ol>
-<p>That's it. The apps you switched off are gone from the home screen. If something doesn't work, see the <a href="/faq/#what-if-setup-doesnt-work">FAQ</a>.</p>
+<p class="note">That's it. The apps you switched off are gone from the home screen. If something doesn't work, see the <a href="/faq/#what-if-setup-doesnt-work">FAQ</a>.</p>
 <h2 id="connecting-adb">Connecting ADB</h2>
-<h3 id="with-a-usb-cable">With a computer and a USB cable</h3>
+<div class="opt"><h3 id="with-a-usb-cable">With a computer and a USB cable</h3>
 <ol><li>Install <a href="https://developer.android.com/tools/releases/platform-tools">ADB</a> on your computer.</li><li>On the phone, turn on Settings → System → Developer options → USB debugging.</li><li>Connect the phone with a USB cable, and tap Allow on the phone.</li><li>Open a terminal on the computer (Command Prompt on Windows) and run step 5's command there.</li></ol>
-<h3 id="over-wi-fi">With a computer, over Wi-Fi</h3>
+</div>
+<div class="opt"><h3 id="over-wi-fi">With a computer, over Wi-Fi</h3>
 <p>No cable needed. The phone and computer need to be on the same Wi-Fi.</p>
 <ol><li>Install <a href="https://developer.android.com/tools/releases/platform-tools">ADB</a> on your computer, and open a terminal (Command Prompt on Windows).</li><li>On the phone, turn on Settings → System → Developer options → Wireless debugging, then tap Pair device with pairing code.</li><li>On the computer, run <code>adb pair</code> followed by the IP address and port shown under the code, then type the code.</li><li>Run <code>adb connect</code> followed by the IP address and port under "IP address &amp; Port" on the Wireless debugging screen.</li><li>Run step 5's command.</li></ol>
-<h3 id="without-a-computer">Without a computer</h3>
+</div>
+<div class="opt"><h3 id="without-a-computer">Without a computer</h3>
 <p>This uses <a href="https://f-droid.org/packages/com.termux/">Termux</a>, a terminal app, and wireless debugging. The phone needs to be on Wi-Fi.</p>
 <ol><li>Install Termux, open it and run <code>pkg install android-tools</code>.</li><li>Turn on Settings → System → Developer options → Wireless debugging.</li><li>Put Settings and Termux side by side in split screen. In Wireless debugging, tap Pair device with pairing code. In Termux, run <code>adb pair localhost:</code> followed by the port shown under the code, then type the code.</li><li>Run <code>adb connect localhost:</code> followed by the port under "IP address &amp; Port" on the Wireless debugging screen.</li><li>Run step 5's command in Termux.</li></ol>
-<p>After setup, uninstall Termux or switch it off in Beeswax, because it can browse the web.</p>
+<p class="note">After setup, uninstall Termux or switch it off in Beeswax, because it can browse the web.</p></div>
     </article>
   </div>
 </main>
