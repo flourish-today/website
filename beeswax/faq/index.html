@@ -109,16 +109,29 @@
 </header>
 
 <main id="main" class="page">
-  <svg class="cloud" aria-hidden="true" style="top:30px;left:-60px;width:250px;height:96px"><use href="#cloud"/></svg>
-  <svg class="cloud" aria-hidden="true" style="top:560px;right:-40px;width:190px;height:76px;opacity:.5"><use href="#cloud-b"/></svg>
+  <!-- Scattered sky: clouds behind the card, bees only in the side margins on wide screens -->
+  <svg class="cloud" aria-hidden="true" style="top:9.3%;right:-37px;width:130px;height:52px;opacity:.4"><use href="#cloud-b"/></svg>
+  <svg class="cloud" aria-hidden="true" style="top:17.0%;left:7%;width:183px;height:73px;opacity:.45"><use href="#cloud-b"/></svg>
+  <svg class="cloud" aria-hidden="true" style="top:30.7%;right:-60px;width:184px;height:71px;opacity:.6"><use href="#cloud"/></svg>
+  <svg class="cloud" aria-hidden="true" style="top:43.2%;left:2%;width:143px;height:55px;opacity:.6"><use href="#cloud"/></svg>
+  <svg class="cloud" aria-hidden="true" style="top:58.7%;right:9%;width:208px;height:80px;opacity:.4"><use href="#cloud"/></svg>
+  <svg class="cloud" aria-hidden="true" style="top:66.2%;left:-41px;width:207px;height:79px;opacity:.6"><use href="#cloud"/></svg>
+  <svg class="cloud" aria-hidden="true" style="top:79.8%;right:7%;width:259px;height:104px;opacity:.45"><use href="#cloud-b"/></svg>
+  <svg class="cloud" aria-hidden="true" style="top:91.8%;left:6%;width:159px;height:64px;opacity:.6"><use href="#cloud-b"/></svg>
+  <div class="flight side" style="top:13.5%;right:1.5%;--w:111px;--tilt:-15deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzzz</span></span></div>
+  <div class="flight side to-left flip" style="top:42.8%;left:2.8%;--w:136px;--tilt:14deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
+  <div class="flight side" style="top:62.3%;right:2.2%;--w:126px;--tilt:1deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 70C26 84 52 74 64 56s0-34-16-26 2 40 40 38 72-30 108-30" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz bzz</span></span></div>
+  <div class="flight side" style="top:76.3%;left:2.9%;--w:138px;--tilt:13deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzzz</span></span></div>
   <div class="wrap">
     <div class="page-head">
       <div class="flight fl-page to-left" style="--w:170px;--tilt:-8deg" aria-hidden="true"><svg class="path" viewBox="0 0 200 90"><path d="M4 20C40 0 60 70 100 60S160 38 196 38" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7" vector-effect="non-scaling-stroke"/></svg><span class="buzz"><svg><use href="#bee"/></svg><span class="bzz">bzz</span></span></div>
       <h1>FAQ</h1>
     </div>
     <article class="card doc">
+<nav class="toc" aria-label="Questions"><h2 id="questions">Questions</h2>
+<ul><li><a href="#does-beeswax-work-on-my-phone">Does Beeswax work on my phone?</a></li><li><a href="#do-i-need-a-computer-or-a-factory-reset">Do I need a computer or a factory reset?</a></li><li><a href="#what-if-i-forget-my-lock-code">What if I forget my lock code?</a></li><li><a href="#what-doesnt-work-with-beeswax">What doesn't work with Beeswax?</a></li><li><a href="#can-an-app-ive-allowed-start-letting-me-browse-later">Can an app I've allowed start letting me browse later?</a></li><li><a href="#can-adb-get-around-beeswax">Can ADB get around Beeswax?</a></li><li><a href="#can-beeswax-block-factory-reset">Can Beeswax block factory reset?</a></li><li><a href="#how-do-i-remove-beeswax">How do I remove Beeswax?</a></li><li><a href="#does-beeswax-use-ai">Does Beeswax use AI?</a></li><li><a href="#is-beeswax-secure">Is Beeswax secure?</a></li><li><a href="#is-beeswax-privacy-respecting">Is Beeswax privacy respecting?</a></li><li><a href="#what-are-the-risks">What are the risks?</a></li><li><a href="#will-i-always-need-adb-to-activate-beeswax">Will I always need ADB to activate Beeswax?</a></li><li><a href="#what-if-i-have-an-iphone-or-ipad">What if I have an iPhone or iPad?</a></li></ul></nav>
 <h2 id="does-beeswax-work-on-my-phone">Does Beeswax work on my phone?</h2>
-<p>Beeswax has only been tested on GrapheneOS and stock Pixel OS so far. Other versions of Android haven't been tested yet.</p>
+<p>Beeswax works on Android 13 and newer. It has only been tested on GrapheneOS and stock Pixel OS, on Android 17, so far.</p>
 <h2 id="do-i-need-a-computer-or-a-factory-reset">Do I need a computer or a factory reset?</h2>
 <p>You need a computer with ADB once, during setup. Android only lets Beeswax manage a phone with no accounts, no other user profiles and no Private Spaces, so you'll remove those first. A factory reset always works if that's easier.</p>
 <h2 id="what-if-i-forget-my-lock-code">What if I forget my lock code?</h2>
@@ -128,30 +141,37 @@
 <h2 id="can-an-app-ive-allowed-start-letting-me-browse-later">Can an app I've allowed start letting me browse later?</h2>
 <p>Yes. Updates to an allowed app go through without your lock code, so an app could add a way to browse the web in a later update. If one does, enter your lock code and switch it off.</p>
 <h2 id="can-adb-get-around-beeswax">Can ADB get around Beeswax?</h2>
-<p>No. Once Beeswax is locked, it blocks debugging features until you deactivate it, so ADB can't be used to get around the lock.</p>
+<p>No. Once Beeswax is locked, it blocks developer options, so ADB can't be used to get around the lock.</p>
+<p>If you turn on Allow developer options in More settings, ADB works again. Only do that if you need it: with ADB on, someone with a computer could get around Beeswax by starting the phone in safe mode and installing a browser that Beeswax can't hide.</p>
+<h2 id="can-beeswax-block-factory-reset">Can Beeswax block factory reset?</h2>
+<p>Yes. Turn on Block factory reset in More settings. You can still factory reset from the phone's recovery screen, so a lost code always has a way out. See <a href="/setup/#more-settings">More settings</a>.</p>
 <h2 id="how-do-i-remove-beeswax">How do I remove Beeswax?</h2>
-<p>Enter your lock code, tap Unlock, then tap Deactivate and confirm. See the <a href="https://beeswax.getflourish.org/setup/">setup guide <span class="addr">(https://beeswax.getflourish.org/setup/)</span></a> for more info.</p>
+<p>Enter your lock code, tap Unlock, then tap Deactivate and confirm. See the <a href="/setup/">setup guide</a> for more info.</p>
 <h2 id="does-beeswax-use-ai">Does Beeswax use AI?</h2>
 <p>Yes. This app was developed with Claude Opus 5.5. Its code was reviewed with Opus 5.5 and all issues were fixed or found inconsequential. More reviews are welcome.</p>
 <h2 id="is-beeswax-secure">Is Beeswax secure?</h2>
-<p>Beeswax uses the intended way to restrict devices on Android. It's tiny, requests one permission, and only does what it says. See more info in <a href="https://beeswax.getflourish.org/privacy/">PRIVACY.md <span class="addr">(https://beeswax.getflourish.org/privacy/)</span></a>. You can verify you got the real Beeswax APK using the <a href="https://beeswax.getflourish.org/privacy/#verifying-a-release">SHA256 Signing Certificate <span class="addr">(https://beeswax.getflourish.org/privacy/#verifying-a-release)</span></a>, and verify that its source code matches the released APK through <a href="https://beeswax.getflourish.org/privacy/#reproducible-builds">reproducible builds <span class="addr">(https://beeswax.getflourish.org/privacy/#reproducible-builds)</span></a>.</p>
+<p>Beeswax uses the intended way to restrict devices on Android. It's tiny, requests one permission, and only does what it says. See more info in <a href="/privacy/">Privacy and security</a>. You can verify you got the real Beeswax APK using the <a href="/privacy/#verifying-a-release">SHA256 Signing Certificate</a>, and verify that its source code matches the released APK through <a href="/privacy/#reproducible-builds">reproducible builds</a>.</p>
 <h2 id="is-beeswax-privacy-respecting">Is Beeswax privacy respecting?</h2>
 <p>Yes. There's no telemetry, one permission, and no network access.</p>
 <h2 id="what-are-the-risks">What are the risks?</h2>
-<p>One risk with Beeswax, and device-owner apps in general, is the amount of trust you have to put in them. Device-owner apps are given a huge amount of permissions by Android. Beeswax uses only the few listed in <a href="https://beeswax.getflourish.org/privacy/#device-management-apis-used">PRIVACY.md <span class="addr">(https://beeswax.getflourish.org/privacy/#device-management-apis-used)</span></a>, and they can be undone. See <a href="https://beeswax.getflourish.org/privacy/#risks-to-using-beeswax">Risks to using Beeswax <span class="addr">(https://beeswax.getflourish.org/privacy/#risks-to-using-beeswax)</span></a> for more.</p>
+<p>One risk with Beeswax, and device-owner apps in general, is the amount of trust you have to put in them. Device-owner apps are given a huge amount of permissions by Android. Beeswax uses only the few listed in <a href="/privacy/#device-management-apis-used">Privacy and security</a>, and they can be undone. See <a href="/privacy/#risks-to-using-beeswax">Risks to using Beeswax</a> for more.</p>
 <h2 id="will-i-always-need-adb-to-activate-beeswax">Will I always need ADB to activate Beeswax?</h2>
-<p>In the future, depending on GrapheneOS, Beeswax may be updated so you can install it and make it the device owner without ADB, through QR code provisioning during initial device setup (<a href="https://github.com/GrapheneOS/platform_packages_apps_SetupWizard2/issues/35">issue <span class="addr">(https://github.com/GrapheneOS/platform_packages_apps_SetupWizard2/issues/35)</span></a> / <a href="https://github.com/GrapheneOS/platform_packages_apps_SetupWizard2/pull/40">earlier attempt, closed <span class="addr">(https://github.com/GrapheneOS/platform_packages_apps_SetupWizard2/pull/40)</span></a>). You can add reactions to the issue to show support, but please only comment if you have something meaningful to add.</p>
+<p>In the future, depending on GrapheneOS, Beeswax may be updated so you can install it and make it the device owner without ADB, through QR code provisioning during initial device setup (<a href="https://github.com/GrapheneOS/platform_packages_apps_SetupWizard2/issues/35">issue</a> / <a href="https://github.com/GrapheneOS/platform_packages_apps_SetupWizard2/pull/40">earlier attempt, closed</a>). You can add reactions to the issue to show support, but please only comment if you have something meaningful to add.</p>
 <p>If GrapheneOS adds support for QR code provisioning, it will likely be added and then work on other Android devices.</p>
 <h2 id="what-if-i-have-an-iphone-or-ipad">What if I have an iPhone or iPad?</h2>
-<p>You should use Apple Configurator (<a href="https://redlib.catsarch.com/r/nosurf/comments/1731ozp/how_to_turn_your_your_iphone_into_dumb_phone/">guide1 <span class="addr">(https://redlib.catsarch.com/r/nosurf/comments/1731ozp/how_to_turn_your_your_iphone_into_dumb_phone/)</span></a> / <a href="https://stopa.io/post/297">guide2 <span class="addr">(https://stopa.io/post/297)</span></a>) to manage your devices, remove the browser and prevent new app installs. A macOS device and a factory reset of your iPhone/iPad are required for the initial setup. A <a href="https://news.ycombinator.com/item?id=49982974">new app <span class="addr">(https://news.ycombinator.com/item?id=49982974)</span></a> that claims to allow this setup without a factory reset has been released but I have not looked into it.</p>
+<p>You should use Apple Configurator (<a href="https://redlib.catsarch.com/r/nosurf/comments/1731ozp/how_to_turn_your_your_iphone_into_dumb_phone/">guide1</a> / <a href="https://stopa.io/post/297">guide2</a>) to manage your devices, remove the browser and prevent new app installs. A macOS device and a factory reset of your iPhone/iPad are required for the initial setup. A <a href="https://news.ycombinator.com/item?id=49982974">new app</a> that claims to allow this setup without a factory reset has been released but I have not looked into it.</p>
     </article>
   </div>
 </main>
 
 <div class="ground" aria-hidden="true">
   <svg class="skep"><use href="#skep"/></svg>
+  <svg class="flowers-b"><use href="#flower"/></svg>
   <svg class="flowers-a"><use href="#flowers"/></svg>
   <span class="buzz bee-door"><svg><use href="#bee"/></svg><span class="bzz">bzz bzz</span></span>
+  <span class="buzz bee-flower"><svg><use href="#bee"/></svg><span class="bzz">bz</span></span>
+  <svg class="trail-low" viewBox="0 0 220 90"><path d="M4 70C40 80 70 40 100 52s10 36-14 26S96 12 150 20s50 30 66 22" fill="none" stroke="#5E8FBA" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7"/></svg>
+  <span class="buzz bee-low"><svg><use href="#bee"/></svg><span class="bzz">bzzzz</span></span>
   <div class="grass"></div>
 </div>
 
