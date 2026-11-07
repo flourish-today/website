@@ -182,10 +182,10 @@ F5:37:A3:91:23:40:95:AC:42:53:85:D4:9E:B0:AA:43:C8:ED:84:4D:FC:84:15:F2:1C:C4:BF
 <ol><li><p>Get the source for the release and build it:</p>
 <div class="copyable"><button class="copy" type="button" data-copy="code2" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button><pre id="code2">git clone https://github.com/flourish-today/beeswax.git
 cd beeswax
-git checkout v1.01
-gradle --no-daemon :app:assembleRelease -Pandroid.aapt2FromMavenOverride=&quot;$ANDROID_HOME/build-tools/37.0.0/aapt2&quot;</pre></div></li><li><p>Download <code>Beeswax-1.01.apk</code> from the <a href="https://github.com/flourish-today/beeswax/releases/tag/v1.01">v1.01 release</a> into the <code>beeswax</code> folder.</p></li><li><p>Unpack both APKs and compare them:</p>
+git checkout v1.02
+gradle --no-daemon :app:assembleRelease -Pandroid.aapt2FromMavenOverride=&quot;$ANDROID_HOME/build-tools/37.0.0/aapt2&quot;</pre></div></li><li><p>Download <code>Beeswax-1.02.apk</code> from the <a href="https://github.com/flourish-today/beeswax/releases/tag/v1.02">v1.02 release</a> into the <code>beeswax</code> folder.</p></li><li><p>Unpack both APKs and compare them:</p>
 <div class="copyable"><button class="copy" type="button" data-copy="code3" aria-label="Copy" hidden><svg class="idle" aria-hidden="true"><use href="#copy"/></svg><svg class="done" aria-hidden="true"><use href="#tick"/></svg></button><pre id="code3">mkdir rel mine
-unzip -q Beeswax-1.01.apk -d rel
+unzip -q Beeswax-1.02.apk -d rel
 unzip -q app/build/outputs/apk/release/app-release-unsigned.apk -d mine
 diff -rq rel mine &amp;&amp; echo MATCH</pre></div></li></ol>
 <p>If it prints <code>MATCH</code>, the release contains exactly what you built.</p>
