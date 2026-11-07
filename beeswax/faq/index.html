@@ -95,8 +95,8 @@
   <symbol id="tick" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
   <symbol id="arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
   <!-- Small pages: round icons for the ways to connect ADB, and for notes -->
-  <symbol id="i-usb" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 19.5v-6M28 19.5v-6" fill="none"/><path d="M16 19.5h16v6.5a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6Z" fill="#FFFFFF"/><path d="M24 32v6.5" fill="none"/></g></symbol>
-  <symbol id="i-wifi" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g fill="none" stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round"><path d="M12.5 21.5a16.5 16.5 0 0 1 23 0"/><path d="M17 26.2a10 10 0 0 1 14 0"/><path d="M21.3 30.6a3.8 3.8 0 0 1 5.4 0"/></g><circle cx="24" cy="35" r="2.2" fill="#1A1A1A"/></symbol>
+  <symbol id="i-usb" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 14v20.5M24 31 17.5 25.2V20.6M24 27.2l6.5-5V19"/></g><g fill="#1A1A1A"><path d="M24 9.2 27.3 14.6H20.7Z"/><circle cx="24" cy="35.6" r="2.7"/><circle cx="17.5" cy="18.6" r="2.4"/><rect x="28.3" y="14.6" width="4.4" height="4.4" rx=".6"/></g></symbol>
+  <symbol id="i-wifi" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g fill="none" stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round"><path d="M11.98 18.98A17 17 0 0 1 36.02 18.98"/><path d="M15.87 22.87A11.5 11.5 0 0 1 32.13 22.87"/><path d="M19.76 26.76A6 6 0 0 1 28.24 26.76"/></g><circle cx="24" cy="31" r="2.4" fill="#1A1A1A"/></symbol>
   <symbol id="i-phone" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.5"/><g stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="16.5" y="11" width="15" height="26" rx="3.5" fill="#FFFFFF"/><path d="M21.5 32.5h5" fill="none"/></g></symbol>
   <symbol id="i-ok" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#99D27F" stroke="#1A1A1A" stroke-width="3"/><path d="m15.5 24.5 6 6 11-12" fill="none" stroke="#1A1A1A" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-warn" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#F7CB46" stroke="#1A1A1A" stroke-width="3"/><path d="M24 13.5v13" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/><circle cx="24" cy="33.5" r="2.6" fill="#1A1A1A"/></symbol>
@@ -135,15 +135,11 @@
       <div class="list">
         <details class="card" id="does-beeswax-work-on-my-phone">
           <summary>Does Beeswax work on my phone?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>Beeswax works on Android 13 and newer. It has only been tested on GrapheneOS and stock Pixel OS, on Android 17, so far.</p></div>
+          <div class="ans"><p>Beeswax supports Android 13 and newer. It has been tested on GrapheneOS, the stock Pixel OS, on Android 17 and the Xiaomi HyperOS on Android 16.</p></div>
         </details>
         <details class="card" id="do-i-need-a-computer-or-a-factory-reset">
           <summary>Do I need a computer or a factory reset?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>You need ADB once, during setup, on a computer or on the phone itself with Termux. Android only lets Beeswax manage a phone with no accounts, no other user profiles and no Private Spaces, so you'll remove those first. A factory reset always works if that's easier.</p></div>
-        </details>
-        <details class="card" id="what-if-setup-doesnt-work">
-          <summary>What if setup doesn't work?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><ul><li><strong>The command fails with an error about accounts or users.</strong> An account, user profile or Private Space is still on the phone. Remove it and try again, or factory reset.</li><li><strong>ADB says no devices were found, or unauthorized.</strong> Unplug and reconnect the phone, and tap Allow when it asks.</li><li><strong>Beeswax won't lock because of other users.</strong> Each user has its own browser. Delete them in Settings → System → Users.</li><li><strong>An app you switched off still shows after locking.</strong> Android won't let Beeswax hide an app that's a device admin. To block it, turn off its device admin in Settings → Security &amp; privacy → More security &amp; privacy → Device admin, then restart the phone.</li></ul></div>
+          <div class="ans"><p>You need ADB once, during setup. You can use a computer with wireless debugging, USB debugging, or on your phone directly with Termux. Android only lets Beeswax manage a phone with no accounts, no other user profiles and no Private Spaces, so you'll remove those first. A factory reset always works if that's easier than removing the accounts and profiles.</p></div>
         </details>
         <details class="card" id="how-do-i-allow-or-block-an-app-later">
           <summary>How do I allow or block an app later?<span class="plus" aria-hidden="true"></span></summary>
@@ -155,29 +151,15 @@
         </details>
         <details class="card" id="what-doesnt-work-with-beeswax">
           <summary>What doesn't work with Beeswax?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><ul><li>You can't use Private Spaces or create other user profiles.</li><li>Links that would open in a browser don't open while Beeswax is locked, unless you've allowed a browser.</li><li>Apps with a built-in browser, like a help link or an in-app browser, may still open websites. Choose the apps you keep with that in mind.</li><li>A few browsers, like Surf and Lite++, aren't detected as browsers, so switch them off yourself.</li><li>Settings, your keyboards, and the built-in phone, messaging and home screen apps are never blocked, so you can always type the code, call and text.</li><li>Blocking a built-in app like Camera also stops other apps from using it. Blocking an app store stops it from updating your apps.</li></ul></div>
-        </details>
-        <details class="card" id="can-an-app-ive-allowed-start-letting-me-browse-later">
-          <summary>Can an app I've allowed start letting me browse later?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>Yes. Updates to an allowed app go through without your lock code, so an app could add a way to browse the web in a later update. If one does, enter your lock code and switch it off.</p></div>
-        </details>
-        <details class="card" id="can-adb-get-around-beeswax">
-          <summary>Can ADB get around Beeswax?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>No. Once Beeswax is locked, it blocks developer options, so ADB can't be used to get around the lock.</p>
-<p>If you turn on Allow developer options in More settings, ADB works again. Only do that if you need it: with ADB on, someone with a computer could get around Beeswax by starting the phone in safe mode and installing a browser that Beeswax can't hide.</p></div>
-        </details>
-        <details class="card" id="whats-in-more-settings">
-          <summary>What's in More settings?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>Open Beeswax, enter the lock code, tap Unlock, then tap More settings. All three are off until you turn them on, and changing them needs the lock code.</p>
-<ul><li><strong>Block factory reset</strong> removes factory reset from Settings. You can still factory reset from the phone's recovery screen, so a lost code always has a way out.</li><li><strong>Lock private DNS</strong> keeps the private DNS you set in Settings → Network &amp; internet → Private DNS, so it can't be changed without the code. Set it in Settings first. A VPN app you've allowed can still replace it.</li><li><strong>Allow developer options</strong> lets you use developer options and ADB while Beeswax is locked. Only turn it on if you need it (see the question above).</li></ul></div>
+          <div class="ans"><ul><li>You can't use Private Spaces or create other user profiles.</li><li>Links that would open in a browser don't open while Beeswax is locked, unless you've allowed a browser.</li><li>Apps with a built-in browser, like a help link or an in-app browser, may still open websites. The vast majority of websites do not allow this and it's recommended against by Android.</li></ul></div>
         </details>
         <details class="card" id="how-do-i-remove-beeswax">
           <summary>How do I remove Beeswax?<span class="plus" aria-hidden="true"></span></summary>
           <div class="ans"><p>Enter your lock code, tap Unlock, then tap Deactivate and confirm. Then you can uninstall it.</p></div>
         </details>
         <details class="card" id="does-beeswax-use-ai">
-          <summary>Does Beeswax use AI?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>Yes. This app was developed with Claude Opus 5.5. Its code was reviewed with Opus 5.5 and all issues were fixed or found inconsequential. More reviews are welcome.</p></div>
+          <summary>Was Beeswax built with AI?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>Yes. This app was developed with Opus 5.5. Its code was reviewed with Opus 5.5 and all issues were fixed or found inconsequential. More reviews are welcome.</p></div>
         </details>
         <details class="card" id="is-beeswax-secure">
           <summary>Is Beeswax secure?<span class="plus" aria-hidden="true"></span></summary>
@@ -198,7 +180,7 @@
         </details>
         <details class="card" id="what-if-i-have-an-iphone-or-ipad">
           <summary>What if I have an iPhone or iPad?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>You should use Apple Configurator (<a href="https://redlib.catsarch.com/r/nosurf/comments/1731ozp/how_to_turn_your_your_iphone_into_dumb_phone/">guide1</a> / <a href="https://stopa.io/post/297">guide2</a>) to manage your devices, remove the browser and prevent new app installs. A macOS device and a factory reset of your iPhone/iPad are required for the initial setup. A <a href="https://news.ycombinator.com/item?id=49982974">new app</a> that claims to allow this setup without a factory reset has been released but I have not looked into it.</p></div>
+          <div class="ans"><p>You should use Apple Configurator (<a href="https://redlib.catsarch.com/r/nosurf/comments/1731ozp/how_to_turn_your_your_iphone_into_dumb_phone/">guide1</a> / <a href="https://stopa.io/post/297">guide2</a>) to manage your devices, remove the browser and prevent new app installs. A macOS device and a factory reset of your iPhone/iPad are required for the initial setup.</p></div>
         </details>
       </div>
       </div>
