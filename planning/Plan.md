@@ -8,7 +8,7 @@ getflourish.org: a deliberately plain homepage so the apps stand out, mostly big
 
 - Repo set up as a project (this file, `CLAUDE.md`). Only `beeswax/` exists; getflourish.org redirects to it.
 - The owner wrote the homepage's words (`planning/Homepage copy.md`): a short personal page, "Hello, I'm FlourishDev", with what to check out, what's coming, and how to say hi. Previews go with the "check out" items.
-- **Current draft (Nov 8):** G, `home/drafts/g-flourish.html`: F's donatemonero look plus a site header (placeholder leaf logo, "Flourish", one line), the live Beeswax page as a big card, and a footer after Beeswax's (CC0 line, Contact, Support with the Monero address). Two review rounds by one Claude Opus delegate: desktop 7 → 8, phone 7.5 → 8.5. Look written down in `home/DESIGN.md`. Waiting on the owner's reaction and a group name (ideas offered: Flourish, Groundwork, Common Ground, Quiet Tools, Hearth).
+- **Current draft (Nov 8):** H, `home/drafts/h-flourish.html`: G with the owner's changes (colour sprout logo, no tagline, no line under the header, footer says "Everything here" instead of "All Flourish apps"). Logo options in `home/drafts/icons/flourish-{sprout,drop,bloom}.svg`. One blind review applied. Look in `home/DESIGN.md`. Waiting on the owner's reaction, logo pick and group name (ideas: Flourish, Groundwork, Common Ground, Quiet Tools, Hearth).
 - **Reference site (Nov 8):** donatemonero.org: near-black `#0e0e0e`, the system font, a grid of small equal cards (48px icon, bold name, one or two grey lines), section headings with a hairline under them, one line of intro. Copied without its orange accent. Icons in `home/drafts/icons/`.
 - Inspiration the owner likes (all product pages, so mainly for app pages): Mullvad VPN, KeePassDX, KeePassium, Signal, Tuta (laggy), Ente, Things. Beeswax was built from Obscura's site.
 
@@ -25,5 +25,5 @@ getflourish.org: a deliberately plain homepage so the apps stand out, mostly big
 
 ## Next steps
 
-1. The owner reacts to draft G and picks a group name; iterate if needed.
+1. The owner reacts to draft H, picks a logo and a group name; iterate if needed.
 2. Build `home/`, then the owner's dashboard steps (new Pages project, custom domain, remove the redirect), then check the live site.

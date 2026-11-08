@@ -1,0 +1,14 @@
+<!-- SPDX-License-Identifier: CC0-1.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <circle cx="36" cy="36" r="36" fill="#CFE3F7"/>
+  <path stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round" fill="none" d="M36,64V40"/>
+  <path fill="#7CC46A" stroke="#1A1A1A" stroke-width="2.2" stroke-linejoin="round" d="M36,58C30,58 24,54 23,47C30,47 35,51 36,58Z"/>
+  <g fill="#F49AB4" stroke="#1A1A1A" stroke-width="2.2" stroke-linejoin="round">
+    <ellipse cx="36" cy="19" rx="7" ry="9"/>
+    <ellipse cx="36" cy="19" rx="7" ry="9" transform="rotate(72 36 31)"/>
+    <ellipse cx="36" cy="19" rx="7" ry="9" transform="rotate(144 36 31)"/>
+    <ellipse cx="36" cy="19" rx="7" ry="9" transform="rotate(216 36 31)"/>
+    <ellipse cx="36" cy="19" rx="7" ry="9" transform="rotate(288 36 31)"/>
+  </g>
+  <circle cx="36" cy="31" r="6" fill="#F7CB46" stroke="#1A1A1A" stroke-width="2.2"/>
+</svg>

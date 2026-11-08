@@ -1,0 +1,8 @@
+<!-- SPDX-License-Identifier: CC0-1.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <circle cx="36" cy="36" r="36" fill="#BFE6DA"/>
+  <path fill="#4FA8E0" stroke="#1A1A1A" stroke-width="2.2" stroke-linejoin="round" d="M36,12C44,25 53,34 53,45A17,17 0 0 1 19,45C19,34 28,25 36,12Z"/>
+  <path fill="#9FD3F2" d="M27,44A9,9 0 0 0 30,52Q25,51 24.5,45Z"/>
+  <path fill="#7CC46A" stroke="#1A1A1A" stroke-width="2.2" stroke-linejoin="round" d="M36,50C36,43 41,37 48,37C48,44 43,50 36,50Z"/>
+  <path stroke="#1A1A1A" stroke-width="1.6" stroke-linecap="round" fill="none" d="M37,48Q41,43 45,40"/>
+</svg>
