@@ -9,6 +9,7 @@ getflourish.org: a deliberately plain homepage so the apps stand out, mostly big
 - Repo set up as a project (this file, `CLAUDE.md`). Only `beeswax/` exists; getflourish.org redirects to it.
 - The owner wrote the homepage's words (`planning/Homepage copy.md`): a short personal page, "Hello, I'm FlourishDev", with what to check out, what's coming, and how to say hi. Previews go with the "check out" items.
 - **Draft chosen (Nov 8):** D, `home/drafts/d-stacked.html`, made as simple as possible: no accent colour, no progress bars. Look written down in `home/DESIGN.md`. (Earlier drafts in History.)
+- **Reference site (Nov 8):** the owner asked to copy what makes donatemonero.org good: near-black `#0e0e0e`, the system font, a grid of small equal cards (48px icon, bold name, one or two grey lines), section headings with a hairline under them, one line of intro, one accent colour. Draft F `home/drafts/f-directory.html` copies this without the orange and without previews (icons instead); icons in `home/drafts/icons/`. Open question: F or D, and whether to keep the live Beeswax preview.
 - Inspiration the owner likes (all product pages, so mainly for app pages): Mullvad VPN, KeePassDX, KeePassium, Signal, Tuta (laggy), Ente, Things. Beeswax was built from Obscura's site.
 
 ## Decisions in force
@@ -24,5 +25,5 @@ getflourish.org: a deliberately plain homepage so the apps stand out, mostly big
 
 ## Next steps
 
-1. The owner reacts to the simplified D; iterate.
+1. The owner picks between D (preview, mono) and F (donatemonero-style icon cards); iterate.
 2. Build `home/`, then the owner's dashboard steps (new Pages project, custom domain, remove the redirect), then check the live site.
