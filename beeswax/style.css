@@ -23,7 +23,7 @@
   color-scheme: light;
 }
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; overscroll-behavior: none; background: linear-gradient(#FFFFFF 50%, #84C46B 50%); }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; overscroll-behavior: none; background: linear-gradient(#FFFFFF 50%, #84C46B 50%); }
 body { margin: 0; background: var(--sky-pale); color: var(--text); font: 400 17.5px/1.65 var(--body); overflow-x: hidden; }
 a { color: var(--ink); font-weight: 700; text-decoration: underline; text-decoration-color: var(--honey); text-decoration-thickness: 3px; text-underline-offset: 3px; }
 a:hover { text-decoration-color: var(--ink); }
@@ -62,11 +62,13 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
   padding: 16px 26px;
 }
 .btn:hover { background: #F9D566; }
+.btn:active { background: #E8B92E; }
 .btn svg { width: 22px; height: 22px; flex: none; }
 .btn-sm { font-size: 0.98rem; padding: 12px 16px; border-radius: 12px; border-width: 2px; }
 .btn-sm svg { width: 20px; height: 20px; }
 .btn-light { background: #99D27F; }
 .btn-light:hover { background: #B3DE9C; }
+.btn-light:active { background: #84C46B; }
 .minor { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px 34px; margin-top: 30px; }
 .minor a, .more a { display: inline-flex; align-items: center; min-height: 44px; gap: 8px; font-weight: 700; color: var(--text); text-decoration-color: transparent; }
 .minor a:hover, .more a:hover { color: var(--ink); text-decoration-color: var(--honey); }
@@ -190,6 +192,7 @@ details[open] > summary .plus { transform: rotate(45deg); }
 .copyable { position: relative; }
 .copy { position: absolute; top: 12px; right: 12px; z-index: 1; width: 36px; height: 36px; border-radius: 10px; border: 2px solid var(--ink); background: var(--honey); color: var(--ink); display: grid; place-items: center; cursor: pointer; padding: 0; }
 .copy:hover { background: #F9D566; }
+.copy:active { background: #E8B92E; }
 .copy svg { width: 18px; height: 18px; }
 .copy::before { content: ""; position: absolute; inset: -6px; }
 .copy .done { display: none; }
