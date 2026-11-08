@@ -275,8 +275,8 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
 }
 @media (max-width: 460px) {
   .top .wrap { gap: 12px; padding: 0 16px; }
-  .btn-light { padding: 12px; }
-  .btn-light .lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .top .btn:not(.btn-light) { padding: 12px; }
+  .top .btn .lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
 
 footer a.xmr-label { color: #1E3517; text-decoration: none; }
