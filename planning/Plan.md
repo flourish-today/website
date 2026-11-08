@@ -8,14 +8,14 @@ getflourish.org: a deliberately plain homepage so the apps stand out, mostly big
 
 - Repo set up as a project (this file, `CLAUDE.md`). Only `beeswax/` exists; getflourish.org redirects to it.
 - The owner wrote the homepage's words (`planning/Homepage copy.md`): a short personal page, "Hello, I'm FlourishDev", with what to check out, what's coming, and how to say hi. Previews go with the "check out" items.
-- **Draft chosen (Nov 8):** D, `home/drafts/d-stacked.html`, made as simple as possible: no accent colour, no progress bars. Look written down in `home/DESIGN.md`. (Earlier drafts in History.)
-- **Reference site (Nov 8):** the owner asked to copy what makes donatemonero.org good: near-black `#0e0e0e`, the system font, a grid of small equal cards (48px icon, bold name, one or two grey lines), section headings with a hairline under them, one line of intro, one accent colour. Draft F `home/drafts/f-directory.html` copies this without the orange and without previews (icons instead); icons in `home/drafts/icons/`. 
+- **Current draft (Nov 8):** G, `home/drafts/g-flourish.html`: F's donatemonero look plus a site header (placeholder leaf logo, "Flourish", one line), the live Beeswax page as a big card, and a footer after Beeswax's (CC0 line, Contact, Support with the Monero address). Two review rounds by one Claude Opus delegate: desktop 7 → 8, phone 7.5 → 8.5. Look written down in `home/DESIGN.md`. Waiting on the owner's reaction and a group name (ideas offered: Flourish, Groundwork, Common Ground, Quiet Tools, Hearth).
+- **Reference site (Nov 8):** donatemonero.org: near-black `#0e0e0e`, the system font, a grid of small equal cards (48px icon, bold name, one or two grey lines), section headings with a hairline under them, one line of intro. Copied without its orange accent. Icons in `home/drafts/icons/`.
 - Inspiration the owner likes (all product pages, so mainly for app pages): Mullvad VPN, KeePassDX, KeePassium, Signal, Tuta (laggy), Ente, Things. Beeswax was built from Obscura's site.
 
 ## Decisions in force
 
 - **Not personal (Nov 8):** no "Hello, I'm FlourishDev" and not that name; the page says "Projects", with as little of the owner's writing as possible. Draft wording: Projects (Beeswax, ObsidianCode with their one-line descriptions), In progress (Meditation app 70%, Things 3 with E2EE and Android 50%), Contact (email, SimpleX). This replaces the personal tone of `Homepage copy.md`.
-- **Look (Nov 8):** as simple as possible: dark grey, high contrast, JetBrains Mono, no accent colour, no fake editor or markdown marks. See `home/DESIGN.md`.
+- **Look (Nov 8):** donatemonero.org's plain dark directory (draft F/G), no accent colour; this replaces D's grey JetBrains Mono look. See `home/DESIGN.md`.
 
 - **Homepage first, with Beeswax only (Nov 8).** Other apps come later. Likely later: big cards for apps built from scratch (Beeswax, Flourish), smaller cards for ones built on others' work (ObsidianCode, maybe PathFinish, Things sync once its Android app and encryption work). Forks credit what they're built on.
 - **Previews (Nov 8):** the owner wants them to feel real. First choice to try: the live app page, shrunk inside the card, not clickable inside, loaded only when scrolled to; the whole card links to the page. Needs the homepage CSP to allow framing the app subdomains (thought fine, not yet tested). Fallback: screenshots taken with headless Brave by a local script.
@@ -25,5 +25,5 @@ getflourish.org: a deliberately plain homepage so the apps stand out, mostly big
 
 ## Next steps
 
-1. **Next round (Nov 8, owner's request):** start from F and bring back the live Beeswax preview (a big card). Fix "you don't know what page you're on": the page needs a clear site header saying where you are, the way donatemonero.org has its logo, name and one line. The apps need a group name: use "Flourish" as a placeholder and suggest 3–5 names for the owner to pick. Add a footer from Beeswax's: "All Flourish apps are dedicated to the public domain under CC0 1.0."; Contact (email, SimpleX, GitHub); Support (Donate with Monero, address `82omZG3aUU7gqJhR6dZGSReYvKD7kHFuxj5MGKMAGiJdcSYLnMb9Nky9UBxeuadSSzCNYpwfUueQBdQPEaTXmLH4Tkmbv39`). Then two review rounds by one Claude Opus delegate that rates desktop and phone screenshots out of 10 and suggests improvements; improve after each, keep scope small; then show the owner the final version with both scores.
+1. The owner reacts to draft G and picks a group name; iterate if needed.
 2. Build `home/`, then the owner's dashboard steps (new Pages project, custom domain, remove the redirect), then check the live site.

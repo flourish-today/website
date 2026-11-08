@@ -1,33 +1,34 @@
 # Homepage: design
 
-getflourish.org. This page sets the direction. Changes keep this look and do not redesign it.
+getflourish.org. This page sets the direction. Changes keep this look and do not redesign it. Current draft: `drafts/g-flourish.html`.
 
 Dial: ENERGY 1 / RHYTHM 1 / MOTION 0
 
 ## Identity
 
-As plain as possible, so the apps stand out. Not personal: no greeting, no name. The only colour on the page comes from the app previews.
+As plain as possible, so the apps stand out. Modelled on donatemonero.org. Not personal: no greeting, no name of a person. The group of apps is called "Flourish" for now (placeholder). The only colour on the page comes from app icons and previews.
 
 ## Palette
 
-- Background `#202124` (dark grey). Cards `#28292d`, lines `#3a3c41`, card border on hover `#6b6e75`.
-- Text `#eeece8`. Secondary text and section labels `#9a9ea6`.
+- Background `#0e0e0e` (near-black). Cards `#171717`, lines and card borders `#292929`, card hover `#1b1b1b` with border `#393939`.
+- Text `#e0e0e0`, headings and links `#f0f0f0`. Secondary text `#9f9f9f`.
 - No accent colour. Focus ring is the text colour, 2px, offset 3px.
 
 ## Type
 
-- JetBrains Mono (one local variable font in `fonts/`) for everything.
-- "Projects" is the one big heading (800 weight). Section labels are small, grey, uppercase.
+- The system font (`system-ui`) for everything; the Monero address in the system monospace.
+- The site name in the header is the one big heading. Section headings ("Projects", "In progress") are small and bold with a hairline under them.
 
 ## Layout
 
-- One column, about 820px wide.
-- Projects: a big card per app built from scratch, with the live app page shrunk inside (not clickable inside, loaded lazily); the whole card links to the page. Smaller cards without a preview for forks.
-- In progress: one row per item, name on the left, percentage on the right, thin lines between rows.
-- Contact: plain underlined links.
+- About 1120px wide, 16px side margins on phones.
+- Site header: logo (placeholder leaf mark), name, one grey line, a hairline under it.
+- Projects: a big card per app built from scratch, the live app page shrunk inside (not clickable inside, loaded lazily, faded at the bottom), text beside it on desktop and under it on phones; the app name's link covers the whole card. Smaller cards (48px icon, bold name, grey line) in a grid for forks.
+- In progress: the same small cards without a fill (not links), the percentage in a dashed box where the icon goes.
+- Footer, after Beeswax's: name and the CC0 line; Contact (email, SimpleX, GitHub); Support (Donate with Monero and the address, selectable on one tap; no copy button, since there's no JavaScript).
 
 ## Rules
 
-- Static, works without JavaScript. Fonts and styles local; the CSP allows framing only the app subdomains.
+- Static, works without JavaScript. Styles local; the CSP allows framing only the app subdomains.
 - Hover changes colour only. No motion.
 - Works at 400px wide; tap targets at least 44px.
