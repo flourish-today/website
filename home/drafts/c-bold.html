@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; frame-src https://beeswax.getflourish.org; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>FlourishDev — draft C (bold)</title>
+<style>
+@font-face { font-family: "Space Mono"; src: url(fonts/space-400.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Space Mono"; src: url(fonts/space-700.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+:root { --bg: #2a2a2a; --line: #f1efe9; --dim: #a3a19b; --text: #f1efe9; --accent: #ff7a59; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 "Space Mono", ui-monospace, monospace; padding: 48px 20px 80px; }
+main { max-width: 1040px; margin: 0 auto; }
+h1 { font-size: clamp(40px, 10vw, 104px); line-height: .98; font-weight: 700; margin: 0 0 72px; letter-spacing: -.04em; }
+h1 em { font-style: normal; color: var(--accent); }
+h2 { font-size: 15px; font-weight: 700; margin: 64px 0 20px; padding-bottom: 10px; border-bottom: 2px solid var(--line); }
+ul { list-style: none; padding: 0; margin: 0; }
+li { margin: 0 0 16px; max-width: 680px; }
+a { color: var(--text); text-underline-offset: 4px; text-decoration-thickness: 2px; }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.cards { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+@media (max-width: 760px) { .cards { grid-template-columns: 1fr; } }
+.card { position: relative; border: 2px solid var(--line); background: var(--bg); }
+.card:hover { border-color: var(--accent); }
+.shot { position: relative; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 2px solid var(--line); background: #dfedfc; }
+.shot iframe { position: absolute; top: 0; left: 0; width: 200%; height: 200%; border: 0; transform: scale(.5); transform-origin: 0 0; pointer-events: none; }
+.card .txt { padding: 16px 18px 18px; }
+.card .name { font-size: 26px; font-weight: 700; text-decoration: none; display: block; }
+.card .name::after { content: ""; position: absolute; inset: 0; }
+.card .name::before { content: "→ "; color: var(--accent); }
+.card.small { display: flex; flex-direction: column; justify-content: flex-end; }
+.card.small .name { font-size: 20px; }
+.card p { margin: 6px 0 0; color: var(--dim); }
+.pct { color: var(--accent); white-space: nowrap; }
+.hi { display: flex; flex-wrap: wrap; gap: 8px 32px; }
+.hi a { display: inline-block; padding: 8px 0; font-size: 18px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Hello, I'm <em>FlourishDev</em></h1>
+
+  <h2>stuff you should check out</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="shot"><iframe src="https://beeswax.getflourish.org/" title="Beeswax page preview" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no"></iframe></div>
+      <div class="txt"><a class="name" href="https://beeswax.getflourish.org/">Beeswax</a><p>An effective dumbphone solution on Android.</p></div>
+    </div>
+    <div class="card small">
+      <div class="txt"><a class="name" href="https://github.com/flourish-today/ObsidianCode">ObsidianCode</a><p>A fork of T3 Code's Android app with improved privacy and usability.</p></div>
+    </div>
+  </div>
+
+  <h2>stuff I'm looking forward to sharing</h2>
+  <ul>
+    <li>A private meditation app frontend with good UI <span class="pct">(70%)</span>.</li>
+    <li>Things 3 with E2EE, self-hosted, and an Android app to work with it <span class="pct">(50%)</span>.</li>
+  </ul>
+
+  <h2>bots send spam; humans say "hi"</h2>
+  <div class="hi">
+    <a href="mailto:flourish.today@protonmail.com">flourish.today@protonmail.com</a>
+    <a href="https://smp17.simplex.im/a#OYNzLgLMY-vsrI69LroxLrhc4xkyLGpT2Q5ygNvoaAc">SimpleX</a>
+  </div>
+</main>
+</body>
+</html>

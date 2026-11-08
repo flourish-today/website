@@ -8,6 +8,7 @@ getflourish.org: a deliberately plain homepage so the apps stand out, mostly big
 
 - Repo set up as a project (this file, `CLAUDE.md`). Only `beeswax/` exists; getflourish.org redirects to it.
 - The owner wrote the homepage's words (`planning/Homepage copy.md`): a short personal page, "Hello, I'm FlourishDev", with what to check out, what's coming, and how to say hi. Previews go with the "check out" items.
+- **Rough drafts (Nov 8):** no reference site; the owner asked for really plain: dark grey, high contrast, an opinionated font, the Beeswax preview, maybe text-editor looking. Three drafts in `home/drafts/` (open the `.html` files in Brave), all monospace on dark grey with the live Beeswax page shrunk in a card: A `a-editor.html` (editor window, `hello.md` tab, line numbers, markdown marks, JetBrains Mono, honey accent), B `b-document.html` (plain page, `//` headings, progress bars, IBM Plex Mono, mint accent), C `c-bold.html` (huge headline, ruled headings, two cards side by side, Space Mono, coral accent). The live preview in a card works: Beeswax allows framing.
 - Inspiration the owner likes (all product pages, so mainly for app pages): Mullvad VPN, KeePassDX, KeePassium, Signal, Tuta (laggy), Ente, Things. Beeswax was built from Obscura's site.
 
 ## Decisions in force
@@ -20,7 +21,6 @@ getflourish.org: a deliberately plain homepage so the apps stand out, mostly big
 
 ## Next steps
 
-1. Reference sites from the owner; note which ideas we copy.
-2. `home/DESIGN.md` in Beeswax's format, kept plain and neutral.
-3. 2–3 rough versions in `home/drafts/` for the owner to react to; iterate.
-4. Build `home/`, then the owner's dashboard steps (new Pages project, custom domain, remove the redirect), then check the live site.
+1. The owner reacts to drafts A–C (or mixes parts); iterate.
+2. `home/DESIGN.md` in Beeswax's format for the chosen look.
+3. Build `home/`, then the owner's dashboard steps (new Pages project, custom domain, remove the redirect), then check the live site.

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; frame-src https://beeswax.getflourish.org; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>FlourishDev — draft B (document)</title>
+<style>
+@font-face { font-family: "IBM Plex Mono"; src: url(fonts/plex-400.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url(fonts/plex-600.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+:root { --bg: #232427; --card: #2c2e32; --line: #3d4046; --dim: #8b9099; --text: #ecebe8; --accent: #8fd3a6; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 "IBM Plex Mono", ui-monospace, monospace; padding: 72px 20px 80px; }
+main { max-width: 720px; margin: 0 auto; }
+h1 { font-size: clamp(28px, 6vw, 44px); line-height: 1.15; font-weight: 600; margin: 0 0 64px; letter-spacing: -.02em; }
+h1::after { content: "_"; color: var(--accent); }
+h2 { font-size: 14px; font-weight: 600; color: var(--dim); margin: 56px 0 18px; }
+h2::before { content: "// "; color: var(--accent); }
+ul { list-style: none; padding: 0; margin: 0; }
+li { margin: 0 0 14px; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 4px; text-decoration-thickness: 2px; }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.card { position: relative; border: 1px solid var(--line); border-radius: 14px; background: var(--card); overflow: hidden; margin: 0 0 16px; }
+.card:hover { border-color: var(--accent); }
+.shot { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #dfedfc; }
+.shot iframe { position: absolute; top: 0; left: 0; width: 200%; height: 200%; border: 0; transform: scale(.5); transform-origin: 0 0; pointer-events: none; }
+.card .txt { padding: 18px 20px 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
+.card .name { font-size: 22px; font-weight: 600; text-decoration: none; }
+.card .name::after { content: ""; position: absolute; inset: 0; }
+.card .go { color: var(--accent); }
+.small { display: block; border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; text-decoration: none; }
+.small:hover { border-color: var(--accent); }
+.small b { font-weight: 600; }
+.small span { color: var(--dim); }
+.pct { display: flex; gap: 12px; align-items: center; color: var(--dim); font-size: 13px; margin-top: 4px; }
+.pct .t { flex: 0 0 120px; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.pct .t i { display: block; height: 100%; background: var(--accent); }
+.hi li { display: inline-block; margin-right: 24px; }
+.hi a { display: inline-block; padding: 8px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Hello, I'm FlourishDev</h1>
+
+  <h2>stuff you should check out</h2>
+  <div class="card">
+    <div class="shot"><iframe src="https://beeswax.getflourish.org/" title="Beeswax page preview" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no"></iframe></div>
+    <div class="txt"><a class="name" href="https://beeswax.getflourish.org/">Beeswax</a><span>An effective dumbphone solution on Android.</span></div>
+  </div>
+  <a class="small" href="https://github.com/flourish-today/ObsidianCode"><b>ObsidianCode</b><br><span>A fork of T3 Code's Android app with improved privacy and usability.</span></a>
+
+  <h2>stuff I'm looking forward to sharing</h2>
+  <ul>
+    <li>A private meditation app frontend with good UI (70%).<div class="pct" aria-hidden="true"><span class="t"><i style="width:70%"></i></span></div></li>
+    <li>Things 3 with E2EE, self-hosted, and an Android app to work with it (50%).<div class="pct" aria-hidden="true"><span class="t"><i style="width:50%"></i></span></div></li>
+  </ul>
+
+  <h2>bots send spam; humans say "hi"</h2>
+  <ul class="hi">
+    <li><a href="mailto:flourish.today@protonmail.com">flourish.today@protonmail.com</a></li>
+    <li><a href="https://smp17.simplex.im/a#OYNzLgLMY-vsrI69LroxLrhc4xkyLGpT2Q5ygNvoaAc">SimpleX</a></li>
+  </ul>
+</main>
+</body>
+</html>
