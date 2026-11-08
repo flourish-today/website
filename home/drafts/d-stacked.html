@@ -8,7 +8,7 @@
 <title>Projects — draft D (stacked)</title>
 <style>
 @font-face { font-family: "JetBrains Mono"; src: url(fonts/jetbrains.woff2) format("woff2"); font-weight: 400 800; font-display: swap; }
-:root { --bg: #202124; --card: #28292d; --line: #3a3c41; --dim: #9a9ea6; --text: #eeece8; --accent: #f2c14e; }
+:root { --bg: #202124; --card: #28292d; --line: #3a3c41; --dim: #9a9ea6; --text: #eeece8; --accent: #eeece8; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.6 "JetBrains Mono", ui-monospace, monospace; padding: 64px 20px 80px; }
 main { max-width: 820px; margin: 0 auto; }
@@ -17,7 +17,7 @@ h2 { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: u
 a { color: var(--text); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 .card { position: relative; display: block; border: 1px solid var(--line); border-radius: 12px; background: var(--card); overflow: hidden; margin: 0 0 16px; text-decoration: none; }
-.card:hover { border-color: var(--accent); }
+.card:hover { border-color: #6b6e75; }
 .shot { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #dfedfc; border-bottom: 1px solid var(--line); }
 .shot iframe { position: absolute; top: 0; left: 0; width: 200%; height: 200%; border: 0; transform: scale(.5); transform-origin: 0 0; pointer-events: none; }
 .txt { padding: 16px 20px 18px; }
@@ -27,12 +27,10 @@ a { color: var(--text); }
 .card.small .name { font-size: 16px; }
 .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 14px 0; border-top: 1px solid var(--line); }
 .row:last-child { border-bottom: 1px solid var(--line); }
-.pct { display: flex; align-items: center; gap: 12px; color: var(--dim); }
-.pct .t { width: 120px; height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
-.pct .t i { display: block; height: 100%; background: var(--accent); }
+.pct { color: var(--dim); }
 .contact { display: flex; flex-wrap: wrap; gap: 4px 32px; }
-.contact a { display: inline-block; padding: 10px 0; text-decoration-color: var(--accent); text-underline-offset: 4px; }
-.contact a:hover { color: var(--accent); }
+.contact a { display: inline-block; padding: 10px 0; text-underline-offset: 4px; }
+.contact a:hover { color: var(--dim); }
 </style>
 </head>
 <body>
@@ -48,8 +46,8 @@ a { color: var(--text); }
   </div>
 
   <h2>In progress</h2>
-  <div class="row"><span>Meditation app</span><span class="pct"><span class="t"><i style="width:70%"></i></span>70%</span></div>
-  <div class="row"><span>Things 3 with E2EE and Android</span><span class="pct"><span class="t"><i style="width:50%"></i></span>50%</span></div>
+  <div class="row"><span>Meditation app</span><span class="pct">70%</span></div>
+  <div class="row"><span>Things 3 with E2EE and Android</span><span class="pct">50%</span></div>
 
   <h2>Contact</h2>
   <div class="contact">
