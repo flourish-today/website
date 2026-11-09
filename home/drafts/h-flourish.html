@@ -34,6 +34,8 @@ a.item:hover { background: #1b1b1b; border-color: #393939; text-decoration: none
 .item .ph { width: 48px; height: 48px; flex: 0 0 48px; border-radius: 10px; border: 1px dashed #393939; display: grid; place-items: center; color: #8f8f8f; font-size: .8rem; font-weight: 600; }
 .item b { display: block; margin-bottom: 3px; font-size: .96rem; font-weight: 650; line-height: 1.3; }
 .item span.d { display: block; color: #9f9f9f; font-size: .82rem; line-height: 1.4; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tag { padding: 1px 8px; border: 1px solid #393939; border-radius: 999px; color: #c8c8c8; font-size: .75rem; line-height: 1.5; white-space: nowrap; }
 
 
 /* Footer, after Beeswax's */
@@ -83,16 +85,16 @@ footer ul a:hover { color: #f0f0f0; }
     <h2>Apps</h2>
     <div class="grid">
       <a class="item" href="https://beeswax.getflourish.org/"><img src="icons/beeswax.svg" alt=""><span><b>Beeswax</b><span class="d">An effective dumbphone solution on Android.</span></span></a>
-      <div class="item"><span class="ph">70%<span class="sr"> done</span></span><span><b>Flourish</b><span class="d">A private client for the Healthy Minds Program, with no tracking.</span></span></div>
+      <div class="item"><span class="ph">70%<span class="sr"> done</span></span><span><b>Flourish</b><span class="d">A privacy-focused client for the Healthy Minds Program meditation app.</span></span></div>
     </div>
   </section>
 
   <section>
     <h2>Patches</h2>
     <div class="grid">
-      <a class="item" href="https://github.com/flourish-today/ObsidianCode"><img src="icons/obsidiancode.png" alt=""><span><b>ObsidianCode</b><span class="d">T3 Code without tracking or Google, with Tailscale built in.</span></span></a>
-      <a class="item" href="https://github.com/flourish-today/PathFinish"><img src="icons/pathfinish.png" alt=""><span><b>PathFinish</b><span class="d">StreetComplete without web access.</span></span></a>
-      <div class="item"><span class="ph">Soon</span><span><b>Atoms</b><span class="d">The Atoms habit app, working fully offline.</span></span></div>
+      <a class="item" href="https://github.com/flourish-today/ObsidianCode"><img src="icons/obsidiancode.png" alt=""><span><b>ObsidianCode</b><span class="d">T3 Code for Android but privacy respecting.</span></span></a>
+      <a class="item" href="https://github.com/flourish-today/PathFinish"><img src="icons/pathfinish.png" alt=""><span><b>PathFinish</b><span class="d">StreetComplete with no web access.</span></span></a>
+      <div class="item"><span class="ph">Soon</span><span><b>Atoms</b><span class="d">Premium unlocked and privacy-focused patch of AtØms, the official Atomic Habits app.</span><span class="tags"><span class="tag">14 third-party services <span aria-hidden="true">→</span><span class="sr">to</span> 0</span><span class="tag">$40/year <span aria-hidden="true">→</span><span class="sr">to</span> $0</span></span></span></div>
       <div class="item"><span class="ph">50%<span class="sr"> done</span></span><span><b>Things sync</b><span class="d">Self-hosted, end-to-end encrypted sync for Things 3, with an Android app.</span></span></div>
     </div>
   </section>
@@ -114,7 +116,7 @@ footer ul a:hover { color: #f0f0f0; }
     </div>
     <div>
       <h3>Support</h3>
-      <div class="xmr-label"><svg aria-hidden="true"><use href="#xmr-logo"/></svg>Donate with Monero</div>
+      <div class="xmr-label"><svg aria-hidden="true"><use href="#xmr-logo"/></svg>Send a tip with Monero</div>
       <span class="xmr">82omZG3aUU7gqJhR6dZGSReYvKD7kHFuxj5MGKMAGiJdcSYLnMb9Nky9UBxeuadSSzCNYpwfUueQBdQPEaTXmLH4Tkmbv39</span>
     </div>
   </div>
