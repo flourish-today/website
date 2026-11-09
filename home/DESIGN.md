@@ -23,8 +23,8 @@ As plain as possible, so the apps stand out. Modelled on donatemonero.org. Not p
 
 - About 1120px wide, 16px side margins on phones.
 - Site header: the name only. No logo, no tagline, no line under it.
-- Projects: every app as the same small card (48px icon, bold name, grey line) in a grid. No previews for now.
-- In progress: the same small cards without a fill (not links), the percentage in a dashed box where the icon goes.
+- Two sections: Apps (built from scratch), then Patches (others' apps changed). Within each, released first. Every item is the same small card (48px icon, bold name, grey line) in a grid. No previews for now.
+- Unreleased items: the same card dashed and without a fill (not a link), the percentage or "Soon" in a dashed box where the icon goes.
 - Footer, after Beeswax's: name and "Dedicated to the public domain under CC0 1.0"; Contact (email, SimpleX, GitHub); Support (Donate with Monero and the address, selectable on one tap; no copy button, since there's no JavaScript).
 
 ## Rules

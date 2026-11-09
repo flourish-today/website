@@ -8,13 +8,14 @@ getflourish.org: a deliberately plain homepage so the apps stand out, mostly big
 
 - Repo set up as a project (this file, `CLAUDE.md`). Only `beeswax/` exists; getflourish.org redirects to it.
 - The owner wrote the homepage's words (`planning/Homepage copy.md`): a short personal page, "Hello, I'm FlourishDev", with what to check out, what's coming, and how to say hi. Previews go with the "check out" items.
-- **Current draft (Nov 8):** H, `home/drafts/h-flourish.html`: F's plain directory with G's footer: just "Flourish" at the top (no logo, no tagline, no line under it), Beeswax and ObsidianCode as equal small cards, footer line "Dedicated to the public domain under CC0 1.0". Look in `home/DESIGN.md`. Waiting on the owner's reaction and group name (ideas: Flourish, Groundwork, Common Ground, Quiet Tools, Hearth).
+- **Current draft (Nov 8):** H, `home/drafts/h-flourish.html`: F's plain directory with G's footer: just "Flourish" at the top (no logo, no tagline, no line under it), sections Apps (Beeswax; Flourish 70%) and Patches (ObsidianCode, PathFinish; Atoms "Soon"; Things sync 50%) as equal small cards, footer line "Dedicated to the public domain under CC0 1.0". Look in `home/DESIGN.md`. Waiting on the owner's reaction and group name (ideas: Flourish, Groundwork, Common Ground, Quiet Tools, Hearth).
 - **Reference site (Nov 8):** donatemonero.org: near-black `#0e0e0e`, the system font, a grid of small equal cards (48px icon, bold name, one or two grey lines), section headings with a hairline under them, one line of intro. Copied without its orange accent. Icons in `home/drafts/icons/`.
 - Inspiration the owner likes (all product pages, so mainly for app pages): Mullvad VPN, KeePassDX, KeePassium, Signal, Tuta (laggy), Ente, Things. Beeswax was built from Obscura's site.
 
 ## Decisions in force
 
-- **Not personal (Nov 8):** no "Hello, I'm FlourishDev" and not that name; the page says "Projects", with as little of the owner's writing as possible. Draft wording: Projects (Beeswax, ObsidianCode with their one-line descriptions), In progress (Meditation app 70%, Things 3 with E2EE and Android 50%), Contact (email, SimpleX). This replaces the personal tone of `Homepage copy.md`.
+- **Not personal (Nov 8):** no "Hello, I'm FlourishDev" and not that name; as little of the owner's writing as possible. This replaces the personal tone of `Homepage copy.md`.
+- **What's listed and order (Nov 8):** Apps first (built from scratch), then Patches; released before unreleased. Flourish is the Healthy Minds Program client. Atoms is described by its offline use only (not the unlocked paid features). Odysseus (archived) and Hybrid Calisthenics (private, not built) are left off. Things sync: servers work, Android app needs a lot of work.
 - **Look (Nov 8):** donatemonero.org's plain dark directory (draft F/G), no accent colour; this replaces D's grey JetBrains Mono look. See `home/DESIGN.md`.
 
 - **Homepage first, with Beeswax only (Nov 8).** Other apps come later. Likely later: big cards for apps built from scratch (Beeswax, Flourish), smaller cards for ones built on others' work (ObsidianCode, maybe PathFinish, Things sync once its Android app and encryption work). Forks credit what they're built on.
