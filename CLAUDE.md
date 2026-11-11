@@ -22,3 +22,7 @@ This repo is getflourish.org: a plain homepage of big cards, one per app, and a 
 - Static HTML and CSS, works without JavaScript. Fonts, images, styles and scripts are local files; the CSP (a `<meta>` tag in each page) allows them only from `'self'`. No tracking, no third parties.
 - Link `style.css` and scripts with `?v=` and the first 8 characters of their SHA-256.
 - Works at 400px wide with no horizontal scroll; tap targets at least 44px; visible focus ring.
+
+## Issues
+
+This project's label in `flourish-today/issues` is `website` (see "Issues are the to-do list" in `~/.claude/CLAUDE.md`).
