@@ -26,5 +26,4 @@ getflourish.org: a deliberately plain homepage so the apps stand out, mostly big
 
 ## Next steps
 
-1. The owner reacts to draft H and picks a group name; iterate if needed.
-2. Build `home/`, then the owner's dashboard steps (new Pages project, custom domain, remove the redirect), then check the live site.
+Next steps are issues labelled `website` in `flourish-today/issues`: `gh issue list -R flourish-today/issues -l website`. Moved there on Nov 11: the owner's reaction to draft H and the group name (#171), then building `home/` and putting it live (#172).
