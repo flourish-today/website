@@ -16,3 +16,7 @@
 ## Nov 14, 2026: Beeswax More features page
 
 Added `/features/` on the Beeswax 1.03 docs branch, with Schedule, User profiles, Recovery wait and Extra settings. It uses the existing small-page layout, styles, fonts and script. A More features button sits below the homepage feature cards; the owner's shorter Block any app text is preserved. The FAQ keeps detailed instructions and limits. The page is in the local editor for the owner to revise, not deployed. Local links and IDs checked; rendered without horizontal overflow at 1280px and 400px.
+
+## Nov 14: final Beeswax wording approved
+
+The owner finished editing the website and instructed that its wording be copied exactly into documentation, without rewriting or questioning it. Commit `43d965c` saves those edits. The app repository now has matching FAQ, PRIVACY, SETUP and README passages, plus FEATURES.md from the More features page. The five approved website pages were checked byte for byte after copying; none changed. No deployment.
