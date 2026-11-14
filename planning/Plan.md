@@ -14,6 +14,8 @@ getflourish.org: a deliberately plain homepage so the apps stand out, mostly big
 
 ## Decisions in force
 
+- Beeswax has a separate More features page for schedules, user profiles, recovery wait and extra settings, linked below the homepage feature cards. The FAQ keeps instructions and limits. Approved Nov 14 while preparing 1.03.
+
 - **Not personal (Nov 8):** no "Hello, I'm FlourishDev" and not that name; as little of the owner's writing as possible. This replaces the personal tone of `Homepage copy.md`.
 - **What's listed and order (Nov 8):** Apps first (built from scratch), then Patches; released before unreleased. Flourish is the Healthy Minds Program client. Atoms is described by its offline use only (not the unlocked paid features). Odysseus (archived) and Hybrid Calisthenics (private, not built) are left off. Things sync: servers work, Android app needs a lot of work.
 - **Look (Nov 8):** donatemonero.org's plain dark directory (draft F/G), no accent colour; this replaces D's grey JetBrains Mono look. See `home/DESIGN.md`.
