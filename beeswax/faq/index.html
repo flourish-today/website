@@ -146,11 +146,22 @@
         </details>
         <details class="card" id="what-if-i-forget-my-lock-code">
           <summary>What if I forget my lock code?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><p>Without your lock code, you can't access new apps you install and can't access apps you've blocked. You can still export all your data and access the apps you already have. If you need to install new apps or unblock apps, you'll need to factory reset your phone.</p></div>
+          <div class="ans"><p>Without your lock code, you can't access new apps you install and can't access apps you've blocked. You can still export all your data and access the apps you already have. If you enabled Recovery wait in More settings beforehand, tap Lost code to start the wait. When it ends, tap Unlock to open the list without your code. Set a new code before closing the list. The wait uses days, hours and minutes; setting all three to zero turns it off. Restarts can make the wait longer, and time with the phone off does not count. Without a recovery wait, you'll need to factory reset your phone.</p></div>
+        </details>
+        <details class="card" id="how-does-the-schedule-work">
+          <summary>How does the schedule work?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>Enter your lock code, tap Unlock, then Schedule. Pick the apps, the start and end times, and the days. A window that crosses midnight belongs to the day it starts. No selected apps, no selected days, or equal start and end times means nothing is blocked by the schedule. There is no separate on/off switch.</p>
+<p>In Schedule in the Owner profile, Lock date and time turns on automatic time and time zone and prevents manual clock changes. Without it, changing the clock can bypass the schedule. The schedule changes when the screen turns on and each minute while it is on. It does not change in safe mode because Beeswax cannot run there. Blocking an app removes it from the home screen, and its shortcut may need to be added again when it is allowed.</p>
+<p>Switching an app off in the main list blocks it outright and removes it from the schedule. Allowing it again does not put it back on the schedule.</p></div>
+        </details>
+        <details class="card" id="can-i-use-another-user-profile">
+          <summary>Can I use another user profile?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>In the Owner profile, enter your lock code, tap Unlock, then More settings and Create user. Switch to it in Android Settings. Beeswax locks that user on its first start with a copy of the current lock code. Only the code's salt and hash are passed to the new user.</p>
+<p>Each user has its own app list, schedule, recovery wait and lock code after creation. Changing the code in one user does not change it in the others. The new user's Beeswax has no Deactivate button or device owner settings. Delete the user from the Owner profile to remove it.</p></div>
         </details>
         <details class="card" id="what-doesnt-work-with-beeswax">
           <summary>What doesn't work with Beeswax?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="ans"><ul><li>You can't use Private Spaces or create other user profiles.</li><li>Links that would open in a browser don't open while Beeswax is locked, unless you've allowed a browser.</li><li>Apps with a built-in browser, like a help link or an in-app browser, may still open websites. The vast majority of websites do not allow this and it's recommended against by Android.</li></ul></div>
+          <div class="ans"><ul><li>You can't use Private Spaces. Create other users through Beeswax, rather than Android Settings.</li><li>Links that would open in a browser don't open while Beeswax is locked, unless you've allowed a browser.</li><li>Apps with a built-in browser, like a help link or an in-app browser, may still open websites. The vast majority of websites do not allow this and it's recommended against by Android.</li></ul></div>
         </details>
         <details class="card" id="how-do-i-remove-beeswax">
           <summary>How do I remove Beeswax?<span class="plus" aria-hidden="true"></span></summary>
