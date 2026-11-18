@@ -149,13 +149,33 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 /* After a tap the word lands with a squash-and-stretch bounce that settles, like a comic sound effect.
    On touch screens it then drifts up and fades before the tap's timer ends. */
 @media (prefers-reduced-motion: no-preference) {
-  .buzz.say .bzz { transform-origin: 0 100%; animation: bzz-bounce .7s ease-out; }
+  .buzz.say .bzz { transform-origin: 0 100%; animation: bzz-bounce .7s ease-out, bzz-buzz .55s steps(1, end) .1s; }
   .flight.to-left .buzz.say .bzz { transform-origin: 100% 100%; }
 }
 @media (prefers-reduced-motion: no-preference) and (hover: none) {
-  .buzz.say .bzz { animation: bzz-bounce .7s ease-out, bzz-away .35s ease-in 1.05s forwards; }
+  .buzz.say .bzz { animation: bzz-bounce .7s ease-out, bzz-buzz .55s steps(1, end) .1s, bzz-away .35s ease-in 1.05s forwards; }
 }
 /* The separate scale and translate properties add to the tilt in transform */
+/* A fast, tiny vibration that dies down: the buzz. Margins shift the word without touching the bounce's transforms. */
+@keyframes bzz-buzz {
+  0.0% { margin-left: 2.20px; margin-right: -2.20px; margin-bottom: 1.10px; }
+  6.2% { margin-left: -2.00px; margin-right: 2.00px; margin-bottom: -1.00px; }
+  12.5% { margin-left: 1.90px; margin-right: -1.90px; margin-bottom: -0.95px; }
+  18.8% { margin-left: -1.70px; margin-right: 1.70px; margin-bottom: 0.85px; }
+  25.0% { margin-left: 1.60px; margin-right: -1.60px; margin-bottom: -0.80px; }
+  31.2% { margin-left: -1.40px; margin-right: 1.40px; margin-bottom: -0.70px; }
+  37.5% { margin-left: 1.30px; margin-right: -1.30px; margin-bottom: 0.65px; }
+  43.8% { margin-left: -1.10px; margin-right: 1.10px; margin-bottom: -0.55px; }
+  50.0% { margin-left: 1.00px; margin-right: -1.00px; margin-bottom: -0.50px; }
+  56.2% { margin-left: -0.90px; margin-right: 0.90px; margin-bottom: 0.45px; }
+  62.5% { margin-left: 0.70px; margin-right: -0.70px; margin-bottom: -0.35px; }
+  68.8% { margin-left: -0.60px; margin-right: 0.60px; margin-bottom: -0.30px; }
+  75.0% { margin-left: 0.50px; margin-right: -0.50px; margin-bottom: 0.25px; }
+  81.2% { margin-left: -0.40px; margin-right: 0.40px; margin-bottom: -0.20px; }
+  87.5% { margin-left: 0.30px; margin-right: -0.30px; margin-bottom: -0.15px; }
+  93.8% { margin-left: -0.20px; margin-right: 0.20px; margin-bottom: 0.10px; }
+  100% { margin-left: 0; margin-right: 0; margin-bottom: 0; }
+}
 @keyframes bzz-bounce {
   0% { opacity: 0; scale: .4; }
   25% { opacity: 1; scale: 1.25 .8; }
