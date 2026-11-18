@@ -137,36 +137,36 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 .bee-flower { right: calc(13% + 10px); bottom: 108px; width: 34px; height: 31px; --r: 172deg; }
 .buzz { position: absolute; z-index: 2; pointer-events: auto; cursor: default; -webkit-tap-highlight-color: transparent; }
 .buzz svg { width: 100%; height: 100%; display: block; transform: rotate(var(--r, 0deg)) scaleX(var(--f, 1)); }
-.bzz { position: absolute; left: 78%; bottom: 88%; font: 600 1rem/1 var(--display); color: var(--ink); letter-spacing: 0.04em; white-space: nowrap; pointer-events: none;
+.bzz { position: absolute; left: 78%; bottom: 88%; font: 700 1.1rem/1 var(--display); color: var(--honey); -webkit-text-stroke: 0.16em var(--ink); paint-order: stroke fill; letter-spacing: 0.05em; white-space: nowrap; pointer-events: none;
   opacity: 0; transform: rotate(-8deg); }
 .buzz:hover .bzz, .buzz.say .bzz { opacity: 1; }
 /* Touch screens: a tap leaves the bee hovered, so only the tap's timer shows the text */
 @media (hover: none) { .buzz:not(.say):hover .bzz { opacity: 0; } }
-.bee-door .bzz, .bee-flower .bzz { font-size: 0.85rem; }
-/* A tap makes the buzz pop out, hold, and drift away (on touch screens it also fades) */
+.bee-door .bzz, .bee-flower .bzz { font-size: 0.9rem; }
+/* A comic-book sound effect: after a tap the word pops in, wiggles a few times, then holds (on touch screens it then drifts up and fades) */
 @media (prefers-reduced-motion: no-preference) {
-  .buzz.say .bzz { transform-origin: 0 100%; animation: bzz-pop 1.4s ease-out, bzz-jitter .07s linear 14; }
+  .buzz.say .bzz { transform-origin: 0 100%; animation: bzz-pop 1.4s ease-out, bzz-wiggle .42s ease-in-out .12s; }
 }
 @media (prefers-reduced-motion: no-preference) and (hover: none) {
-  .buzz.say .bzz { animation: bzz-pop-fade 1.4s ease-out, bzz-jitter .07s linear 14; }
+  .buzz.say .bzz { animation: bzz-pop-fade 1.4s ease-out, bzz-wiggle .42s ease-in-out .12s; }
 }
-/* The text itself vibrates while it is up (the separate translate property adds to the pop's transform) */
-@keyframes bzz-jitter {
-  0%, 100% { translate: 0 0; }
-  25% { translate: -1.5px 1px; }
-  50% { translate: 1.5px -1px; }
-  75% { translate: -1px -1.5px; }
+/* The separate rotate property adds to the pop's transform */
+@keyframes bzz-wiggle {
+  0%, 100% { rotate: 0deg; }
+  20% { rotate: -3deg; }
+  45% { rotate: 3deg; }
+  70% { rotate: -2deg; }
 }
 @keyframes bzz-pop {
-  0% { opacity: 0; transform: rotate(-8deg) scale(.3) translateY(8px); }
-  14% { opacity: 1; transform: rotate(-14deg) scale(1.3) translateY(-2px); }
-  28%, 100% { opacity: 1; transform: rotate(-8deg) scale(1) translateY(0); }
+  0% { opacity: 0; transform: rotate(-8deg) scale(.8); }
+  10% { opacity: 1; transform: rotate(-8deg) scale(1.08); }
+  18%, 100% { opacity: 1; transform: rotate(-8deg) scale(1); }
 }
 @keyframes bzz-pop-fade {
-  0% { opacity: 0; transform: rotate(-8deg) scale(.3) translateY(8px); }
-  14% { opacity: 1; transform: rotate(-14deg) scale(1.3) translateY(-2px); }
-  28%, 70% { opacity: 1; transform: rotate(-8deg) scale(1) translateY(0); }
-  100% { opacity: 0; transform: rotate(-4deg) scale(1) translateY(-16px); }
+  0% { opacity: 0; transform: rotate(-8deg) scale(.8); }
+  10% { opacity: 1; transform: rotate(-8deg) scale(1.08); }
+  18%, 72% { opacity: 1; transform: rotate(-8deg) scale(1) translateY(0); }
+  100% { opacity: 0; transform: rotate(-8deg) scale(1) translateY(-8px); }
 }
 .trail-low { position: absolute; left: calc(50% - 250px); bottom: 98px; width: 220px; height: 90px; }
 .flowers-b { position: absolute; left: calc(11% + 196px); bottom: 44px; width: 44px; height: 70px; }
