@@ -9,6 +9,20 @@ for (const b of document.querySelectorAll('[data-copy]')) {
     setTimeout(() => { b.classList.remove('ok'); b.setAttribute('aria-label', 'Copy'); }, 1600);
   });
 }
+// Long buzzes shake one letter after another, "bzz bzz" one word after another, so a long word isn't one solid block
+for (const z of document.querySelectorAll('.bzz')) {
+  const t = z.textContent.trim();
+  const parts = t.includes(' ') ? t.split(' ') : t.length > 3 ? [...t] : null;
+  if (!parts) continue;
+  z.textContent = '';
+  parts.forEach((p, i) => {
+    const s = document.createElement('span');
+    s.textContent = p; s.style.setProperty('--i', i);
+    s.className = t.includes(' ') ? 'w' : 'l';
+    z.append(s, t.includes(' ') && i < parts.length - 1 ? ' ' : '');
+  });
+  z.classList.add('split');
+}
 for (const b of document.querySelectorAll('.buzz')) {
   b.addEventListener('click', () => {
     b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
