@@ -145,10 +145,17 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 .bee-door .bzz, .bee-flower .bzz { font-size: 0.85rem; }
 /* A tap makes the buzz pop out, hold, and drift away (on touch screens it also fades) */
 @media (prefers-reduced-motion: no-preference) {
-  .buzz.say .bzz { transform-origin: 0 100%; animation: bzz-pop 1.4s ease-out; }
+  .buzz.say .bzz { transform-origin: 0 100%; animation: bzz-pop 1.4s ease-out, bzz-jitter .07s linear 14; }
 }
 @media (prefers-reduced-motion: no-preference) and (hover: none) {
-  .buzz.say .bzz { animation-name: bzz-pop-fade; }
+  .buzz.say .bzz { animation: bzz-pop-fade 1.4s ease-out, bzz-jitter .07s linear 14; }
+}
+/* The text itself vibrates while it is up (the separate translate property adds to the pop's transform) */
+@keyframes bzz-jitter {
+  0%, 100% { translate: 0 0; }
+  25% { translate: -1.5px 1px; }
+  50% { translate: 1.5px -1px; }
+  75% { translate: -1px -1.5px; }
 }
 @keyframes bzz-pop {
   0% { opacity: 0; transform: rotate(-8deg) scale(.3) translateY(8px); }
