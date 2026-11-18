@@ -116,6 +116,8 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 .flight.flip { --sy: -1; --ey: 58%; }
 .hero-pair .fa { right: 40px; top: -104px; }
 .hero-pair .fb { left: calc(50% + 10px); bottom: -78px; }
+.hero-text { position: relative; }
+.fl-hero { left: 0; top: -48px; }
 .fl-shots { left: 6%; top: 34px; }
 .fl-why { right: 9%; top: 78px; }
 .fl-privacy { right: 12%; bottom: 46px; }
