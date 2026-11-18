@@ -99,9 +99,7 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 .hero-to { width: 32px; height: 32px; flex: none; color: var(--ink); margin-bottom: 36px; }
 .hero h1 { font-weight: 700; font-size: clamp(3rem, 8.8vw, 6.6rem); line-height: 0.98; letter-spacing: -0.025em; }
 .hero h1 .stick.green { color: #8FCB6E; }
-.hero h1 .stick { color: var(--honey); -webkit-text-stroke: 0.075em var(--ink); paint-order: stroke fill; }
-.hero h1 .stick::selection { color: var(--honey); -webkit-text-fill-color: var(--honey); -webkit-text-stroke-color: var(--ink); background: rgba(45, 95, 142, .35); }
-.hero h1 .stick.green::selection { color: #8FCB6E; -webkit-text-fill-color: #8FCB6E; }
+.hero h1 .stick { color: var(--honey); -webkit-text-stroke: 0.075em var(--ink); paint-order: stroke fill; -webkit-user-select: none; user-select: none; }
 .hero .lede { font-size: clamp(1.12rem, 2.2vw, 1.32rem); line-height: 1.55; max-width: 27em; margin: 28px 0 36px; }
 .deco { position: absolute; pointer-events: none; overflow: visible; }
 .hero .wrap { position: relative; z-index: 1; }
@@ -210,7 +208,8 @@ details[open] > summary .plus { transform: rotate(45deg); }
 footer { background: #84C46B; color: var(--ink); padding: 40px 0 64px; margin-top: -1px; }
 .foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 44px; }
 footer .brand { min-height: 44px; margin-bottom: 12px; }
-footer p a { font-weight: 600; text-decoration-color: var(--ink); }
+footer p a { font-weight: 600; text-decoration: none; }
+footer p a:hover { text-decoration: underline; text-decoration-color: var(--ink); text-decoration-thickness: 3px; }
 footer h3 { font: 600 1.05rem/1 var(--display); margin-bottom: 6px; }
 footer ul { list-style: none; margin: 0; padding: 0; display: grid; }
 footer li, footer p { color: #1E3517; font-size: 0.97rem; }
