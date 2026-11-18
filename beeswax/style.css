@@ -148,29 +148,41 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 .bee-door .bzz, .bee-flower .bzz { font-size: 0.85rem; }
 /* After a tap the word appears and vibrates (the buzz). On touch screens it then drifts up and fades before the tap's timer ends. */
 @media (prefers-reduced-motion: no-preference) {
-  .buzz.say .bzz { animation: bzz-in .12s ease-out, bzz-buzz .55s steps(1, end) .12s; }
+  .buzz.say .bzz { animation: bzz-in .12s ease-out, bzz-buzz .8s steps(1, end) .12s; }
 }
 @media (prefers-reduced-motion: no-preference) and (hover: none) {
-  .buzz.say .bzz { animation: bzz-in .12s ease-out, bzz-buzz .55s steps(1, end) .12s, bzz-away .35s ease-in 1.05s forwards; }
+  .buzz.say .bzz { animation: bzz-in .12s ease-out, bzz-buzz .8s steps(1, end) .12s, bzz-away .35s ease-in 1.05s forwards; }
 }
 /* A fast, tiny vibration that dies down: the buzz. Margins shift the word without touching its tilt. */
 @keyframes bzz-buzz {
-  0.0% { margin-left: 2.20px; margin-right: -2.20px; margin-bottom: 1.10px; }
-  6.2% { margin-left: -2.00px; margin-right: 2.00px; margin-bottom: -1.00px; }
-  12.5% { margin-left: 1.90px; margin-right: -1.90px; margin-bottom: -0.95px; }
-  18.8% { margin-left: -1.70px; margin-right: 1.70px; margin-bottom: 0.85px; }
-  25.0% { margin-left: 1.60px; margin-right: -1.60px; margin-bottom: -0.80px; }
-  31.2% { margin-left: -1.40px; margin-right: 1.40px; margin-bottom: -0.70px; }
-  37.5% { margin-left: 1.30px; margin-right: -1.30px; margin-bottom: 0.65px; }
-  43.8% { margin-left: -1.10px; margin-right: 1.10px; margin-bottom: -0.55px; }
-  50.0% { margin-left: 1.00px; margin-right: -1.00px; margin-bottom: -0.50px; }
-  56.2% { margin-left: -0.90px; margin-right: 0.90px; margin-bottom: 0.45px; }
-  62.5% { margin-left: 0.70px; margin-right: -0.70px; margin-bottom: -0.35px; }
-  68.8% { margin-left: -0.60px; margin-right: 0.60px; margin-bottom: -0.30px; }
-  75.0% { margin-left: 0.50px; margin-right: -0.50px; margin-bottom: 0.25px; }
-  81.2% { margin-left: -0.40px; margin-right: 0.40px; margin-bottom: -0.20px; }
-  87.5% { margin-left: 0.30px; margin-right: -0.30px; margin-bottom: -0.15px; }
-  93.8% { margin-left: -0.20px; margin-right: 0.20px; margin-bottom: 0.10px; }
+  0.0% { margin-left: 1.00px; margin-right: -1.00px; margin-bottom: 0.30px; }
+  3.6% { margin-left: -0.97px; margin-right: 0.97px; margin-bottom: -0.29px; }
+  7.1% { margin-left: 0.95px; margin-right: -0.95px; margin-bottom: -0.28px; }
+  10.7% { margin-left: -0.92px; margin-right: 0.92px; margin-bottom: 0.27px; }
+  14.3% { margin-left: 0.89px; margin-right: -0.89px; margin-bottom: -0.26px; }
+  17.9% { margin-left: -0.87px; margin-right: 0.87px; margin-bottom: -0.25px; }
+  21.4% { margin-left: 0.84px; margin-right: -0.84px; margin-bottom: 0.24px; }
+  25.0% { margin-left: -0.81px; margin-right: 0.81px; margin-bottom: -0.22px; }
+  28.6% { margin-left: 0.79px; margin-right: -0.79px; margin-bottom: -0.21px; }
+  32.1% { margin-left: -0.76px; margin-right: 0.76px; margin-bottom: 0.20px; }
+  35.7% { margin-left: 0.73px; margin-right: -0.73px; margin-bottom: -0.19px; }
+  39.3% { margin-left: -0.71px; margin-right: 0.71px; margin-bottom: -0.18px; }
+  42.9% { margin-left: 0.68px; margin-right: -0.68px; margin-bottom: 0.17px; }
+  46.4% { margin-left: -0.65px; margin-right: 0.65px; margin-bottom: -0.16px; }
+  50.0% { margin-left: 0.62px; margin-right: -0.62px; margin-bottom: -0.15px; }
+  53.6% { margin-left: -0.60px; margin-right: 0.60px; margin-bottom: 0.14px; }
+  57.1% { margin-left: 0.57px; margin-right: -0.57px; margin-bottom: -0.13px; }
+  60.7% { margin-left: -0.54px; margin-right: 0.54px; margin-bottom: -0.12px; }
+  64.3% { margin-left: 0.52px; margin-right: -0.52px; margin-bottom: 0.11px; }
+  67.9% { margin-left: -0.49px; margin-right: 0.49px; margin-bottom: -0.10px; }
+  71.4% { margin-left: 0.46px; margin-right: -0.46px; margin-bottom: -0.09px; }
+  75.0% { margin-left: -0.44px; margin-right: 0.44px; margin-bottom: 0.07px; }
+  78.6% { margin-left: 0.41px; margin-right: -0.41px; margin-bottom: -0.06px; }
+  82.1% { margin-left: -0.38px; margin-right: 0.38px; margin-bottom: -0.05px; }
+  85.7% { margin-left: 0.36px; margin-right: -0.36px; margin-bottom: 0.04px; }
+  89.3% { margin-left: -0.33px; margin-right: 0.33px; margin-bottom: -0.03px; }
+  92.9% { margin-left: 0.30px; margin-right: -0.30px; margin-bottom: -0.02px; }
+  96.4% { margin-left: -0.28px; margin-right: 0.28px; margin-bottom: 0.01px; }
   100% { margin-left: 0; margin-right: 0; margin-bottom: 0; }
 }
 @keyframes bzz-in {

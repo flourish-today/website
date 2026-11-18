@@ -11,7 +11,7 @@ for (const b of document.querySelectorAll('[data-copy]')) {
 }
 for (const b of document.querySelectorAll('.buzz')) {
   b.addEventListener('click', () => {
-    b.classList.add('say');
+    b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
     clearTimeout(b.t); b.t = setTimeout(() => b.classList.remove('say'), 1400);
   });
 }
