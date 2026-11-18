@@ -99,7 +99,7 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 .hero-to { width: 32px; height: 32px; flex: none; color: var(--ink); margin-bottom: 36px; }
 .hero h1 { font-weight: 700; font-size: clamp(3rem, 8.8vw, 6.6rem); line-height: 0.98; letter-spacing: -0.025em; }
 .hero h1 .stick.green { color: #8FCB6E; }
-.hero h1 .stick { color: var(--honey); -webkit-text-stroke: 0.075em var(--ink); paint-order: stroke fill; }
+.hero h1 .stick { color: var(--honey); -webkit-text-stroke: 0.075em var(--ink); paint-order: stroke fill; -webkit-user-select: none; user-select: none; }
 .hero .lede { font-size: clamp(1.12rem, 2.2vw, 1.32rem); line-height: 1.55; max-width: 27em; margin: 28px 0 36px; }
 .deco { position: absolute; pointer-events: none; overflow: visible; }
 .hero .wrap { position: relative; z-index: 1; }
@@ -268,13 +268,21 @@ footer .xmr { user-select: all; -webkit-user-select: all; cursor: text; color: #
   .why .grid { grid-template-columns: 1fr; }
   .cloud { transform: scale(.6); transform-origin: center; }
   .three { grid-template-columns: 1fr; }
-  .stats { gap: 12px; }
-  .stats li { padding: 20px 8px; }
-  .stats b { font-size: 3rem; height: 54px; }
-  .stats b svg { width: 48px; height: 48px; }
-  .stats span { font-size: 0.88rem; }
+  .hero h1 { font-size: min(16vw, 4.4rem); }
+  .stats { grid-template-columns: 1fr; gap: 12px; }
+  .stats li { flex-direction: row; justify-content: center; gap: 16px; padding: 14px 18px; }
+  .stats b { font-size: 2.6rem; height: 48px; }
+  .stats b svg { width: 44px; height: 44px; }
+  .stats span { margin-top: 0; font-size: 1.1rem; }
+  .dl-card { border-radius: 28px; padding: 44px 16px 40px; }
+  .download .mascot { width: 88px; height: 88px; margin-bottom: 16px; }
+  .download .btn-row { margin-top: 24px; }
+  .download .minor { margin-top: 12px; gap: 0 28px; }
+  .verify { margin-top: 24px; }
+  .verify pre { padding: 16px 56px 16px 16px; font-size: 0.74rem; }
+  .comb-c, .comb-d { top: 36px; }
   .foot { grid-template-columns: 1fr; gap: 32px; }
-  .comb-c, .comb-d { width: 80px; height: 71px; }
+  .comb-c, .comb-d { width: 64px; height: 57px; }
 }
 @media (max-width: 460px) {
   .top .wrap { gap: 12px; padding: 0 16px; }
