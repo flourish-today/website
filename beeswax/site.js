@@ -23,11 +23,15 @@ for (const z of document.querySelectorAll('.bzz')) {
   });
   z.classList.add('split');
 }
+// A tap or click plays the buzz again; with a mouse, pointing at the bee plays it too
+const canHover = matchMedia('(hover: hover)');
 for (const b of document.querySelectorAll('.buzz')) {
-  b.addEventListener('click', () => {
+  const say = () => {
     b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
     clearTimeout(b.t); b.t = setTimeout(() => b.classList.remove('say'), 1400);
-  });
+  };
+  b.addEventListener('click', say);
+  b.addEventListener('mouseenter', () => { if (canHover.matches) say(); });
 }
 
 // FAQ: a link to a question opens it

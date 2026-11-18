@@ -121,6 +121,8 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 .hero-pair .fb { left: calc(50% + 10px); bottom: -78px; }
 .hero-text { position: relative; }
 .fl-hero { left: 0; top: -48px; }
+/* The bee above the headline shows only on phones */
+@media (min-width: 721px) { .fl-hero { display: none; } }
 .fl-hero .bzz { bottom: 6%; left: 104%; }
 .fl-shots { left: 6%; top: 34px; }
 .fl-why { right: 9%; top: 78px; }
@@ -213,7 +215,7 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 @keyframes bzz-away {
   to { opacity: 0; translate: 0 -8px; }
 }
-.trail-low { position: absolute; left: calc(50% - 250px); bottom: 98px; width: 220px; height: 90px; }
+.trail-low { position: absolute; left: calc(50% - 248.3px); bottom: 85.2px; width: 220px; height: 90px; }
 .flowers-b { position: absolute; left: calc(11% + 196px); bottom: 44px; width: 44px; height: 70px; }
 
 /* Sky: clouds behind everything, all the way down */
