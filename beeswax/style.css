@@ -146,17 +146,14 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
 /* Touch screens: a tap leaves the bee hovered, so only the tap's timer shows the text */
 @media (hover: none) { .buzz:not(.say):hover .bzz { opacity: 0; } }
 .bee-door .bzz, .bee-flower .bzz { font-size: 0.85rem; }
-/* After a tap the word lands with a squash-and-stretch bounce that settles, like a comic sound effect.
-   On touch screens it then drifts up and fades before the tap's timer ends. */
+/* After a tap the word appears and vibrates (the buzz). On touch screens it then drifts up and fades before the tap's timer ends. */
 @media (prefers-reduced-motion: no-preference) {
-  .buzz.say .bzz { transform-origin: 0 100%; animation: bzz-bounce .7s ease-out, bzz-buzz .55s steps(1, end) .1s; }
-  .flight.to-left .buzz.say .bzz { transform-origin: 100% 100%; }
+  .buzz.say .bzz { animation: bzz-in .12s ease-out, bzz-buzz .55s steps(1, end) .12s; }
 }
 @media (prefers-reduced-motion: no-preference) and (hover: none) {
-  .buzz.say .bzz { animation: bzz-bounce .7s ease-out, bzz-buzz .55s steps(1, end) .1s, bzz-away .35s ease-in 1.05s forwards; }
+  .buzz.say .bzz { animation: bzz-in .12s ease-out, bzz-buzz .55s steps(1, end) .12s, bzz-away .35s ease-in 1.05s forwards; }
 }
-/* The separate scale and translate properties add to the tilt in transform */
-/* A fast, tiny vibration that dies down: the buzz. Margins shift the word without touching the bounce's transforms. */
+/* A fast, tiny vibration that dies down: the buzz. Margins shift the word without touching its tilt. */
 @keyframes bzz-buzz {
   0.0% { margin-left: 2.20px; margin-right: -2.20px; margin-bottom: 1.10px; }
   6.2% { margin-left: -2.00px; margin-right: 2.00px; margin-bottom: -1.00px; }
@@ -176,13 +173,9 @@ section { padding: 84px 0; scroll-margin-top: 76px; }
   93.8% { margin-left: -0.20px; margin-right: 0.20px; margin-bottom: 0.10px; }
   100% { margin-left: 0; margin-right: 0; margin-bottom: 0; }
 }
-@keyframes bzz-bounce {
-  0% { opacity: 0; scale: .4; }
-  25% { opacity: 1; scale: 1.25 .8; }
-  42% { scale: .88 1.14; }
-  58% { scale: 1.07 .94; }
-  74% { scale: .97 1.03; }
-  100% { scale: 1; }
+@keyframes bzz-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 @keyframes bzz-away {
   to { opacity: 0; translate: 0 -8px; }
