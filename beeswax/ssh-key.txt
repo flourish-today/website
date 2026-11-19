@@ -1,4 +1,4 @@
-FlourishDev identity key
+FlourishDev SSH key
 
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE3JbueO4Qsdkpgk2JsHIUMU4FVniGQoQh//E9hJPCPg
 Fingerprint: SHA256:JIKl/R/Y0xf8TngOPgf+LGlrbN3DUnBiQaebSjRgRS4
