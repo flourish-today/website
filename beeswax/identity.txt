@@ -1,0 +1,6 @@
+FlourishDev identity key
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE3JbueO4Qsdkpgk2JsHIUMU4FVniGQoQh//E9hJPCPg
+Fingerprint: SHA256:JIKl/R/Y0xf8TngOPgf+LGlrbN3DUnBiQaebSjRgRS4
+
+If a message is signed with this key, it proves that I wrote it. Copies of this page are saved on the Wayback Machine and archive.today, so you can check the key hasn't changed.
