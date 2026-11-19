@@ -3,5 +3,7 @@ FlourishDev SSH key
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE3JbueO4Qsdkpgk2JsHIUMU4FVniGQoQh//E9hJPCPg
 Fingerprint: SHA256:JIKl/R/Y0xf8TngOPgf+LGlrbN3DUnBiQaebSjRgRS4
 
-I won't lose this SSH key. If a message is signed with this key, it proves that I wrote it. If I ever replace it, I'll sign the new key with this one. The same fingerprint is on my GitHub profile: https://github.com/flourish-today
+I won't lose this SSH key. If a message is signed with this key, it proves that I wrote it. 
+If I ever replace it, I'll sign the new key with this one. 
+The same fingerprint is on my GitHub profile: https://github.com/flourish-today
 Copies of these pages are saved on the big web archives.
